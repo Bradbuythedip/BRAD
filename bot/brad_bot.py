@@ -36,14 +36,44 @@ class BradBot:
         self.loop_count_at_last_tweet = 0
         
     def _load_config(self, path):
-        """Load Twitter API configuration."""
+        """Load Twitter API configuration from file or environment variables."""
+        # Try loading from file first
         try:
             with open(path, 'r') as f:
                 return json.load(f)
         except FileNotFoundError:
-            print(f"⚠️  Config file not found: {path}")
-            print("Using simulation mode (no actual tweets)")
-            return {"simulation_mode": True}
+            pass
+        
+        # Fall back to environment variables
+        import os
+        api_key = os.getenv("TWITTER_API_KEY")
+        api_secret = os.getenv("TWITTER_API_SECRET")
+        access_token = os.getenv("TWITTER_ACCESS_TOKEN")
+        access_token_secret = os.getenv("TWITTER_ACCESS_TOKEN_SECRET")
+        bearer_token = os.getenv("TWITTER_BEARER_TOKEN")
+        
+        if api_key and api_secret and access_token and access_token_secret:
+            print("✓ Using Twitter API credentials from environment variables")
+            return {
+                "simulation_mode": False,
+                "twitter_api": {
+                    "api_key": api_key,
+                    "api_secret": api_secret,
+                    "access_token": access_token,
+                    "access_token_secret": access_token_secret,
+                    "bearer_token": bearer_token
+                },
+                "bot_config": {
+                    "tweet_interval_hours": int(os.getenv("TWEET_INTERVAL_HOURS", "2")),
+                    "max_tweets_per_day": int(os.getenv("MAX_TWEETS_PER_DAY", "12"))
+                }
+            }
+        
+        # No config found, use simulation mode
+        print(f"⚠️  Config file not found: {path}")
+        print("⚠️  No environment variables set")
+        print("Using simulation mode (no actual tweets)")
+        return {"simulation_mode": True}
     
     def tweet(self, content):
         """Post a tweet (or simulate it)."""

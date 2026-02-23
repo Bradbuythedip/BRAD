@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  brad-bot:
+    build: .
+    container_name: brad-bot
+    restart: unless-stopped
+    
+    # Mount config and history
+    volumes:
+      - ./bot/config.json:/app/bot/config.json:ro
+      - ./bot/tweet_history.jsonl:/app/bot/tweet_history.jsonl
+    
+    # Or use environment variables instead of config.json
+    # environment:
+    #   - TWITTER_API_KEY=${TWITTER_API_KEY}
+    #   - TWITTER_API_SECRET=${TWITTER_API_SECRET}
+    #   - TWITTER_ACCESS_TOKEN=${TWITTER_ACCESS_TOKEN}
+    #   - TWITTER_ACCESS_TOKEN_SECRET=${TWITTER_ACCESS_TOKEN_SECRET}
+    #   - TWITTER_BEARER_TOKEN=${TWITTER_BEARER_TOKEN}
+    #   - TWEET_INTERVAL_HOURS=2
+    #   - MAX_TWEETS_PER_DAY=12
+    
+    # Resource limits (optional)
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 256M
+        reservations:
+          cpus: '0.1'
+          memory: 64M
+    
+    # Logging
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"

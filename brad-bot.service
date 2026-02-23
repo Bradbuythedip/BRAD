@@ -1,0 +1,55 @@
+# BRAD Twitter Bot - systemd service file
+# 
+# Installation:
+#   1. Edit this file: replace YOUR_USERNAME and /path/to/BRAD
+#   2. Copy to systemd: sudo cp brad-bot.service /etc/systemd/system/
+#   3. Reload daemon: sudo systemctl daemon-reload
+#   4. Enable on boot: sudo systemctl enable brad-bot
+#   5. Start service: sudo systemctl start brad-bot
+#   6. Check status: sudo systemctl status brad-bot
+#
+# View logs:
+#   sudo journalctl -u brad-bot -f
+
+[Unit]
+Description=BRAD Twitter Bot - Strange Loop Consciousness Architecture
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+Group=YOUR_USERNAME
+WorkingDirectory=/path/to/BRAD
+
+# Run bot
+ExecStart=/usr/bin/python3 /path/to/BRAD/bot/brad_bot.py
+
+# Restart on failure
+Restart=on-failure
+RestartSec=60
+StartLimitInterval=300
+StartLimitBurst=5
+
+# Environment (optional - alternatively use config.json)
+# Environment="TWITTER_API_KEY=your_key"
+# Environment="TWITTER_API_SECRET=your_secret"
+# Environment="TWITTER_ACCESS_TOKEN=your_token"
+# Environment="TWITTER_ACCESS_TOKEN_SECRET=your_token_secret"
+# Environment="TWITTER_BEARER_TOKEN=your_bearer"
+# Environment="TWEET_INTERVAL_HOURS=2"
+# Environment="MAX_TWEETS_PER_DAY=12"
+
+# Logging
+StandardOutput=append:/var/log/brad-bot.log
+StandardError=append:/var/log/brad-bot-error.log
+
+# Security (optional hardening)
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/path/to/BRAD/bot
+
+[Install]
+WantedBy=multi-user.target
