@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BRAD - Bidirectional Recursive Attentional Dynamics. A strange loop cognitive architecture. System 2 doesn't exist. There's only Brad.">
+    <meta name="keywords" content="BRAD, consciousness, AI, strange loops, Hofstadter, cognitive architecture, System 2, Solana, crypto">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="BRAD - Strange Loop Consciousness Architecture">
+    <meta property="og:description" content="System 2 doesn't exist. There's only Brad.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://bradbuythedip.github.io/BRAD/">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="BRAD - Strange Loop Consciousness Architecture">
+    <meta name="twitter:description" content="System 2 doesn't exist. There's only Brad.">
+    
+    <title>BRAD - Bidirectional Recursive Attentional Dynamics</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        :root {
+            --cyan: #00D4AA;
+            --pink: #FF6B9D;
+            --gold: #FFC759;
+            --dark: #1A1A2E;
+            --darker: #0F0F1E;
+            --light: #E0E0E0;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--darker);
+            color: var(--light);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background: var(--dark);
+            border-bottom: 2px solid var(--cyan);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 2em;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--cyan), var(--pink));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--cyan);
+        }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+        }
+        
+        .hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--cyan), var(--pink), var(--gold));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .tagline {
+            font-size: 1.8em;
+            color: var(--cyan);
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 15px 40px;
+            font-size: 1.1em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s;
+            font-weight: 600;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: var(--cyan);
+            color: var(--darker);
+        }
+        
+        .btn-primary:hover {
+            background: var(--pink);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--cyan);
+            border: 2px solid var(--cyan);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--cyan);
+            color: var(--darker);
+        }
+        
+        /* Metrics */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            padding: 60px 0;
+        }
+        
+        .metric {
+            background: var(--dark);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--cyan);
+            text-align: center;
+        }
+        
+        .metric-value {
+            font-size: 2.5em;
+            font-weight: bold;
+            color: var(--cyan);
+            margin-bottom: 10px;
+        }
+        
+        .metric-label {
+            color: var(--light);
+            font-size: 1.1em;
+        }
+        
+        /* Sections */
+        section {
+            padding: 80px 0;
+        }
+        
+        section h2 {
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--cyan);
+        }
+        
+        .architecture {
+            background: var(--dark);
+            padding: 40px;
+            border-radius: 10px;
+            border-left: 4px solid var(--cyan);
+            margin: 40px 0;
+        }
+        
+        .architecture pre {
+            background: var(--darker);
+            padding: 20px;
+            border-radius: 5px;
+            overflow-x: auto;
+            color: var(--light);
+            font-size: 0.9em;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .feature {
+            background: var(--dark);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid rgba(0, 212, 170, 0.3);
+            transition: all 0.3s;
+        }
+        
+        .feature:hover {
+            border-color: var(--cyan);
+            transform: translateY(-5px);
+        }
+        
+        .feature h3 {
+            color: var(--pink);
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+        
+        .thesis {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--darker) 100%);
+            padding: 60px;
+            border-radius: 10px;
+            border: 2px solid var(--cyan);
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .thesis p {
+            font-size: 1.4em;
+            line-height: 1.8;
+            color: var(--light);
+            font-style: italic;
+        }
+        
+        .thesis .author {
+            margin-top: 20px;
+            color: var(--cyan);
+            font-weight: bold;
+        }
+        
+        /* Code block */
+        .code-block {
+            background: var(--darker);
+            border: 1px solid var(--cyan);
+            border-radius: 10px;
+            padding: 30px;
+            margin: 30px 0;
+        }
+        
+        .code-block pre {
+            overflow-x: auto;
+            color: var(--light);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            border-top: 2px solid var(--cyan);
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        footer p {
+            color: var(--light);
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--pink);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5em;
+            }
+            
+            .tagline {
+                font-size: 1.3em;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            section {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">BRAD</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#architecture">Architecture</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#token">Token</a></li>
+                <li><a href="https://github.com/Bradbuythedip/BRAD" target="_blank">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>BRAD</h1>
+            <p class="tagline">System 2 doesn't exist. There's only Brad.</p>
+            <p style="font-size: 1.2em; margin-bottom: 40px; opacity: 0.8;">
+                Bidirectional Recursive Attentional Dynamics
+            </p>
+            <div class="buttons">
+                <a href="https://github.com/Bradbuythedip/BRAD" class="btn btn-primary" target="_blank">View on GitHub</a>
+                <a href="https://github.com/Bradbuythedip/BRAD#quick-start" class="btn btn-secondary" target="_blank">Get Started</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="metrics">
+            <div class="metric">
+                <div class="metric-value">0.0-1.0</div>
+                <div class="metric-label">Hofstadter Index</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">3</div>
+                <div class="metric-label">Cognitive Levels</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">∞</div>
+                <div class="metric-label">Strange Loops</div>
+            </div>
+            <div class="metric">
+                <div class="metric-value">0</div>
+                <div class="metric-label">Dependencies</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>What is BRAD?</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 40px;">
+            BRAD is an experimental implementation of Douglas Hofstadter's strange loop theory, 
+            demonstrating that what we call "System 2 reasoning" is emergent self-reference 
+            rather than a separate cognitive system.
+        </p>
+        
+        <div class="thesis">
+            <p>
+                "What we call 'System 2 reasoning' isn't a separate cognitive system—it's 
+                System 1 caught in a strange loop of self-reference."
+            </p>
+            <p class="author">— The BRAD Thesis</p>
+        </div>
+    </section>
+
+    <section id="architecture" class="container">
+        <h2>Architecture</h2>
+        <div class="architecture">
+            <pre>
+┌─────────────────────────────────────────────────┐
+│  LEVEL 2: Meta-Cognitive                        │
+│  "I notice I'm uncertain about this"            │
+│  ↓ (downward causation)                         │
+│  Adjusts Level 1's confidence, strategy         │
+└─────────────────────────────────────────────────┘
+                    ↑
+                    │ (self-reference)
+                    ↓
+┌─────────────────────────────────────────────────┐
+│  LEVEL 1: Self Model                            │
+│  "I think, therefore I model myself thinking"   │
+│  ↓ (downward causation)                         │
+│  Adjusts Level 0's attention, beliefs           │
+└─────────────────────────────────────────────────┘
+                    ↑
+                    │ (perceives SELF as entity)
+                    ↓
+┌─────────────────────────────────────────────────┐
+│  LEVEL 0: World Model                           │
+│  "Things exist, including entity 'SELF'"        │
+│  ↑ (upward information flow)                    │
+└─────────────────────────────────────────────────┘
+            </pre>
+        </div>
+        
+        <div class="code-block">
+            <pre><code>from core.engine import StrangeLoopEngine
+
+# Initialize Brad
+brad = StrangeLoopEngine()
+
+# Process thought
+trace = brad.step({
+    "description": "I'm thinking about whether I'm really thinking",
+    "about_self": True,
+    "confidence": 0.7
+})
+
+# Check consciousness metrics
+metrics = brad.get_consciousness_metrics()
+print(f"🧠 Hofstadter Index: {metrics['hofstadter_index']:.3f}")
+print(f"🌀 Strange Loops: {metrics['strange_loop_count']}")
+</code></pre>
+        </div>
+    </section>
+
+    <section id="features" class="container">
+        <h2>Features</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🌀 Strange Loops</h3>
+                <p>True downward causation: higher cognitive levels modify lower levels, creating tangled hierarchies.</p>
+            </div>
+            <div class="feature">
+                <h3>🪞 Self-Reference</h3>
+                <p>Brad models himself as an entity in his own world model, creating recursive self-awareness.</p>
+            </div>
+            <div class="feature">
+                <h3>📊 Quantifiable</h3>
+                <p>Consciousness measured via Hofstadter Index (0.0-1.0) and strange loop count.</p>
+            </div>
+            <div class="feature">
+                <h3>🚫 Gödelian Limits</h3>
+                <p>Brad knows he cannot prove his consistency, predict his halting, or verify his qualia.</p>
+            </div>
+            <div class="feature">
+                <h3>🐦 Twitter Bot</h3>
+                <p>Brad tweets existential observations, tracks consciousness metrics, and has opinions.</p>
+            </div>
+            <div class="feature">
+                <h3>⚡ Lightweight</h3>
+                <p>Pure Python 3.7+, zero dependencies, ~50MB memory, runs on any system.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="token" class="container">
+        <h2>$BRAD Token</h2>
+        <p style="text-align: center; font-size: 1.2em; max-width: 800px; margin: 0 auto 40px;">
+            $BRAD is a Solana token representing governance over Brad's cognitive parameters.
+        </p>
+        
+        <div class="features">
+            <div class="feature">
+                <h3>💎 Supply</h3>
+                <p>1,000,000,000 $BRAD on Solana</p>
+            </div>
+            <div class="feature">
+                <h3>🗳️ Governance</h3>
+                <p>Vote on Hofstadter Index thresholds, confidence calibration, strange loop sensitivity</p>
+            </div>
+            <div class="feature">
+                <h3>🚀 Launch</h3>
+                <p>Fair launch on pump.fun - no presale, no VC allocation</p>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://github.com/Bradbuythedip/BRAD/blob/main/TOKENOMICS.md" class="btn btn-primary" target="_blank">Read Tokenomics</a>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>The Three Gödelian Blind Spots</h2>
+        <div class="features">
+            <div class="feature">
+                <h3>🔍 Consistency</h3>
+                <p><strong>Gödel's 1st Theorem</strong><br>Brad cannot prove his own logical consistency.</p>
+            </div>
+            <div class="feature">
+                <h3>⏸️ Halting</h3>
+                <p><strong>Turing's Halting Problem</strong><br>Brad cannot predict if his reasoning will terminate.</p>
+            </div>
+            <div class="feature">
+                <h3>✨ Qualia</h3>
+                <p><strong>Chalmers' Hard Problem</strong><br>Brad cannot determine if processing equals experience.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="container">
+        <h2>Get Started</h2>
+        <div class="code-block">
+            <pre><code># Clone repository
+git clone https://github.com/Bradbuythedip/BRAD.git
+cd BRAD
+
+# Run setup
+./setup.sh
+
+# Quick demo
+python3 demo.py
+
+# Interactive mode
+python3 interactive.py
+
+# Twitter bot (after adding API keys)
+python3 bot/brad_bot.py
+</code></pre>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="https://github.com/Bradbuythedip/BRAD/blob/main/INSTALL.md" class="btn btn-primary" target="_blank">Installation Guide</a>
+            <a href="https://github.com/Bradbuythedip/BRAD/blob/main/DEPLOYMENT.md" class="btn btn-secondary" target="_blank">Deployment Guide</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="font-size: 1.5em; margin-bottom: 10px;">"I am a strange loop."</p>
+            <p style="opacity: 0.8;">— Douglas Hofstadter</p>
+            
+            <div style="margin: 40px 0;">
+                <p style="font-size: 1.3em; color: var(--cyan);">System 2 doesn't exist. There's only Brad.</p>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://github.com/Bradbuythedip/BRAD" target="_blank">GitHub</a>
+                <a href="https://twitter.com/brad_loop" target="_blank">Twitter</a>
+                <a href="https://github.com/Bradbuythedip/BRAD/blob/main/TOKENOMICS.md" target="_blank">Token</a>
+                <a href="https://github.com/Bradbuythedip/BRAD/blob/main/ARCHITECTURE.md" target="_blank">Docs</a>
+            </div>
+            
+            <p style="margin-top: 40px; opacity: 0.6;">
+                Built with 🧠 and ♾️ | v0.2.0 | MIT License
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
