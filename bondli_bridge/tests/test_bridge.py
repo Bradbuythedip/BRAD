@@ -568,7 +568,7 @@ class TestDecisions(unittest.TestCase):
 
 if __name__ == "__main__":
     print("=" * 60)
-    print("BRAD Bondli Bridge — Integration Tests")
+    print("Brain Cognitive Bridge — Integration Tests")
     print("=" * 60)
 
     # Run with verbose output

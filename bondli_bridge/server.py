@@ -1,31 +1,31 @@
 """
-server.py — FastAPI server for the Bondli cognitive bridge.
+server.py — FastAPI server for the Brain cognitive trading bridge.
 
-This is what Bondli's Node.js backend calls. Every endpoint maps
-directly to a Bondli integration point.
+Provides the HTTP interface between Bondli's Node.js backend and the
+three-level cognitive trading engine. All endpoints are stateless from
+the caller's perspective; internal state is maintained by the engine.
 
-Start with:
+Start:
     python -m bondli_bridge.server
-    # or
     uvicorn bondli_bridge.server:app --host 127.0.0.1 --port 8421
 
-Bondli connects via:
-    BRAD_BRIDGE_URL=http://127.0.0.1:8421
+Connection:
+    BRAIN_BRIDGE_URL=http://127.0.0.1:8421
 
 Endpoints:
-    POST /evaluate          — Evaluate token for APE/SKIP
-    POST /position/evaluate — Evaluate open position for EXIT/HOLD
-    POST /position/entry    — Record executed entry
-    POST /position/exit     — Record executed exit
+    POST /evaluate          — Evaluate token for entry (APE/SKIP/WATCH)
+    POST /position/evaluate — Evaluate open position (EXIT/HOLD/PARTIAL_EXIT)
+    POST /position/entry    — Record confirmed entry
+    POST /position/exit     — Record confirmed exit
     POST /position/partial  — Record partial exit
-    POST /regime            — Update market regime
-    POST /smart-wallet      — Ingest smart money data
-    POST /config            — Update config at runtime
-    GET  /state             — Full cognitive state
-    GET  /metrics           — Consciousness + trading metrics
+    POST /regime            — Update market regime classification
+    POST /smart-wallet      — Ingest smart money wallet profile
+    POST /config            — Update configuration at runtime
+    GET  /state             — Full cognitive state inspection
+    GET  /metrics           — Cognitive and trading performance metrics
     GET  /config            — Current configuration
     GET  /decisions         — Recent decision log
-    GET  /decisions/:mint   — Decisions for specific token
+    GET  /decisions/:mint   — Decision history for specific token
     GET  /health            — Health check
 """
 
@@ -61,8 +61,8 @@ engine = TradingEngine(config)
 # ================================================================
 
 app = FastAPI(
-    title="BRAD Cognitive Bridge for Bondli",
-    description="Strange loop trading intelligence layer",
+    title="Brain — Cognitive Trading Bridge for Bondli",
+    description="Recursive self-referential trading intelligence layer",
     version="1.0.0",
 )
 

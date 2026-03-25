@@ -1,17 +1,31 @@
 """
-bondli_bridge — Plug-and-play cognitive trading layer for Bondli
+bondli_bridge — Recursive cognitive trading architecture for Bondli
 
-Connects BRAD's strange loop architecture to Bondli's ML trading terminal.
-Level 0 (Market) watches tokens. Level 1 (Trading) makes decisions.
-Level 2 (Meta) catches bad patterns and forces corrections.
+Implements a three-level strange loop cognitive hierarchy for autonomous
+trading decision-making on Solana. Based on Hofstadter's theory of
+self-referential systems, adapted for real-time market microstructure.
 
-Usage from Bondli's Node.js backend:
-    POST /evaluate    — score a token, get APE/SKIP
-    POST /position    — update position, get EXIT/HOLD
-    POST /regime      — update market regime
-    GET  /state       — full cognitive state
-    GET  /metrics     — consciousness + trading metrics
+Architecture:
+    Level 0 (MarketWorldModel)   — Perceptual grounding: token entities,
+                                    wallet entities, regime classification
+    Level 1 (TradingSelfModel)   — Strategic reasoning: entry/exit decisions,
+                                    strategy selection, position management
+    Level 2 (TradingMetaCognitive) — Meta-cognitive oversight: blind spot
+                                    detection, strategy evaluation,
+                                    downward causation interventions
+
+API surface (FastAPI, default port 8421):
+    POST /evaluate    — Evaluate token for entry (APE/SKIP)
+    POST /position    — Evaluate open position (EXIT/HOLD)
+    POST /regime      — Update market regime classification
+    GET  /state       — Full cognitive state inspection
+    GET  /metrics     — Cognitive and trading performance metrics
+
+Reference:
+    Hofstadter, D. R. (1979). Godel, Escher, Bach: An Eternal Golden Braid.
+    Kahneman, D. (2011). Thinking, Fast and Slow.
+    Baars, B. J. (1988). A Cognitive Theory of Consciousness.
 """
 
 __version__ = "1.0.0"
-__description__ = "BRAD cognitive trading layer for Bondli"
+__description__ = "Brain — Recursive cognitive trading architecture for Bondli"

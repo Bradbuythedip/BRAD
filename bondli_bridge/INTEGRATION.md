@@ -1,46 +1,47 @@
-# BRAD Cognitive Bridge — Bondli Integration Guide
+# Brain — Cognitive Trading Bridge Integration Guide
 
-## What This Is
+## Overview
 
-A self-correcting cognitive layer that sits between Bondli's ML scorer and its auto-ape engine. BRAD's strange loop architecture watches its own trading performance and forces corrections before more money is lost.
+Brain is a self-correcting cognitive trading layer that implements Hofstadter's strange loop architecture for autonomous decision-making on Solana. It sits between Bondli's ML scoring pipeline and its trade execution engine, providing structured entry/exit decisions with auditable reasoning chains.
+
+The core mechanism: a three-level cognitive hierarchy where higher levels monitor and restructure lower levels (downward causation), creating a recursive self-referential loop that adapts to changing market conditions and corrects systematic decision-making errors.
 
 ```
-Bondli Scanner → ML Scorer → BRAD Bridge → Auto-Ape Engine → Trade Router
-                                  ↑                              |
-                                  └──── trade outcomes ──────────┘
-                                  (strange loop: learns from results)
+Bondli Scanner --> ML Scorer --> Brain Bridge --> Auto-Ape Engine --> Trade Router
+                                     ^                                  |
+                                     +-------- trade outcomes ----------+
+                                     (recursive self-correction loop)
 ```
 
 ## Architecture
 
 ```
-Level 2: Trading Meta-Cognitive
-  Watches Level 1's performance. Detects:
-  - Overconfidence (sizing up after wins)
-  - Revenge trading (aping after losses)
-  - Regime blindness (wrong strategy for market)
-  - Loss aversion (holding losers too long)
-  Forces strategy switches and pauses (DOWNWARD CAUSATION)
-          ↓
-Level 1: Trading Self-Model
-  Makes APE/SKIP/EXIT/HOLD decisions.
+Level 2: Meta-Cognitive Oversight (TradingMetaCognitive)
+  Monitors Level 1 performance. Detects cognitive biases:
+  - Overconfidence (position sizing inflated vs base rate)
+  - Revenge trading (rapid re-entry after losses)
+  - Regime blindness (strategy-regime mismatch)
+  - Loss aversion (excessive hold duration on losers)
+  Applies corrective interventions via downward causation.
+          |
+Level 1: Strategic Reasoning (TradingSelfModel)
+  Produces APE/SKIP/EXIT/HOLD decisions.
   Manages strategies: momentum, snipe, smart_follow, fade, survivor.
-  Tracks position performance. Intervenes on Level 0 attention.
-  (DOWNWARD CAUSATION on Level 0)
-          ↓
-Level 0: Market World Model
-  Tokens, wallets, and regime as entities.
+  Tracks position performance. Modulates Level 0 attention.
+  Position sizing via half-Kelly criterion.
+          |
+Level 0: Market Perception (MarketWorldModel)
+  Tokens, wallets, and regime as structured entities.
   Score-based attention weighting.
-  Auto-generates beliefs from strong signals.
-  Feeds upward to Level 1.
+  Automatic belief generation from strong signals.
+  Feeds observations upward to Level 1.
 ```
 
 ## Quick Start
 
-### 1. Start the BRAD bridge server
+### 1. Start the Brain bridge server
 
 ```bash
-cd /path/to/BRAD
 pip install fastapi uvicorn pydantic
 python -m bondli_bridge.server
 # Server starts on http://127.0.0.1:8421
@@ -49,25 +50,25 @@ python -m bondli_bridge.server
 ### 2. Add to Bondli's .env
 
 ```env
-# BRAD Cognitive Bridge
-BRAD_BRIDGE_URL=http://127.0.0.1:8421
-BRAD_PORT=8421
-BRAD_MAX_POSITION_SOL=1.0
-BRAD_MAX_POSITIONS=5
-BRAD_MAX_EXPOSURE_SOL=5.0
-BRAD_MIN_SCORE_APE=0.65
-BRAD_RUG_SIGNAL_MAX=2
+# Brain Cognitive Bridge
+BRAIN_BRIDGE_URL=http://127.0.0.1:8421
+BRAIN_PORT=8421
+BRAIN_MAX_POSITION_SOL=1.0
+BRAIN_MAX_POSITIONS=5
+BRAIN_MAX_EXPOSURE_SOL=5.0
+BRAIN_MIN_SCORE_APE=0.65
+BRAIN_RUG_SIGNAL_MAX=2
 ```
 
 ### 3. Integrate with Bondli's Node.js backend
 
-Add `brad-client.mjs` to Bondli's `src/engine/` directory (see below).
+Add `brain-client.mjs` to Bondli's `src/engine/` directory (see below).
 
-## API Endpoints
+## API Reference
 
 ### POST /evaluate — Token Evaluation
 
-Called by Bondli's scorer after computing ML features.
+Evaluates a token for entry. Called by Bondli's scorer after computing ML features.
 
 **Request:**
 ```json
@@ -125,7 +126,7 @@ Called by Bondli's scorer after computing ML features.
 
 ### POST /position/evaluate — Position Evaluation
 
-Called on each scoring cycle for open positions.
+Evaluates an open position for exit signals. Called on each scoring cycle.
 
 **Request:**
 ```json
@@ -155,7 +156,7 @@ Called on each scoring cycle for open positions.
 
 ### POST /position/entry — Record Confirmed Entry
 
-Called AFTER Bondli's trade router confirms the swap on-chain.
+Called after Bondli's trade router confirms the on-chain swap.
 
 ```json
 {
@@ -170,7 +171,7 @@ Called AFTER Bondli's trade router confirms the swap on-chain.
 
 ### POST /position/exit — Record Confirmed Exit
 
-Triggers meta-cognitive evaluation and strategy assessment.
+Triggers meta-cognitive evaluation and strategy performance assessment.
 
 ```json
 {
@@ -194,7 +195,7 @@ Triggers meta-cognitive evaluation and strategy assessment.
 }
 ```
 
-### POST /smart-wallet — Ingest Smart Money
+### POST /smart-wallet — Ingest Smart Money Profile
 
 ```json
 {
@@ -208,9 +209,9 @@ Triggers meta-cognitive evaluation and strategy assessment.
 
 ### GET /state — Full Cognitive State
 
-Returns the complete state of all three cognitive levels, risk state, and decision stats.
+Returns the complete state of all three cognitive levels, risk state, and decision statistics.
 
-### GET /metrics — Trading + Consciousness Metrics
+### GET /metrics — Cognitive and Trading Metrics
 
 ```json
 {
@@ -239,20 +240,20 @@ Returns the complete state of all three cognitive levels, risk state, and decisi
 
 ## Bondli Integration Code
 
-### brad-client.mjs
+### brain-client.mjs
 
 Drop this into Bondli's `src/engine/` directory:
 
 ```javascript
-// src/engine/brad-client.mjs
-// BRAD Cognitive Bridge client for Bondli
+// src/engine/brain-client.mjs
+// Brain Cognitive Bridge client for Bondli
 
-const BRAD_URL = process.env.BRAD_BRIDGE_URL || 'http://127.0.0.1:8421';
-const TIMEOUT = 5000; // 5s timeout — don't block the pipeline
+const BRAIN_URL = process.env.BRAIN_BRIDGE_URL || 'http://127.0.0.1:8421';
+const TIMEOUT = 5000;
 
-let bradAvailable = null; // null = unknown, true/false = cached
+let brainAvailable = null;
 
-async function bradFetch(path, method = 'GET', body = null) {
+async function brainFetch(path, method = 'GET', body = null) {
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), TIMEOUT);
 
@@ -264,13 +265,13 @@ async function bradFetch(path, method = 'GET', body = null) {
     };
     if (body) opts.body = JSON.stringify(body);
 
-    const res = await fetch(`${BRAD_URL}${path}`, opts);
-    bradAvailable = true;
+    const res = await fetch(`${BRAIN_URL}${path}`, opts);
+    brainAvailable = true;
     return await res.json();
   } catch (err) {
-    if (bradAvailable !== false) {
-      console.warn(`[BRAD] Bridge unavailable: ${err.message}`);
-      bradAvailable = false;
+    if (brainAvailable !== false) {
+      console.warn(`[Brain] Bridge unavailable: ${err.message}`);
+      brainAvailable = false;
     }
     return null;
   } finally {
@@ -278,52 +279,52 @@ async function bradFetch(path, method = 'GET', body = null) {
   }
 }
 
-// Periodic health check to detect when BRAD comes back online
+// Periodic health check to detect reconnection
 setInterval(async () => {
-  if (!bradAvailable) {
+  if (!brainAvailable) {
     try {
-      const res = await fetch(`${BRAD_URL}/health`, {
+      const res = await fetch(`${BRAIN_URL}/health`, {
         signal: AbortSignal.timeout(2000)
       });
       if (res.ok) {
-        bradAvailable = true;
-        console.log('[BRAD] Bridge reconnected');
+        brainAvailable = true;
+        console.log('[Brain] Bridge reconnected');
       }
     } catch {}
   }
 }, 30000);
 
 /**
- * Evaluate a token through BRAD's cognitive engine.
- * Falls back gracefully if BRAD is unavailable.
+ * Evaluate a token through the cognitive engine.
+ * Returns null if Brain is unavailable (graceful degradation).
  */
 export async function evaluateToken(tokenData) {
-  const result = await bradFetch('/evaluate', 'POST', tokenData);
-  if (!result) return null; // Bondli proceeds with its own logic
+  const result = await brainFetch('/evaluate', 'POST', tokenData);
+  if (!result) return null;
   return result;
 }
 
 /**
- * Evaluate an open position.
+ * Evaluate an open position for exit signals.
  */
 export async function evaluatePosition(mint, tokenData) {
-  return bradFetch('/position/evaluate', 'POST', { mint, ...tokenData });
+  return brainFetch('/position/evaluate', 'POST', { mint, ...tokenData });
 }
 
 /**
- * Record a confirmed entry.
+ * Record a confirmed entry after on-chain swap.
  */
 export async function recordEntry(mint, symbol, priceSol, sizeSol, score, reasoning = []) {
-  return bradFetch('/position/entry', 'POST', {
+  return brainFetch('/position/entry', 'POST', {
     mint, symbol, price_sol: priceSol, size_sol: sizeSol, score, reasoning,
   });
 }
 
 /**
- * Record a confirmed exit.
+ * Record a confirmed exit. Triggers meta-cognitive evaluation.
  */
 export async function recordExit(mint, exitPriceSol, reason) {
-  return bradFetch('/position/exit', 'POST', {
+  return brainFetch('/position/exit', 'POST', {
     mint, exit_price_sol: exitPriceSol, reason,
   });
 }
@@ -332,51 +333,51 @@ export async function recordExit(mint, exitPriceSol, reason) {
  * Record a partial exit (take profit).
  */
 export async function recordPartialExit(mint, sizeSol, priceSol, reason) {
-  return bradFetch('/position/partial', 'POST', {
+  return brainFetch('/position/partial', 'POST', {
     mint, size_sol: sizeSol, price_sol: priceSol, reason,
   });
 }
 
 /**
- * Update market regime.
+ * Update market regime classification.
  */
 export async function updateRegime(regimeData) {
-  return bradFetch('/regime', 'POST', regimeData);
+  return brainFetch('/regime', 'POST', regimeData);
 }
 
 /**
- * Ingest smart money wallet.
+ * Ingest smart money wallet profile.
  */
 export async function ingestSmartWallet(wallet, profile) {
-  return bradFetch('/smart-wallet', 'POST', { wallet, ...profile });
+  return brainFetch('/smart-wallet', 'POST', { wallet, ...profile });
 }
 
 /**
- * Get cognitive metrics.
+ * Retrieve cognitive and trading metrics.
  */
 export async function getMetrics() {
-  return bradFetch('/metrics');
+  return brainFetch('/metrics');
 }
 
 /**
- * Get full state (for debugging).
+ * Retrieve full cognitive state (diagnostic use).
  */
 export async function getState() {
-  return bradFetch('/state');
+  return brainFetch('/state');
 }
 
 /**
- * Update config at runtime.
+ * Update configuration at runtime.
  */
 export async function updateConfig(updates) {
-  return bradFetch('/config', 'POST', updates);
+  return brainFetch('/config', 'POST', updates);
 }
 
 /**
- * Check if BRAD bridge is available.
+ * Check if Brain bridge is available.
  */
 export function isAvailable() {
-  return bradAvailable === true;
+  return brainAvailable === true;
 }
 
 export default {
@@ -399,14 +400,12 @@ export default {
 #### 1. In `meme-intelligence.mjs` (after scoring):
 
 ```javascript
-import brad from './brad-client.mjs';
+import brain from './brain-client.mjs';
 
-// After computing ML score for a token:
 async function scoreToken(token) {
-  const mlScore = await computeMLScore(token); // existing logic
+  const mlScore = await computeMLScore(token);
 
-  // Ask BRAD for cognitive evaluation
-  const bradDecision = await brad.evaluateToken({
+  const brainDecision = await brain.evaluateToken({
     mint: token.mint,
     name: token.name,
     symbol: token.symbol,
@@ -426,13 +425,12 @@ async function scoreToken(token) {
     source: token.source,
   });
 
-  // BRAD enhances the decision — or graceful fallback
-  if (bradDecision) {
-    mlScore.bradAction = bradDecision.action;
-    mlScore.bradConfidence = bradDecision.confidence;
-    mlScore.bradReasoning = bradDecision.reasoning;
-    mlScore.bradPositionSize = bradDecision.position_size_sol;
-    mlScore.bradStrategy = bradDecision.strategy;
+  if (brainDecision) {
+    mlScore.brainAction = brainDecision.action;
+    mlScore.brainConfidence = brainDecision.confidence;
+    mlScore.brainReasoning = brainDecision.reasoning;
+    mlScore.brainPositionSize = brainDecision.position_size_sol;
+    mlScore.brainStrategy = brainDecision.strategy;
   }
 
   return mlScore;
@@ -442,32 +440,29 @@ async function scoreToken(token) {
 #### 2. In `autoape/pipeline.js` (entry decision):
 
 ```javascript
-import brad from '../engine/brad-client.mjs';
+import brain from '../engine/brain-client.mjs';
 
-// In the entry decision logic:
-if (brad.isAvailable() && score.bradAction) {
-  if (score.bradAction === 'SKIP') {
-    log(`[BRAD] Skipping ${token.symbol}: ${score.bradReasoning.join(', ')}`);
-    return; // BRAD says no
+if (brain.isAvailable() && score.brainAction) {
+  if (score.brainAction === 'SKIP') {
+    log(`[Brain] Skipping ${token.symbol}: ${score.brainReasoning.join(', ')}`);
+    return;
   }
-  if (score.bradAction === 'APE') {
-    // Use BRAD's position size
-    positionSize = score.bradPositionSize;
+  if (score.brainAction === 'APE') {
+    positionSize = score.brainPositionSize;
   }
 }
 
 // After confirmed swap:
-await brad.recordEntry(token.mint, token.symbol, entryPrice, positionSize, score.score);
+await brain.recordEntry(token.mint, token.symbol, entryPrice, positionSize, score.score);
 ```
 
 #### 3. In `autoape/exit-plan.js` (exit evaluation):
 
 ```javascript
-import brad from '../engine/brad-client.mjs';
+import brain from '../engine/brain-client.mjs';
 
-// On each scoring cycle for open positions:
 async function evaluateExit(position, latestScore) {
-  const bradDecision = await brad.evaluatePosition(position.mint, {
+  const decision = await brain.evaluatePosition(position.mint, {
     score: latestScore.score,
     velocity: latestScore.velocity,
     acceleration: latestScore.acceleration,
@@ -475,16 +470,16 @@ async function evaluateExit(position, latestScore) {
     price_sol: position.currentPrice,
   });
 
-  if (bradDecision?.action === 'EXIT') {
-    log(`[BRAD] EXIT signal for ${position.symbol}: ${bradDecision.reasoning.join(', ')}`);
-    return { shouldExit: true, reason: bradDecision.reasoning[0] };
+  if (decision?.action === 'EXIT') {
+    log(`[Brain] EXIT ${position.symbol}: ${decision.reasoning.join(', ')}`);
+    return { shouldExit: true, reason: decision.reasoning[0] };
   }
 
-  if (bradDecision?.action === 'PARTIAL_EXIT') {
+  if (decision?.action === 'PARTIAL_EXIT') {
     return {
       shouldPartialExit: true,
-      exitPct: bradDecision.exit_pct,
-      reason: bradDecision.reasoning[0],
+      exitPct: decision.exit_pct,
+      reason: decision.reasoning[0],
     };
   }
 
@@ -492,18 +487,17 @@ async function evaluateExit(position, latestScore) {
 }
 
 // After confirmed exit:
-await brad.recordExit(position.mint, exitPrice, reason);
+await brain.recordExit(position.mint, exitPrice, reason);
 ```
 
 #### 4. In `regime-engine.mjs` (regime updates):
 
 ```javascript
-import brad from './brad-client.mjs';
+import brain from './brain-client.mjs';
 
-// When regime changes:
-async function updateRegime(regime) {
-  await brad.updateRegime({
-    regime: regime.type,        // bull, bear, chop
+async function onRegimeChange(regime) {
+  await brain.updateRegime({
+    regime: regime.type,
     confidence: regime.confidence,
     bull_score: regime.bullScore,
     bear_score: regime.bearScore,
@@ -517,11 +511,10 @@ async function updateRegime(regime) {
 #### 5. In `smart-money-tracker.mjs`:
 
 ```javascript
-import brad from './brad-client.mjs';
+import brain from './brain-client.mjs';
 
-// When a profitable wallet is identified:
 async function trackWallet(wallet, stats) {
-  await brad.ingestSmartWallet(wallet, {
+  await brain.ingestSmartWallet(wallet, {
     win_rate: stats.winRate,
     avg_profit: stats.avgProfit,
     total_trades: stats.totalTrades,
@@ -535,16 +528,16 @@ async function trackWallet(wallet, stats) {
 Add to Bondli's `docker-compose.yml`:
 
 ```yaml
-  brad-bridge:
+  brain-bridge:
     build:
       context: ../BRAD
       dockerfile: bondli_bridge/Dockerfile
     ports:
       - "8421:8421"
     environment:
-      - BRAD_PORT=8421
-      - BRAD_MAX_POSITION_SOL=1.0
-      - BRAD_MAX_POSITIONS=5
+      - BRAIN_PORT=8421
+      - BRAIN_MAX_POSITION_SOL=1.0
+      - BRAIN_MAX_POSITIONS=5
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8421/health"]
@@ -553,12 +546,20 @@ Add to Bondli's `docker-compose.yml`:
       retries: 3
 ```
 
-## How the Strange Loop Helps Trading
+## Theoretical Basis
 
-1. **Score derivatives fire first** — BRAD's exit Layer 1 uses velocity + acceleration before price drops
-2. **Meta-cognitive catches bad patterns** — Overconfidence, revenge trading, regime blindness detected and corrected
-3. **Automatic strategy switching** — When momentum stops working, meta-cognitive forces switch to snipe/survivor
-4. **Forced pauses** — 3+ consecutive losses triggers mandatory cooldown
-5. **Self-correcting risk** — Confidence calibration adjusts position sizing based on actual vs expected performance
+The cognitive trading architecture is grounded in three established frameworks:
 
-The system literally watches itself trade and restructures its own decision-making. That's the strange loop.
+1. **Strange Loop Theory** (Hofstadter, 1979) — Self-referential hierarchies where higher levels modify lower levels create emergent properties. In this implementation, the meta-cognitive layer (L2) restructures the strategic layer (L1), which modulates the perceptual layer (L0), forming a recursive causal loop.
+
+2. **Global Workspace Theory** (Baars, 1988) — Salient cognitive events compete for broadcast attention. Self-referential events receive a configurable salience boost, ensuring the system's self-monitoring signals propagate through the architecture.
+
+3. **Dual Process Theory** (Kahneman, 2011) — The system operates in three modes: fast pattern matching (System 1), deliberate analytical evaluation (System 2), and recursive self-referential processing (Strange Loop mode). Mode selection is context-dependent and can be overridden by meta-cognitive intervention.
+
+## Operational Mechanisms
+
+1. **Score derivative exit signals** — Level 1 uses velocity and acceleration of ML scores as leading indicators, detecting deterioration approximately 2 scoring cycles before price impact.
+2. **Cognitive bias detection** — Level 2 identifies overconfidence, revenge trading, regime blindness, and loss aversion through pattern analysis of decision history and performance metrics.
+3. **Adaptive strategy selection** — When a strategy's effectiveness falls below threshold, the meta-cognitive layer forces a switch to the best-performing alternative for the current regime.
+4. **Mandatory cooldown periods** — Three or more consecutive losses trigger an automatic trading pause, requiring meta-cognitive review before resumption.
+5. **Confidence calibration** — The system continuously compares stated confidence levels against realized performance, adjusting position sizing when divergence exceeds tolerance.

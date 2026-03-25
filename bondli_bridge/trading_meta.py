@@ -1,14 +1,22 @@
 """
-trading_meta.py — Level 2: The Trading Watcher
+trading_meta.py — Level 2: Meta-Cognitive Oversight Layer
 
-Extends BRAD's MetaCognitiveLoop for trading.
-Monitors the self-model's trading performance, detects pathological
-patterns (overconfidence, revenge trading, regime blindness), and
-forces strategy switches through downward causation.
+Extends the base MetaCognitiveLoop with trading-specific behavioral
+monitoring. Detects systematic decision-making errors (cognitive biases)
+through pattern analysis and applies corrective interventions via
+downward causation on Level 1.
 
-This is where BRAD's strange loop architecture earns its keep:
-the system watches itself trade, and when it detects it's failing,
-it restructures its own decision-making before more money is lost.
+Detected blind spots include:
+- Overconfidence bias (position sizing inflated relative to base rate)
+- Revenge trading (rapid re-entry following realized losses)
+- Regime blindness (strategy-regime mismatch persistence)
+- Loss aversion (excessive hold duration on deteriorating positions)
+- Recency bias (over-weighting recent outcomes vs historical base rate)
+
+When triggered, the meta-cognitive layer restructures the self-model's
+strategy selection, confidence calibration, or trading state. This
+downward causation constitutes the strange loop: a higher-order
+representation modifying the lower-order process that produced it.
 """
 
 from typing import Dict, List, Optional

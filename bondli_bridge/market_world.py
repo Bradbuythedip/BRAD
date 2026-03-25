@@ -1,12 +1,14 @@
 """
-market_world.py — Level 0: The Market Floor
+market_world.py — Level 0: Market Perception Layer
 
-Extends BRAD's WorldModel to represent the Solana memecoin market.
-Tokens, wallets, liquidity pools, and market conditions are entities.
-Beliefs are market hypotheses. Predictions are price/rug forecasts.
+Extends the base WorldModel to represent the Solana token market as a
+structured knowledge graph. Tokens, wallets, liquidity pools, and market
+regime classifications are represented as first-class entities with
+typed relations and confidence-weighted beliefs.
 
-The SELF entity becomes "BRAD-as-trader" — a representation of the
-trading system's own state within the market it's observing.
+The SELF entity encodes the trading agent's own state within the market
+it observes, providing the foundational self-reference required for
+strange loop formation (Hofstadter, 1979).
 """
 
 from typing import Dict, List, Optional, Tuple
@@ -120,12 +122,12 @@ class MarketWorldModel(WorldModel):
     """
     Level 0 of the trading cognitive hierarchy.
 
-    Extends BRAD's world model with:
-    - Token entities from Bondli's scanner
-    - Smart money wallet entities
-    - Market regime as a persistent entity
-    - Score-based attention weighting
-    - Trading-specific predictions
+    Extends the base world model with domain-specific constructs:
+    - Token entities derived from Bondli's ML scoring pipeline
+    - Smart money wallet entities with profitability profiles
+    - Market regime as a persistent, updateable entity
+    - Score-based attention weighting via salience computation
+    - Automatic belief generation from strong market signals
     """
 
     def __init__(self, config=None):
