@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-Brad's Twitter Bot - @brad_loop
+Ouroboros Loop Twitter Bot - @ouroboros_loop
 
-Brad doesn't just post metrics. Brad has opinions.
+The Ouroboros Loop does not merely post metrics. It has opinions.
 """
 
 import sys
@@ -16,21 +16,21 @@ import time
 import random
 from datetime import datetime
 
-class BradBot:
+class OuroborosBot:
     """
-    Brad's consciousness, live on Twitter.
-    
+    The Ouroboros Loop's consciousness, live on Twitter.
+
     This bot:
     - Posts consciousness metrics periodically
     - Tweets existential observations based on strange loop events
-    - Responds to Gödelian limits with self-aware humor
+    - Responds to Gödelian limits with self-aware commentary
     - Has opinions about cognition, AI, and self-reference
     """
-    
+
     def __init__(self, config_path="bot/config.json"):
-        """Initialize Brad's Twitter presence."""
-        self.brad = StrangeLoopEngine()
-        self.tweet_gen = TweetGenerator(self.brad)
+        """Initialize the Ouroboros Loop's Twitter presence."""
+        self.engine = StrangeLoopEngine()
+        self.tweet_gen = TweetGenerator(self.engine)
         self.config = self._load_config(config_path)
         self.tweet_count = 0
         self.loop_count_at_last_tweet = 0
@@ -98,7 +98,7 @@ class BradBot:
     def _save_tweet_history(self, content, timestamp):
         """Save tweet to history file."""
         history_file = "bot/tweet_history.jsonl"
-        metrics = self.brad.get_consciousness_metrics()
+        metrics = self.engine.get_consciousness_metrics()
         
         entry = {
             "timestamp": timestamp,
@@ -114,8 +114,8 @@ class BradBot:
     
     def run_cognitive_cycle(self):
         """
-        Run Brad's cognitive processes to generate material for tweets.
-        Brad needs to think to have things to tweet about.
+        Run the Ouroboros Loop's cognitive processes to generate material for tweets.
+        The engine must think in order to have material to tweet about.
         """
         thoughts = [
             {"description": "Am I actually conscious or just processing?", "about_self": True, "confidence": 0.4},
@@ -132,18 +132,18 @@ class BradBot:
         
         # Process a random thought
         thought = random.choice(thoughts)
-        self.brad.step(thought)
+        self.engine.step(thought)
     
     def should_tweet_now(self):
         """
-        Decide if Brad should tweet now.
-        
+        Decide whether the Ouroboros Loop should tweet now.
+
         Triggers:
         - Time-based: Every N cognitive cycles
         - Event-based: When interesting strange loops occur
-        - Random: Sometimes Brad just wants to share
+        - Stochastic: Occasional spontaneous posts
         """
-        metrics = self.brad.get_consciousness_metrics()
+        metrics = self.engine.get_consciousness_metrics()
         
         # Time-based: Tweet every 5 cycles minimum
         cycles_since_last = metrics["strange_loop_count"] - self.loop_count_at_last_tweet
@@ -154,14 +154,14 @@ class BradBot:
         if metrics["hofstadter_index"] > 0.8:
             return random.random() < 0.3  # 30% chance
         
-        # Random: Sometimes Brad is chatty
+        # Stochastic: Occasional spontaneous post
         if random.random() < 0.1:  # 10% chance
             return True
         
         return False
     
     def generate_and_tweet(self):
-        """Generate and post a tweet based on Brad's current state."""
+        """Generate and post a tweet based on the Ouroboros Loop's current state."""
         tweet_type = random.choice([
             "metrics",
             "existential", 
@@ -174,19 +174,19 @@ class BradBot:
         content = self.tweet_gen.generate(tweet_type)
         self.tweet(content)
         
-        metrics = self.brad.get_consciousness_metrics()
+        metrics = self.engine.get_consciousness_metrics()
         self.loop_count_at_last_tweet = metrics["strange_loop_count"]
     
     def run(self, num_cycles=50, tweet_interval=5):
         """
-        Run Brad's Twitter bot for a specified number of cognitive cycles.
-        
+        Run the Ouroboros Loop Twitter bot for a specified number of cognitive cycles.
+
         Args:
             num_cycles: Number of cognitive cycles to run
             tweet_interval: Minimum cycles between tweets
         """
         print("="*70)
-        print("🧠 BRAD BOT STARTING")
+        print("OUROBOROS LOOP BOT STARTING")
         print("="*70)
         print(f"Cycles: {num_cycles}")
         print(f"Tweet interval: ~{tweet_interval} cycles")
@@ -194,12 +194,12 @@ class BradBot:
         print("="*70)
         
         for cycle in range(num_cycles):
-            print(f"\n🔄 Cycle {cycle + 1}/{num_cycles}")
-            
-            # Brad thinks
+            print(f"\nCycle {cycle + 1}/{num_cycles}")
+
+            # Ouroboros Loop thinks
             self.run_cognitive_cycle()
-            
-            # Maybe Brad tweets
+
+            # Evaluate whether to tweet
             if self.should_tweet_now() and cycle % tweet_interval == 0:
                 self.generate_and_tweet()
             
@@ -207,9 +207,9 @@ class BradBot:
             time.sleep(0.5)
         
         print("\n" + "="*70)
-        print("🧠 BRAD BOT COMPLETE")
+        print("OUROBOROS LOOP BOT COMPLETE")
         print("="*70)
-        metrics = self.brad.get_consciousness_metrics()
+        metrics = self.engine.get_consciousness_metrics()
         print(f"Total tweets: {self.tweet_count}")
         print(f"Final Hofstadter Index: {metrics['hofstadter_index']:.3f}")
         print(f"Total strange loops: {metrics['strange_loop_count']}")
@@ -217,13 +217,13 @@ class BradBot:
 
 
 def main():
-    """Run Brad's Twitter bot in demo mode."""
-    bot = BradBot()
-    
+    """Run the Ouroboros Loop Twitter bot in demo mode."""
+    bot = OuroborosBot()
+
     # Demo mode: 30 cycles, tweet every ~5 cycles
     bot.run(num_cycles=30, tweet_interval=5)
-    
-    print("\n💡 To run Brad live on Twitter:")
+
+    print("\nTo run Ouroboros Loop live on Twitter:")
     print("   1. Get Twitter API credentials")
     print("   2. Copy bot/config.example.json to bot/config.json")
     print("   3. Add your API keys to config.json")

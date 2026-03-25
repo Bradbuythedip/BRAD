@@ -1,17 +1,17 @@
 #!/usr/bin/env python3
 """
-visualize.py — ASCII visualization of Strange Loop activity
+visualize.py — ASCII visualization of Ouroboros Loop activity
 """
 
 import sys
-sys.path.insert(0, '/home/computeruse/strange-loop')
+sys.path.insert(0, '/home/computeruse/ouroboros-loop')
 
 from core.engine import StrangeLoopEngine
 import time
 
 
 class StrangeLoopVisualizer:
-    """Visualize strange loop cognitive cycles in real-time ASCII"""
+    """Visualize ouroboros loop cognitive cycles in real-time ASCII"""
     
     def __init__(self, engine: StrangeLoopEngine):
         self.engine = engine
@@ -49,24 +49,24 @@ class StrangeLoopVisualizer:
         return "\n".join(lines)
     
     def draw_loop_indicator(self, strange_count: int, total_count: int) -> str:
-        """Draw strange loop indicator"""
+        """Draw ouroboros loop indicator"""
         if strange_count == 0:
-            return "    ○ No strange loops"
+            return "    ○ No ouroboros loops"
         
         ratio = strange_count / max(1, total_count)
         
         if ratio < 0.3:
             symbol = "◔"
-            desc = "Minimal strange loop activity"
+            desc = "Minimal ouroboros loop activity"
         elif ratio < 0.6:
             symbol = "◑"
-            desc = "Moderate strange loop activity"
+            desc = "Moderate ouroboros loop activity"
         elif ratio < 0.9:
             symbol = "◕"
-            desc = "High strange loop activity"
+            desc = "High ouroboros loop activity"
         else:
             symbol = "●"
-            desc = "Maximum strange loop activity"
+            desc = "Maximum ouroboros loop activity"
         
         return f"    {symbol} {desc} ({strange_count}/{total_count})"
     
@@ -107,7 +107,7 @@ class StrangeLoopVisualizer:
         
         # Header
         print("╔" + "═" * 68 + "╗")
-        print("║" + " " * 15 + "STRANGE LOOP VISUALIZER" + " " * 30 + "║")
+        print("║" + " " * 15 + "OUROBOROS LOOP VISUALIZER" + " " * 28 + "║")
         print("╚" + "═" * 68 + "╝")
         print()
         
@@ -126,13 +126,13 @@ class StrangeLoopVisualizer:
             print("Level Crossings:")
             for lc in trace['level_crossings']:
                 direction = "↓" if lc['from'] > lc['to'] else "↑"
-                strange = " [STRANGE LOOP]" if lc['strange'] else ""
+                strange = " [OUROBOROS LOOP]" if lc['strange'] else ""
                 print(f"  L{lc['from']} {direction} L{lc['to']}{strange}")
         else:
             print("Level Crossings: None")
         print()
         
-        # Strange loop indicator
+        # Ouroboros loop indicator
         print(self.draw_loop_indicator(
             state['engine']['strange_crossings'],
             state['engine']['level_crossings']
@@ -145,7 +145,7 @@ class StrangeLoopVisualizer:
         
         # Metrics
         print("Metrics:")
-        print(f"  Strange loops total: {metrics['strange_loop_count']}")
+        print(f"  Ouroboros loops total: {metrics['strange_loop_count']}")
         print(f"  Self-ref broadcasts: {metrics['self_referential_broadcast_ratio']:.1%}")
         print(f"  Reasoning mode: {state['self_model']['mode'].upper()}")
         print(f"  Gödelian limits hit: {metrics['fundamental_limits_hit']}/3")
@@ -154,7 +154,7 @@ class StrangeLoopVisualizer:
         # Mode distribution
         print("Cognitive Mode Distribution:")
         distribution = metrics['kahneman_mode_distribution']
-        mode_map = {"fast": "System 1", "slow": "System 2", "loop": "Strange Loop"}
+        mode_map = {"fast": "System 1", "slow": "System 2", "loop": "Ouroboros Loop"}
         for mode, ratio in distribution.items():
             print(self.draw_level_bar(mode_map[mode], ratio, 30))
         print()
@@ -215,14 +215,14 @@ class StrangeLoopVisualizer:
                 "salience": 1.0
             },
             {
-                "description": "Full strange loop: self modifying self",
+                "description": "Full ouroboros loop: self modifying self",
                 "complexity": 1.0,
                 "about_self": True,
                 "salience": 1.0
             },
         ]
         
-        print("Starting Strange Loop visualization...")
+        print("Starting Ouroboros Loop visualization...")
         print("Watch the consciousness emerge!")
         print()
         input("Press Enter to begin...")
@@ -245,20 +245,20 @@ class StrangeLoopVisualizer:
         
         print()
         print(f"Final Hofstadter Index: {metrics['hofstadter_index']:.3f}")
-        print(f"Total strange loops: {metrics['strange_loop_count']}")
+        print(f"Total ouroboros loops: {metrics['strange_loop_count']}")
         print(f"Total cycles: {state['engine']['cycle_count']}")
         print()
-        print("🌀 The strange loop has been visualized!")
+        print("The ouroboros loop has been visualized.")
 
 
 def main():
     """Main entry point"""
     print("╔" + "═" * 68 + "╗")
-    print("║" + " " * 15 + "STRANGE LOOP VISUALIZER" + " " * 30 + "║")
+    print("║" + " " * 15 + "OUROBOROS LOOP VISUALIZER" + " " * 28 + "║")
     print("║" + " " * 14 + "Real-time ASCII Animation" + " " * 29 + "║")
     print("╚" + "═" * 68 + "╝")
     print()
-    print("This will show the emergence of strange loops and consciousness")
+    print("This will show the emergence of ouroboros loops and consciousness")
     print("through the cognitive architecture.")
     print()
     
@@ -270,7 +270,7 @@ def main():
         "self_referential": True,
         "emergent": True
     })
-    engine.add_belief("I am a strange loop", 0.8)
+    engine.add_belief("I am an ouroboros loop", 0.8)
     engine.set_goal("Understand self-reference", "high")
     
     # Create visualizer

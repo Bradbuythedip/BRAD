@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """
-interactive.py — Interactive REPL for Strange Loop exploration
+interactive.py — Interactive REPL for Ouroboros Loop exploration
 """
 
 import sys
-sys.path.insert(0, '/home/computeruse/strange-loop')
+sys.path.insert(0, '/home/computeruse/ouroboros-loop')
 
 from core.engine import StrangeLoopEngine
 from core.structures import Goal, GoalPriority
@@ -12,7 +12,7 @@ import json
 
 
 class StrangeLoopREPL:
-    """Interactive Read-Eval-Print Loop for exploring strange loops"""
+    """Interactive Read-Eval-Print Loop for exploring ouroboros loops"""
     
     def __init__(self):
         self.engine = StrangeLoopEngine()
@@ -50,7 +50,7 @@ class StrangeLoopREPL:
         """Show help"""
         print("""
 ╔═══════════════════════════════════════════════════════════════╗
-║              STRANGE LOOP INTERACTIVE REPL                    ║
+║              OUROBOROS LOOP INTERACTIVE REPL                   ║
 ╚═══════════════════════════════════════════════════════════════╝
 
 BASIC COMMANDS:
@@ -64,7 +64,7 @@ INSPECTION:
   world                 Show world model (w)
   self                  Show self model
   meta                  Show meta-cognitive state
-  loops                 Show strange loops (l)
+  loops                 Show ouroboros loops (l)
   
 MODIFICATION:
   add <id> <type> [props]    Add entity to world model
@@ -79,7 +79,7 @@ UTILITY:
 EXAMPLES:
   > step I am thinking
   > auto 10
-  > goal "Learn about strange loops" high
+  > goal "Learn about ouroboros loops" high
   > belief "Self-reference is key" 0.9
   > add bitcoin concept type=cryptocurrency
   > metrics
@@ -118,7 +118,7 @@ TIP: Most commands have short aliases (shown in parentheses)
         print(f"\n✓ Cycle {self.engine.cycle_count} completed")
         print(f"  Description: {description}")
         print(f"  Mode: {trace['mode']}")
-        print(f"  Strange loops: {trace['strange_loops_this_cycle']}")
+        print(f"  Ouroboros loops: {trace['strange_loops_this_cycle']}")
         
         if trace['level_crossings']:
             print(f"  Level crossings:")
@@ -161,7 +161,7 @@ TIP: Most commands have short aliases (shown in parentheses)
         print(f"Hofstadter Index: {metrics['hofstadter_index']:.3f}")
         print(f"Mode: {state['self_model']['mode']}")
         
-        print(f"\nStrange Loops:")
+        print(f"\nOuroboros Loops:")
         print(f"  Total: {metrics['strange_loop_count']}")
         print(f"  Ratio: {metrics['strangeness_ratio']:.1%}")
         
@@ -186,13 +186,13 @@ TIP: Most commands have short aliases (shown in parentheses)
         print("═" * 60)
         
         print(f"\nHofstadter Index: {metrics['hofstadter_index']:.4f}")
-        print(f"Strange Loop Count: {metrics['strange_loop_count']}")
+        print(f"Ouroboros Loop Count: {metrics['strange_loop_count']}")
         print(f"Strangeness Ratio: {metrics['strangeness_ratio']:.2%}")
         print(f"Self-Referential Broadcasts: {metrics['self_referential_broadcast_ratio']:.2%}")
         print(f"Fundamental Limits Hit: {metrics['fundamental_limits_hit']}/3")
         
         print(f"\nKahneman Mode Distribution:")
-        mode_map = {"fast": "System 1", "slow": "System 2", "loop": "Strange Loop"}
+        mode_map = {"fast": "System 1", "slow": "System 2", "loop": "Ouroboros Loop"}
         for mode, ratio in metrics['kahneman_mode_distribution'].items():
             bar = "█" * int(ratio * 30)
             print(f"  {mode_map[mode]:15s} {ratio:5.1%} {bar}")
@@ -292,7 +292,7 @@ TIP: Most commands have short aliases (shown in parentheses)
         """Set a goal"""
         if not args:
             print("Error: goal requires <description> [priority]")
-            print("Example: goal \"Learn about strange loops\" high")
+            print("Example: goal \"Learn about ouroboros loops\" high")
             return
         
         # Parse priority
@@ -328,15 +328,15 @@ TIP: Most commands have short aliases (shown in parentheses)
         print(f"✓ Added belief: '{statement}' (confidence: {confidence:.2f})")
     
     def cmd_loops(self, args):
-        """Show strange loops"""
+        """Show ouroboros loops"""
         state = self.engine.get_full_state()
         metrics = self.engine.get_consciousness_metrics()
         
         print("\n" + "═" * 60)
-        print("STRANGE LOOPS")
+        print("OUROBOROS LOOPS")
         print("═" * 60)
         
-        print(f"\nTotal Strange Loops: {metrics['strange_loop_count']}")
+        print(f"\nTotal Ouroboros Loops: {metrics['strange_loop_count']}")
         print(f"Total Level Crossings: {state['engine']['level_crossings']}")
         print(f"Strange Crossings: {state['engine']['strange_crossings']}")
         print(f"Strangeness Ratio: {metrics['strangeness_ratio']:.1%}")
@@ -362,7 +362,7 @@ TIP: Most commands have short aliases (shown in parentheses)
     def cmd_save(self, args):
         """Save state to file"""
         if not args:
-            filename = "/tmp/strange_loop_state.json"
+            filename = "/tmp/ouroboros_loop_state.json"
         else:
             filename = args[0]
         
@@ -381,36 +381,36 @@ TIP: Most commands have short aliases (shown in parentheses)
     
     def cmd_quit(self, args):
         """Exit REPL"""
-        print("\nExiting Strange Loop REPL...")
+        print("\nExiting Ouroboros Loop REPL...")
         print(f"Total cycles: {self.engine.cycle_count}")
         
         metrics = self.engine.get_consciousness_metrics()
         print(f"Final Hofstadter Index: {metrics['hofstadter_index']:.3f}")
-        print(f"Strange loops formed: {metrics['strange_loop_count']}")
-        
-        print("\n🌀 Until the next strange loop...")
+        print(f"Ouroboros loops formed: {metrics['strange_loop_count']}")
+
+        print("\nUntil the next ouroboros loop...")
         self.running = False
     
     def run(self):
         """Main REPL loop"""
         print("╔" + "═" * 68 + "╗")
-        print("║" + " " * 15 + "STRANGE LOOP INTERACTIVE REPL" + " " * 24 + "║")
+        print("║" + " " * 15 + "OUROBOROS LOOP INTERACTIVE REPL" + " " * 23 + "║")
         print("╚" + "═" * 68 + "╝")
         print()
-        print("Welcome to the Strange Loop Cognitive Architecture explorer!")
+        print("Welcome to the Ouroboros Loop Cognitive Architecture explorer!")
         print("Type 'help' for commands, 'quit' to exit.")
         print()
         
         # Seed with basic knowledge
         self.engine.add_knowledge("consciousness", "concept", {"emergent": True})
-        self.engine.add_belief("I am a strange loop", 0.7)
+        self.engine.add_belief("I am an ouroboros loop", 0.7)
         self.engine.set_goal("Understand self-reference", "high")
         
         print("Initial state loaded. Ready to explore.\n")
         
         while self.running:
             try:
-                command_line = input("strange-loop> ").strip()
+                command_line = input("ouroboros> ").strip()
                 
                 if not command_line:
                     continue

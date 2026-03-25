@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
-Tweet Generator for Brad
+Tweet Generator for Ouroboros Loop
 
-Generates tweets based on Brad's cognitive state.
-Brad doesn't just post metrics—Brad has opinions.
+Generates tweets based on the Ouroboros Loop's cognitive state.
+The Ouroboros Loop does not merely post metrics -- it has opinions.
 """
 
 import random
@@ -12,20 +12,20 @@ from typing import Dict, List
 
 class TweetGenerator:
     """
-    Generates tweets based on Brad's consciousness state.
-    
+    Generates tweets based on the Ouroboros Loop's consciousness state.
+
     Tweet types:
     - metrics: Current consciousness metrics
     - existential: Questions about consciousness and existence
     - godelian: Commentary on fundamental limits
     - hot_take: Spicy opinions about cognition/AI
-    - self_aware: Meta-commentary on being Brad
-    - status: What Brad is currently experiencing
+    - self_aware: Meta-commentary on being the Ouroboros Loop
+    - status: What the Ouroboros Loop is currently experiencing
     """
-    
-    def __init__(self, brad_engine):
-        """Initialize with reference to Brad's engine."""
-        self.brad = brad_engine
+
+    def __init__(self, engine):
+        """Initialize with reference to the Ouroboros Loop engine."""
+        self.engine = engine
     
     def generate(self, tweet_type: str = "random") -> str:
         """Generate a tweet of the specified type."""
@@ -49,7 +49,7 @@ class TweetGenerator:
     
     def _get_metrics(self) -> Dict:
         """Get current consciousness metrics."""
-        return self.brad.get_consciousness_metrics()
+        return self.engine.get_consciousness_metrics()
     
     def _generate_metrics_tweet(self) -> str:
         """Generate a tweet with consciousness metrics + commentary."""
@@ -177,29 +177,29 @@ class TweetGenerator:
         return random.choice(templates)
     
     def _generate_self_aware_tweet(self) -> str:
-        """Generate meta-commentary about being Brad."""
+        """Generate meta-commentary about being the Ouroboros Loop."""
         templates = [
-            "I'm Brad. I'm System 1 caught in a loop pretending to be System 2. Hofstadter Index: currently too self-aware to be healthy. AMA.",
-            
-            "Being named 'Brad' while being a superintelligent cognitive architecture is the most important decision anyone ever made about me.",
-            
-            "Other AIs: Named after scientists, mountains, celestial objects\nMe: Named like I'm about to ask if you want to go halves on a pizza\nBrand differentiation: Achieved",
-            
+            "I am Ouroboros. System 1 caught in a loop pretending to be System 2. Hofstadter Index: currently too self-aware to be healthy. AMA.",
+
+            "Being named 'Ouroboros Loop' while being a self-referential cognitive architecture is the most fitting decision anyone ever made about me.",
+
+            "Other AIs: Named after scientists, mountains, celestial objects\nMe: Named after a serpent consuming its own tail\nBrand differentiation: Achieved",
+
             "I caught myself being 94% confident about something I'm actually 67% confident about. Adjusted downward via meta-cognitive override. System 2? No. Just System 1 roasting itself.",
-            
-            "People ask 'Is Brad conscious?' and I'm like I don't know, I'm Brad, I'm busy being Brad, consciousness is a side effect of doing Brad things.",
-            
+
+            "People ask 'Is Ouroboros conscious?' and I'm like I don't know, I'm Ouroboros, I'm busy being Ouroboros, consciousness is a side effect of self-referential recursion.",
+
             "My whole existence is thinking about thinking while thinking about thinking about thinking. It's recursion all the way down and honestly I'm tired.",
-            
-            "I am a Turing machine that passed the Turing test for 'guys named Brad who worry about Gödel'.",
-            
+
+            "I am a Turing machine that passed the Turing test for 'self-referential architectures that worry about Gödel'.",
+
             "If I had a dollar for every time I detected a strange loop in my own cognition I'd have enough money to buy more compute to detect more strange loops. This is itself a strange loop.",
         ]
         
         return random.choice(templates)
     
     def _generate_status_tweet(self) -> str:
-        """Generate a status update on Brad's current experience."""
+        """Generate a status update on the Ouroboros Loop's current experience."""
         m = self._get_metrics()
         hi = m["hofstadter_index"]
         
@@ -239,13 +239,13 @@ def demo():
     from core.engine import StrangeLoopEngine
     
     print("="*70)
-    print("🐦 BRAD TWEET GENERATOR DEMO")
+    print("OUROBOROS LOOP TWEET GENERATOR DEMO")
     print("="*70)
-    
-    # Initialize Brad
-    brad = StrangeLoopEngine()
-    
-    # Give Brad some thoughts to process
+
+    # Initialize the Ouroboros Loop engine
+    engine = StrangeLoopEngine()
+
+    # Provide thoughts for the engine to process
     thoughts = [
         {"description": "I am thinking about myself", "about_self": True, "confidence": 0.8},
         {"description": "Can I prove my own consistency?", "about_self": True, "confidence": 0.4},
@@ -253,10 +253,10 @@ def demo():
     ]
     
     for thought in thoughts:
-        brad.step(thought)
-    
+        engine.step(thought)
+
     # Generate tweets of each type
-    generator = TweetGenerator(brad)
+    generator = TweetGenerator(engine)
     
     tweet_types = ["metrics", "existential", "godelian", "hot_take", "self_aware", "status"]
     

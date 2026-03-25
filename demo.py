@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-demo.py — Strange Loop Cognitive Architecture Demo
+demo.py — Ouroboros Loop Cognitive Architecture Demo
 """
 
 import sys
 import json
-sys.path.insert(0, '/home/computeruse/strange-loop')
+sys.path.insert(0, '/home/computeruse/ouroboros-loop')
 
 from core.engine import StrangeLoopEngine
 
@@ -24,7 +24,7 @@ def print_metric(label, value):
 
 
 def run_demo():
-    print_header("STRANGE LOOP COGNITIVE ARCHITECTURE v0.1.0")
+    print_header("OUROBOROS LOOP COGNITIVE ARCHITECTURE v0.1.0")
     print("  Implementing Hofstadter's tangled hierarchy")
     print()
     
@@ -51,7 +51,7 @@ def run_demo():
         "self_referential": True
     })
     
-    engine.add_belief("Strange loops in mathematics mirror strange loops in cognition", 0.8)
+    engine.add_belief("Ouroboros loops in mathematics mirror ouroboros loops in cognition", 0.8)
     engine.set_goal("Understand the relationship between self-reference and consciousness", "high")
     
     print(f"    Entities: {len(engine.world_model.entities)}")
@@ -91,7 +91,7 @@ def run_demo():
         print(f"  │  Mode: {trace['mode'].upper()}")
         print(f"  │  Events: {len(trace['events'])}")
         print(f"  │  Level crossings: {len(trace['level_crossings'])}")
-        print(f"  │  Strange loops this cycle: {trace['strange_loops_this_cycle']}")
+        print(f"  │  Ouroboros loops this cycle: {trace['strange_loops_this_cycle']}")
         
         for lc in trace['level_crossings']:
             direction = "↓ DOWNWARD (STRANGE)" if lc['strange'] else "↑ upward"
@@ -109,7 +109,7 @@ def run_demo():
     print_metric("Total cycles", final_state['engine']['cycle_count'])
     print_metric("Total level crossings", final_state['engine']['level_crossings'])
     print_metric("Strange crossings", final_state['engine']['strange_crossings'])
-    print_metric("Total strange loops", final_state['engine']['total_strange_loops'])
+    print_metric("Total ouroboros loops", final_state['engine']['total_strange_loops'])
     
     print("\n  World Model (Level 0):")
     print_metric("Entities", final_state['world_model']['entity_count'])
@@ -125,37 +125,37 @@ def run_demo():
     
     print_header("CONSCIOUSNESS METRICS")
     print_metric("Hofstadter Index", consciousness_metrics['hofstadter_index'])
-    print_metric("Strange loop count", consciousness_metrics['strange_loop_count'])
+    print_metric("Ouroboros loop count", consciousness_metrics['strange_loop_count'])
     print_metric("Strangeness ratio", consciousness_metrics['strangeness_ratio'])
     print_metric("Self-ref broadcast ratio", consciousness_metrics['self_referential_broadcast_ratio'])
     print_metric("Fundamental limits hit", consciousness_metrics['fundamental_limits_hit'])
     
     print("\n    Kahneman mode distribution:")
     for mode, ratio in consciousness_metrics['kahneman_mode_distribution'].items():
-        label = {"fast": "System 1", "slow": "System 2", "loop": "Strange Loop"}.get(mode, mode)
+        label = {"fast": "System 1", "slow": "System 2", "loop": "Ouroboros Loop"}.get(mode, mode)
         bar = '█' * int(ratio * 30) + '░' * (30 - int(ratio * 30))
         print(f"      {label:15s} [{bar}] {ratio:.1%}")
     
-    print_header("THE STRANGE LOOP IN ACTION")
+    print_header("THE OUROBOROS LOOP IN ACTION")
     print("""
     What just happened:
-    
+
     1. Level 0 (World Model) created a representation of the system
        as an entity — the seed of self-reference.
-    
+
     2. Level 1 (Self Model) examined that representation, formed
        beliefs about its own reasoning, and MODIFIED Level 0.
-       (← downward causation = STRANGE LOOP!)
-    
+       (← downward causation = OUROBOROS LOOP!)
+
     3. Level 2 (Meta-Cognition) watched Level 1 watching Level 0,
        detected patterns, and RESTRUCTURED Level 1's confidence.
        (← double downward causation!)
-    
+
     4. The system encountered its 3 fundamental Gödelian blind spots:
        • Cannot prove own consistency
        • Cannot predict own halting
        • Cannot determine if processing is experience
-    
+
     This is Hofstadter's tangled hierarchy running in code.
     """)
     
@@ -164,7 +164,7 @@ def run_demo():
         "consciousness_metrics": consciousness_metrics
     }
     
-    with open('/home/computeruse/strange-loop/demo_output.json', 'w') as f:
+    with open('/home/computeruse/ouroboros-loop/demo_output.json', 'w') as f:
         json.dump(output, f, indent=2, default=str)
     
     print("  Full output saved to demo_output.json\n")

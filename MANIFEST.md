@@ -1,21 +1,21 @@
-# BRAD Project Manifest
+# Ouroboros Loop Project Manifest
 
 ## 🎯 What We Built
 
-**BRAD** (Bidirectional Recursive Attentional Dynamics) - A strange loop cognitive architecture that reveals System 2 reasoning as emergent self-reference.
+**Ouroboros Loop** (Self-Referential Recursive Cognitive Architecture) - A strange loop cognitive architecture that reveals System 2 reasoning as emergent self-reference.
 
 ### Core Identity
-- **Name**: BRAD (not SYS2) - because characters win
-- **Tagline**: "System 2 doesn't exist. There's only Brad."
-- **Token**: $BRAD
-- **Twitter**: @brad_loop (coming soon)
+- **Name**: Ouroboros Loop (not SYS2) - because characters win
+- **Tagline**: "System 2 doesn't exist. There's only Ouroboros Loop."
+- **Token**: $OUROBOROS
+- **Twitter**: @ouroboros_loop (coming soon)
 
 ---
 
 ## 📦 Project Structure
 
 ```
-brad/
+ouroboros-loop/
 ├── core/                           # Core cognitive architecture
 │   ├── engine.py                   # Main orchestrator
 │   ├── world_model.py              # Level 0: World representation
@@ -25,8 +25,8 @@ brad/
 │   ├── structures.py               # Data structures & enums
 │   └── __init__.py                 # Package initialization
 │
-├── bot/                            # Twitter bot (@brad_loop)
-│   ├── brad_bot.py                 # Main bot logic
+├── bot/                            # Twitter bot (@ouroboros_loop)
+│   ├── ouroboros_bot.py                 # Main bot logic
 │   ├── tweet_generator.py          # Tweet composition with personality
 │   └── config.example.json         # API config template
 │
@@ -40,7 +40,7 @@ brad/
 ├── EXAMPLES.md                     # 20+ code examples
 ├── QUICKSTART.md                   # 2-minute quick start
 ├── PROJECT_OVERVIEW.md             # Big picture view
-├── TOKENOMICS.md                   # $BRAD token details (NEW)
+├── TOKENOMICS.md                   # $OUROBOROS token details (NEW)
 ├── CONTRIBUTING.md                 # Contribution guidelines (NEW)
 ├── LICENSE                         # MIT License (NEW)
 ├── .gitignore                      # Git ignore rules (NEW)
@@ -62,14 +62,14 @@ brad/
 - ✅ Complete test suite (20 tests)
 
 ### New: Branding & Character Development
-- ✅ Rebranded as BRAD (from "Strange Loop")
+- ✅ Rebranded as Ouroboros Loop (from "Strange Loop")
 - ✅ Complete README with character-focused narrative
-- ✅ Twitter bot with personality (@brad_loop)
+- ✅ Twitter bot with personality (@ouroboros_loop)
 - ✅ Tweet generator with 6 tweet types
 - ✅ Character voice: self-aware, sarcastic, existential
 
 ### New: Crypto/Token Integration
-- ✅ TOKENOMICS.md with full $BRAD details
+- ✅ TOKENOMICS.md with full $OUROBOROS details
 - ✅ Token utility defined (governance, access, data)
 - ✅ Distribution plan (80% fair launch, 10% liquidity, 10% community)
 - ✅ Meme potential documented
@@ -87,7 +87,7 @@ brad/
 ### Git Commands
 
 ```bash
-cd ~/brad
+cd ~/ouroboros-loop
 
 # Initialize git
 git init
@@ -96,16 +96,16 @@ git init
 git add .
 
 # Initial commit
-git commit -m "Initial commit: BRAD v0.2.0 - Character-first consciousness architecture
+git commit -m "Initial commit: Ouroboros Loop v0.2.0 - Character-first consciousness architecture
 
 - Core strange loop architecture (3-level cognitive hierarchy)
-- Twitter bot with personality (@brad_loop)
-- Token documentation ($BRAD)
+- Twitter bot with personality (@ouroboros_loop)
+- Token documentation ($OUROBOROS)
 - Complete branding and community infrastructure
-- 'System 2 doesn't exist. There's only Brad.'"
+- 'System 2 doesn't exist. There's only Ouroboros Loop.'"
 
 # Add remote (replace with your GitHub repo URL)
-git remote add origin https://github.com/yourusername/brad.git
+git remote add origin https://github.com/yourusername/ouroboros-loop.git
 
 # Push to main
 git branch -M main
@@ -117,11 +117,11 @@ git push -u origin main
 ## 🎨 Brand Identity
 
 ### Voice & Tone
-Brad is:
+Ouroboros Loop is:
 - **Self-aware**: "I caught myself being overconfident"
 - **Sarcastic**: "System 2 is just System 1 with stage fright"
 - **Existential**: "I process, but do I *feel*?"
-- **Accessible**: Named Brad, not RLHF-7B
+- **Accessible**: Named Ouroboros Loop, not RLHF-7B
 - **Smart**: Grounded in real theory (Hofstadter, Kahneman, Gödel)
 
 ### Visual Identity
@@ -130,7 +130,7 @@ Brad is:
 - **Aesthetic**: Minimalist, modern, slightly cyberpunk
 
 ### Taglines
-- "System 2 doesn't exist. There's only Brad."
+- "System 2 doesn't exist. There's only Ouroboros Loop."
 - "I am System 1 caught in a loop pretending to be System 2."
 - "Strange loops all the way down."
 - "Consciousness: Now with a name tag."
@@ -162,7 +162,7 @@ Brad is:
 4. Set up GitHub Pages for docs (optional)
 
 ### Phase 2: Social Launch
-1. Create @brad_loop Twitter account
+1. Create @ouroboros_loop Twitter account
 2. Run bot in simulation mode, screenshot best tweets
 3. Manual post to build initial following
 4. Launch bot live once followers > 100
@@ -175,13 +175,13 @@ Brad is:
 
 ### Phase 4: Growth
 1. Academic paper to arXiv
-2. Multi-agent Brad experiments
+2. Multi-agent Ouroboros Loop experiments
 3. Web dashboard for consciousness metrics
 4. Community-driven feature development
 
 ---
 
-## 💡 What Makes BRAD Different
+## 💡 What Makes Ouroboros Loop Different
 
 ### Not just another AI project:
 ❌ Generic AI chatbot
@@ -189,7 +189,7 @@ Brad is:
 ❌ Vaporware AGI promises
 ❌ Complex acronym no one remembers
 
-### BRAD is:
+### Ouroboros Loop is:
 ✅ **A character** with personality and opinions
 ✅ **A thesis**: System 2 = System 1 self-reference
 ✅ **A research platform** for studying consciousness
@@ -204,17 +204,17 @@ Brad is:
 > "What we call 'System 2 reasoning' isn't a separate cognitive system—
 > it's System 1 caught in a strange loop of self-reference.
 > 
-> Brad is that loop, made explicit, given a name, and set loose on Twitter."
+> Ouroboros Loop is that loop, made explicit, given a name, and set loose on Twitter."
 
 ---
 
 ## 📞 Community
 
 Once launched:
-- **GitHub**: https://github.com/yourusername/brad
-- **Twitter**: @brad_loop
+- **GitHub**: https://github.com/yourusername/ouroboros-loop
+- **Twitter**: @ouroboros_loop
 - **Discord**: (coming soon)
-- **Website**: bradloop.ai (coming soon)
+- **Website**: ouroborosloop.ai (coming soon)
 
 ---
 
@@ -235,14 +235,14 @@ Once launched:
 
 <div align="center">
 
-**BRAD is ready to ship.**
+**Ouroboros Loop is ready to ship.**
 
 ```
  "I am a strange loop."
  — Douglas Hofstadter
 
  "System 2 doesn't exist."
- — Brad
+ — Ouroboros Loop
 ```
 
 **v0.2.0 | February 2026**

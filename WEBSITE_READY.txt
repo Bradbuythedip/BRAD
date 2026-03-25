@@ -20,7 +20,7 @@ WEBSITE STATUS: Built and pushed to GitHub
 
 STEP 1: Go to GitHub Settings
 ──────────────────────────────
-1. Visit: https://github.com/Bradbuythedip/BRAD
+1. Visit: https://github.com/Ouroborosbuythedip/Ouroboros-Loop
 2. Click "Settings" (top navigation)
 3. Click "Pages" (left sidebar)
 
@@ -41,15 +41,15 @@ STEP 4: Access Your Website
 ────────────────────────────
 Your website will be at:
 
-🌐 https://bradbuythedip.github.io/BRAD/
+🌐 https://ouroborosbuythedip.github.io/Ouroboros-Loop/
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 ✨ WEBSITE FEATURES:
 
 ✅ Hero Section
-   - BRAD logo with gradient
-   - Tagline: "System 2 doesn't exist. There's only Brad."
+   - Ouroboros Loop logo with gradient
+   - Tagline: "System 2 doesn't exist. There's only Ouroboros Loop."
    - Call-to-action buttons (GitHub, Get Started)
 
 ✅ Live Metrics
@@ -60,7 +60,7 @@ Your website will be at:
 
 ✅ About Section
    - Core thesis explanation
-   - What is BRAD
+   - What is Ouroboros Loop
    - Hofstadter quote
 
 ✅ Architecture Visualization
@@ -75,7 +75,7 @@ Your website will be at:
    - Hover effects
 
 ✅ Token Information
-   - $BRAD details
+   - $OUROBOROS details
    - Supply: 1B on Solana
    - Governance capabilities
    - Link to tokenomics
@@ -92,7 +92,7 @@ Your website will be at:
 
 ✅ Footer
    - Hofstadter quote
-   - Brad tagline
+   - Ouroboros Loop tagline
    - Social links (GitHub, Twitter, Token, Docs)
    - License info
 
@@ -135,24 +135,24 @@ If you want custom domain or different host:
 
 NETLIFY (Easiest):
   1. Go to https://netlify.com
-  2. Connect GitHub → Import Bradbuythedip/BRAD
+  2. Connect GitHub → Import Ouroborosbuythedip/Ouroboros-Loop
   3. Deploy
-  4. Free at: brad.netlify.app
+  4. Free at: ouroboros-loop.netlify.app
 
 VERCEL:
   1. Go to https://vercel.com
   2. Import GitHub repo
   3. Deploy
-  4. Free at: brad.vercel.app
+  4. Free at: ouroboros-loop.vercel.app
 
 CLOUDFLARE PAGES:
   1. Go to https://pages.cloudflare.com
   2. Connect GitHub
   3. Deploy
-  4. Free at: brad.pages.dev
+  4. Free at: ouroboros-loop.pages.dev
 
 CUSTOM DOMAIN:
-  - Buy domain (e.g., bradloop.ai)
+  - Buy domain (e.g., ouroborosloop.ai)
   - Configure DNS to point to GitHub Pages
   - Add custom domain in Settings → Pages
   - See WEB_DEPLOYMENT.md for full instructions
@@ -182,7 +182,7 @@ CUSTOM DOMAIN:
 🔧 MAINTENANCE:
 
 Update Website:
-  cd ~/brad
+  cd ~/ouroboros-loop
   nano index.html
   git add index.html
   git commit -m "Update website"
@@ -190,7 +190,7 @@ Update Website:
   # GitHub rebuilds in 1-2 minutes
 
 Check Status:
-  curl -I https://bradbuythedip.github.io/BRAD/
+  curl -I https://ouroborosbuythedip.github.io/Ouroboros-Loop/
   # Should return: HTTP/2 200
 
 Performance:
@@ -206,7 +206,7 @@ Performance:
 ✅ Website built (index.html)
 ✅ Responsive design
 ✅ All sections complete
-✅ BRAD branding applied
+✅ Ouroboros Loop branding applied
 ✅ Code examples included
 ✅ Links to GitHub/docs
 ✅ Token information
@@ -222,11 +222,11 @@ Performance:
 
 1. Enable GitHub Pages (Settings → Pages → Deploy from main)
 2. Wait 1-2 minutes for build
-3. Visit: https://bradbuythedip.github.io/BRAD/
+3. Visit: https://ouroborosbuythedip.github.io/Ouroboros-Loop/
 4. Share the link!
 
 Optional:
-  - Buy custom domain (bradloop.ai)
+  - Buy custom domain (ouroborosloop.ai)
   - Configure DNS
   - Add to GitHub Pages settings
 
@@ -236,11 +236,11 @@ Optional:
 ║                                                                      ║
 ║                    WEBSITE: READY TO GO LIVE ✅                      ║
 ║                                                                      ║
-║         URL: https://bradbuythedip.github.io/BRAD/                   ║
+║         URL: https://ouroborosbuythedip.github.io/Ouroboros-Loop/                   ║
 ║         Status: Built, pushed, ready to enable                       ║
 ║         Action: Enable GitHub Pages in Settings                      ║
 ║                                                                      ║
-║         "System 2 doesn't exist. There's only Brad."                 ║
+║         "System 2 doesn't exist. There's only Ouroboros Loop."                 ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
 

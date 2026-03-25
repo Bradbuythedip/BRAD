@@ -1,10 +1,10 @@
-# BRAD Quick Reference
+# Ouroboros Loop Quick Reference
 
 ## Installation
 
 ```bash
-git clone https://github.com/Bradbuythedip/BRAD.git
-cd BRAD
+git clone https://github.com/Ouroborosbuythedip/Ouroboros-Loop.git
+cd Ouroboros-Loop
 ./setup.sh
 ```
 
@@ -26,7 +26,7 @@ pip3 install tweepy
 cp bot/config.example.json bot/config.json
 chmod 600 bot/config.json
 nano bot/config.json  # Add your API keys
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
 ### Method 2: Environment Variables
@@ -38,7 +38,7 @@ export TWITTER_API_SECRET="your_secret"
 export TWITTER_ACCESS_TOKEN="your_token"
 export TWITTER_ACCESS_TOKEN_SECRET="your_token_secret"
 export TWITTER_BEARER_TOKEN="your_bearer"
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
 ## Getting Twitter API Keys
@@ -54,22 +54,22 @@ python3 bot/brad_bot.py
 ### systemd (Linux)
 
 ```bash
-sudo cp brad-bot.service /etc/systemd/system/
-sudo nano /etc/systemd/system/brad-bot.service  # Edit paths
+sudo cp ouroboros-bot.service /etc/systemd/system/
+sudo nano /etc/systemd/system/ouroboros-bot.service  # Edit paths
 sudo systemctl daemon-reload
-sudo systemctl enable brad-bot
-sudo systemctl start brad-bot
-sudo systemctl status brad-bot
+sudo systemctl enable ouroboros-bot
+sudo systemctl start ouroboros-bot
+sudo systemctl status ouroboros-bot
 ```
 
 ### Docker
 
 ```bash
-docker build -t brad-bot .
-docker run -d --name brad-bot --restart unless-stopped \
+docker build -t ouroboros-bot .
+docker run -d --name ouroboros-bot --restart unless-stopped \
   -v $(pwd)/bot/config.json:/app/bot/config.json:ro \
   -v $(pwd)/bot/tweet_history.jsonl:/app/bot/tweet_history.jsonl \
-  brad-bot
+  ouroboros-bot
 ```
 
 ### Docker Compose
@@ -92,10 +92,10 @@ bot/config.example.json   # Template
 
 ```bash
 # systemd logs
-sudo journalctl -u brad-bot -f
+sudo journalctl -u ouroboros-bot -f
 
 # Docker logs
-docker logs -f brad-bot
+docker logs -f ouroboros-bot
 
 # Tweet history
 tail -f bot/tweet_history.jsonl | jq .
@@ -133,22 +133,22 @@ quit                 # Exit
 from core.engine import StrangeLoopEngine
 
 # Initialize
-brad = StrangeLoopEngine()
+ouroboros = StrangeLoopEngine()
 
 # Process thought
-trace = brad.step({
+trace = ouroboros.step({
     "description": "I am thinking",
     "about_self": True,
     "confidence": 0.7
 })
 
 # Get metrics
-m = brad.get_consciousness_metrics()
+m = ouroboros.get_consciousness_metrics()
 print(f"Hofstadter Index: {m['hofstadter_index']:.3f}")
 print(f"Strange Loops: {m['strange_loop_count']}")
 
 # Get state
-state = brad.get_state()
+state = ouroboros.get_state()
 print(f"Entities: {len(state['world_model']['entities'])}")
 ```
 
@@ -159,7 +159,7 @@ print(f"Entities: {len(state['world_model']['entities'])}")
 sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 
 # Create wallet
-solana-keygen new --outfile ~/brad-wallet.json
+solana-keygen new --outfile ~/ouroboros-wallet.json
 
 # Get SOL (devnet for testing)
 solana airdrop 2 --url devnet
@@ -167,7 +167,7 @@ solana airdrop 2 --url devnet
 # Deploy on pump.fun
 # 1. Go to https://pump.fun
 # 2. Connect wallet
-# 3. Create token: BRAD / $BRAD
+# 3. Create token: Ouroboros Loop / $OUROBOROS
 # 4. Upload logo, add description
 # 5. Set initial liquidity
 # 6. Deploy
@@ -178,7 +178,7 @@ solana airdrop 2 --url devnet
 | Problem | Solution |
 |---------|----------|
 | `Python 3.7+ required` | Install Python 3.7+: `sudo apt install python3.9` |
-| `Module 'core' not found` | Run from BRAD directory: `cd /path/to/BRAD` |
+| `Module 'core' not found` | Run from Ouroboros Loop directory: `cd /path/to/Ouroboros Loop` |
 | `Twitter 401 Unauthorized` | Check API keys, regenerate if needed |
 | `Twitter 403 Forbidden` | Set "Read and Write" permissions in dev portal |
 | `Rate limit exceeded` | Increase `tweet_interval_hours` in config |
@@ -187,7 +187,7 @@ solana airdrop 2 --url devnet
 ## File Structure
 
 ```
-BRAD/
+Ouroboros Loop/
 ├── core/                 # Core architecture
 │   ├── engine.py
 │   ├── world_model.py
@@ -195,7 +195,7 @@ BRAD/
 │   ├── meta_cognitive.py
 │   └── ...
 ├── bot/                  # Twitter bot
-│   ├── brad_bot.py
+│   ├── ouroboros_bot.py
 │   ├── tweet_generator.py
 │   └── config.json (create this)
 ├── demo.py
@@ -205,7 +205,7 @@ BRAD/
 ├── setup.sh
 ├── Dockerfile
 ├── docker-compose.yml
-├── brad-bot.service
+├── ouroboros-bot.service
 └── docs/
     ├── README.md
     ├── INSTALL.md
@@ -216,17 +216,17 @@ BRAD/
 
 ## Important URLs
 
-- **Repo**: https://github.com/Bradbuythedip/BRAD
+- **Repo**: https://github.com/Ouroborosbuythedip/Ouroboros Loop
 - **Twitter Dev**: https://developer.twitter.com/
 - **Solana**: https://solana.com/
 - **pump.fun**: https://pump.fun/
 
 ## Support
 
-- **Issues**: https://github.com/Bradbuythedip/BRAD/issues
+- **Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
 - **Docs**: README.md, INSTALL.md, DEPLOYMENT.md
-- **Twitter**: @brad_loop (coming soon)
+- **Twitter**: @ouroboros_loop (coming soon)
 
 ---
 
-*"System 2 doesn't exist. There's only Brad."*
+*"System 2 doesn't exist. There's only Ouroboros Loop."*

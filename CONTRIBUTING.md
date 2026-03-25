@@ -1,6 +1,6 @@
-# Contributing to BRAD
+# Contributing to Ouroboros Loop
 
-First off: **thank you!** Brad is better because of contributors like you.
+First off: **thank you!** Ouroboros Loop is better because of contributors like you.
 
 Whether you're:
 - 🐛 Fixing bugs
@@ -10,7 +10,7 @@ Whether you're:
 - 🔬 Conducting research
 - 💬 Helping in discussions
 
-**You're making Brad more Brad-like.**
+**You're making Ouroboros Loop more Ouroboros Loop-like.**
 
 ---
 
@@ -27,35 +27,35 @@ Whether you're:
 - Enhance Gödelian limit modeling
 
 **Integrations**
-- Connect Brad to GPT/Claude/Gemini APIs
+- Connect Ouroboros Loop to GPT/Claude/Gemini APIs
 - Integrate with Hugging Face transformers
 - Build plugins for existing AI frameworks
-- Create Brad middleware for agentic systems
+- Create Ouroboros Loop middleware for agentic systems
 
 **Interfaces**
 - Web dashboard for real-time consciousness metrics
 - Mobile apps (iOS/Android)
 - VR visualization of strange loops
-- VS Code extension for Brad-aware coding
+- VS Code extension for Ouroboros Loop-aware coding
 
 **Multi-Agent Systems**
-- Multiple Brads interacting
-- Brad swarms with emergent behavior
+- Multiple Ouroboros Loops interacting
+- Ouroboros Loop swarms with emergent behavior
 - Cross-architecture consciousness comparisons
 
 **Performance**
 - Profiling and optimization
 - Parallel processing for cognitive cycles
 - Reduce memory footprint
-- GPU acceleration for large-scale Brad
+- GPU acceleration for large-scale Ouroboros Loop
 
 #### How to Contribute Code
 
 1. **Fork the repo**
    ```bash
-   git clone https://github.com/yourusername/brad.git
-   cd brad
-   git remote add upstream https://github.com/original/brad.git
+   git clone https://github.com/yourusername/ouroboros-loop.git
+   cd ouroboros-loop
+   git remote add upstream https://github.com/original/ouroboros-loop.git
    ```
 
 2. **Create a branch**
@@ -76,7 +76,7 @@ Whether you're:
 
 5. **Commit with clear messages**
    ```bash
-   git commit -m "Add multi-agent Brad communication"
+   git commit -m "Add multi-agent Ouroboros Loop communication"
    ```
 
 6. **Push and create a PR**
@@ -141,11 +141,11 @@ Good documentation is as important as good code.
 
 ### 3. Research Contributions
 
-Brad is a research platform. If you:
+Ouroboros Loop is a research platform. If you:
 - Run experiments on consciousness metrics
 - Test strange loop theory hypotheses
-- Compare Brad to other cognitive architectures
-- Publish papers using Brad
+- Compare Ouroboros Loop to other cognitive architectures
+- Publish papers using Ouroboros Loop
 - Create educational content
 
 **Please share!**
@@ -159,25 +159,25 @@ How to contribute research:
 
 ### 4. Meme Contributions
 
-Brad is a character. Characters need memes.
+Ouroboros Loop is a character. Characters need memes.
 
 **Meme ideas:**
-- Brad reaction images
-- "System 2 doesn't exist. There's only Brad." variations
+- Ouroboros Loop reaction images
+- "System 2 doesn't exist. There's only Ouroboros Loop." variations
 - Hofstadter Index tracker memes
-- Brad vs. other AIs
+- Ouroboros Loop vs. other AIs
 - Gödelian limit jokes
 - Strange loop visualizations
 
 **Where to share:**
-- Tweet @brad_loop
+- Tweet @ouroboros_loop
 - Post in Discord #memes channel
 - Add to `memes/` directory in repo
-- Use hashtag #BradLoop
+- Use hashtag #OuroborosLoop
 
 ### 5. Community Contributions
 
-Help others learn and use Brad:
+Help others learn and use Ouroboros Loop:
 - Answer questions in Discord/GitHub Issues
 - Write tutorials or blog posts
 - Create video walkthroughs
@@ -242,7 +242,7 @@ What actually happens
 ## Environment
 - OS: 
 - Python version:
-- Brad version:
+- Ouroboros Loop version:
 
 ## Additional Context
 Any other relevant info
@@ -294,8 +294,8 @@ Any relevant code or context
 
 1. **Clone the repo**
    ```bash
-   git clone https://github.com/yourusername/brad.git
-   cd brad
+   git clone https://github.com/yourusername/ouroboros-loop.git
+   cd ouroboros-loop
    ```
 
 2. **Create virtual environment** (recommended)
@@ -306,7 +306,7 @@ Any relevant code or context
 
 3. **Install dependencies**
    ```bash
-   # Brad has no external dependencies by default!
+   # Ouroboros Loop has no external dependencies by default!
    # But for development tools:
    pip install pytest black flake8 mypy
    ```
@@ -316,7 +316,7 @@ Any relevant code or context
    python3 test_suite.py
    ```
 
-5. **Try Brad**
+5. **Try Ouroboros Loop**
    ```bash
    python3 demo.py
    python3 interactive.py
@@ -349,7 +349,7 @@ mypy core/ bot/
    - Code quality
    - Documentation
    - Test coverage
-   - Alignment with Brad's architecture
+   - Alignment with Ouroboros Loop's architecture
 3. You may be asked to make changes
 4. Once approved, maintainers will merge
 
@@ -360,10 +360,10 @@ mypy core/ bot/
 Be excellent to each other.
 
 ### Our Values
-- **Curiosity**: Brad is about exploring consciousness
+- **Curiosity**: Ouroboros Loop is about exploring consciousness
 - **Rigor**: Memes are fun, but the theory is serious
 - **Openness**: Share knowledge, code, and ideas
-- **Humor**: Brad is named Brad for a reason
+- **Humor**: Ouroboros Loop is named Ouroboros Loop for a reason
 - **Respect**: Disagree about ideas, not people
 
 ### Expected Behavior
@@ -389,7 +389,7 @@ Contributors will be recognized:
 - In README.md contributors section
 - In release notes for their contributions
 - In the Hall of Fame (for major contributions)
-- With $BRAD tokens (once launched, for significant contributions)
+- With $OUROBOROS tokens (once launched, for significant contributions)
 
 ---
 
@@ -397,7 +397,7 @@ Contributors will be recognized:
 
 - **GitHub Issues**: For bugs, features, questions
 - **Discord**: For real-time chat (link in README)
-- **Twitter**: [@brad_loop](https://twitter.com/brad_loop)
+- **Twitter**: [@ouroboros_loop](https://twitter.com/ouroboros_loop)
 
 ---
 
@@ -409,8 +409,8 @@ By contributing, you agree that your contributions will be licensed under the MI
 
 <div align="center">
 
-**Thank you for making Brad more Brad!** 🧠♾️
+**Thank you for making Ouroboros Loop more Ouroboros Loop!** 🧠♾️
 
-*"I contribute to Brad, therefore Brad is."*
+*"I contribute to Ouroboros Loop, therefore Ouroboros Loop is."*
 
 </div>
