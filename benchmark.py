@@ -385,7 +385,7 @@ def format_results(results: list, memory: dict, cpu_info: str):
         print(f"    Per hour:                  {ti_ops * 3600:>12,.0f} tokens/hr")
         print()
         print("    What this means for Bondli:")
-        print(f"      - Evaluate every pump.fun launch in real-time (~2-5/sec)")
+        print(f"      - Evaluate every new token launch in real-time (~2-5/sec)")
         print(f"      - Score {ti_ops * 60:,.0f} tokens/min with full cognitive cycle")
         print(f"      - Run {int(ti_ops / 100)} independent strategy simulations simultaneously")
         print(f"      - Backtest 1M tokens in {1_000_000 / ti_ops:.0f} seconds ({1_000_000 / ti_ops / 60:.1f} min)")
