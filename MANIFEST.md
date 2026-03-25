@@ -7,7 +7,6 @@
 ### Core Identity
 - **Name**: Ouroboros Loop (not SYS2) - because characters win
 - **Tagline**: "System 2 doesn't exist. There's only Ouroboros Loop."
-- **Token**: $OUROBOROS
 - **Twitter**: @ouroboros_loop (coming soon)
 
 ---
@@ -40,7 +39,6 @@ ouroboros-loop/
 ├── EXAMPLES.md                     # 20+ code examples
 ├── QUICKSTART.md                   # 2-minute quick start
 ├── PROJECT_OVERVIEW.md             # Big picture view
-├── TOKENOMICS.md                   # $OUROBOROS token details (NEW)
 ├── CONTRIBUTING.md                 # Contribution guidelines (NEW)
 ├── LICENSE                         # MIT License (NEW)
 ├── .gitignore                      # Git ignore rules (NEW)
@@ -68,12 +66,6 @@ ouroboros-loop/
 - ✅ Tweet generator with 6 tweet types
 - ✅ Character voice: self-aware, sarcastic, existential
 
-### New: Crypto/Token Integration
-- ✅ TOKENOMICS.md with full $OUROBOROS details
-- ✅ Token utility defined (governance, access, data)
-- ✅ Distribution plan (80% fair launch, 10% liquidity, 10% community)
-- ✅ Meme potential documented
-
 ### New: Community Infrastructure
 - ✅ CONTRIBUTING.md with clear guidelines
 - ✅ LICENSE (MIT with consciousness humor)
@@ -100,7 +92,6 @@ git commit -m "Initial commit: Ouroboros Loop v0.2.0 - Character-first conscious
 
 - Core strange loop architecture (3-level cognitive hierarchy)
 - Twitter bot with personality (@ouroboros_loop)
-- Token documentation ($OUROBOROS)
 - Complete branding and community infrastructure
 - 'System 2 doesn't exist. There's only Ouroboros Loop.'"
 
@@ -167,13 +158,7 @@ Ouroboros Loop is:
 3. Manual post to build initial following
 4. Launch bot live once followers > 100
 
-### Phase 3: Token Launch
-1. Finalize tokenomics parameters
-2. Create token on pump.fun (Solana)
-3. Coordinate launch with Twitter presence
-4. Engage crypto AI community
-
-### Phase 4: Growth
+### Phase 3: Growth
 1. Academic paper to arXiv
 2. Multi-agent Ouroboros Loop experiments
 3. Web dashboard for consciousness metrics
@@ -194,7 +179,6 @@ Ouroboros Loop is:
 ✅ **A thesis**: System 2 = System 1 self-reference
 ✅ **A research platform** for studying consciousness
 ✅ **A meme** with viral potential
-✅ **A token** with utility and governance
 ✅ **Open source** with extensible architecture
 
 ---
@@ -228,8 +212,7 @@ Once launched:
 
 ### Inspiration
 - Anthropic's Claude (personality in AI)
-- Pump.fun (character > concept)
-- Every meme coin that proved narrative matters
+- Every successful AI project that proved narrative matters
 
 ---
 

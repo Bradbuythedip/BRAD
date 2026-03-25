@@ -6,7 +6,6 @@ This document describes how to deploy Ouroboros Loop in various configurations:
 1. Local development/testing
 2. Twitter bot deployment
 3. Production server deployment
-4. Token integration (Solana)
 
 ---
 
@@ -337,54 +336,6 @@ Twitter has rate limits:
 Ouroboros Loop's default config respects these limits:
 - `max_tweets_per_day`: 12 (well under limit)
 - `tweet_interval_hours`: 2
-
----
-
-## Token Deployment (Solana)
-
-### Prerequisites
-
-1. Install Solana CLI:
-```bash
-sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
-```
-
-2. Create Solana wallet:
-```bash
-solana-keygen new --outfile ~/ouroboros-wallet.json
-```
-
-3. Get SOL for fees:
-```bash
-# Devnet (for testing)
-solana airdrop 2 --url devnet
-
-# Mainnet (for production)
-# Buy SOL from exchange and transfer to wallet
-```
-
-### Launch on pump.fun
-
-1. Go to https://pump.fun
-2. Connect your Solana wallet (Phantom/Solflare)
-3. Click "Create Token"
-4. Fill in:
-   - **Name**: Ouroboros Loop
-   - **Symbol**: $OUROBOROS
-   - **Description**: "Self-Referential Recursive Cognitive Architecture. System 2 doesn't exist. There's only Ouroboros Loop."
-   - **Image**: Upload Ouroboros Loop logo (create voxel face image)
-   - **Links**:
-     - Twitter: https://twitter.com/ouroboros_loop
-     - Website: https://github.com/Ouroborosbuythedip/Ouroboros Loop
-5. Set initial liquidity (minimum ~0.5 SOL)
-6. Click "Create & Deploy"
-7. Confirm transaction in wallet
-
-### Post-Launch
-
-1. Save contract address to `TOKENOMICS.md`
-2. Tweet announcement from @ouroboros_loop
-3. Add contract to README.md
 
 ---
 

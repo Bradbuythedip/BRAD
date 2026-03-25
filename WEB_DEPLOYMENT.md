@@ -119,12 +119,6 @@ Value: ouroborosbuythedip.github.io
 - Twitter Bot
 - Lightweight
 
-✅ **Token Information**
-- $OUROBOROS details
-- Governance
-- Launch info
-- Link to tokenomics
-
 ✅ **Gödelian Blind Spots**
 - Consistency (Gödel)
 - Halting (Turing)
@@ -145,7 +139,7 @@ Value: ouroborosbuythedip.github.io
 - **Colors**: Cyan (#00D4AA), Pink (#FF6B9D), Gold (#FFC759)
 - **Typography**: System fonts for speed
 - **Responsive**: Mobile-friendly
-- **Dark theme**: Matches crypto/tech aesthetic
+- **Dark theme**: Matches tech/research aesthetic
 - **Animations**: Hover effects, gradients
 
 ---
