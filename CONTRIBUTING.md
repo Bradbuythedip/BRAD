@@ -397,7 +397,7 @@ Contributors will be recognized:
 
 - **GitHub Issues**: For bugs, features, questions
 - **Discord**: For real-time chat (link in README)
-- **Twitter**: [@ouroboros_loop](https://twitter.com/brad_loop)
+- **Twitter**: [@ouroboros_loop](https://twitter.com/ouroboros_loop)
 
 ---
 

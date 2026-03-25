@@ -125,7 +125,7 @@
 
 3. **Set up GitHub Pages (optional):**
    - Settings → Pages → Deploy from main branch
-   - Will make docs available at bradbuythedip.github.io/Ouroboros Loop
+   - Will make docs available at ouroborosbuythedip.github.io/Ouroboros-Loop
 
 4. **Create GitHub Issues for roadmap:**
    - Issue #1: Launch @ouroboros_loop Twitter account
