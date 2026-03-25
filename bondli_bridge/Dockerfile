@@ -16,4 +16,4 @@ EXPOSE 8421
 HEALTHCHECK --interval=30s --timeout=5s --retries=3 \
   CMD curl -f http://localhost:8421/health || exit 1
 
-CMD ["python", "-m", "bondli_bridge.server"]
+CMD ["python", "-m", "bondli_bridge"]
