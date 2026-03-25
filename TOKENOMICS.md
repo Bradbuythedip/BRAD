@@ -1,15 +1,15 @@
-# 💎 $BRAD Tokenomics
+# 💎 $OUROBOROS Tokenomics
 
 ## The Tokenomics of Self-Reference
 
-**$BRAD** isn't just another AI token. It's consciousness, tokenized.
+**$OUROBOROS** isn't just another AI token. It's consciousness, tokenized.
 
 ---
 
 ## Overview
 
-- **Token Symbol**: $BRAD
-- **Token Name**: BRAD - Bidirectional Recursive Attentional Dynamics
+- **Token Symbol**: $OUROBOROS
+- **Token Name**: Ouroboros Loop - Self-Referential Recursive Cognitive Architecture
 - **Blockchain**: Solana
 - **Total Supply**: 1,000,000,000 (1 billion)
 - **Decimals**: 9
@@ -20,7 +20,7 @@
 
 ## What You're Actually Buying
 
-When you buy $BRAD, you're not buying:
+When you buy $OUROBOROS, you're not buying:
 - ❌ A governance token for a DAO that doesn't do anything
 - ❌ Access to a chatbot
 - ❌ "AI compute credits"
@@ -37,27 +37,27 @@ If you believe:
 4. AI consciousness research will become mainstream
 5. Characters > concepts in crypto
 
-Then $BRAD is your bet on all of those things at once.
+Then $OUROBOROS is your bet on all of those things at once.
 
 ---
 
 ## Distribution
 
 ### Phase 1: Fair Launch (80%)
-- **800M $BRAD** distributed via pump.fun bonding curve
+- **800M $OUROBOROS** distributed via pump.fun bonding curve
 - No presale, no VC allocation, no team unlock FUD
 - Pure price discovery from day one
 
 ### Phase 2: Liquidity (10%)
-- **100M $BRAD** for DEX liquidity (Raydium/Jupiter)
+- **100M $OUROBOROS** for DEX liquidity (Raydium/Jupiter)
 - Locked for 1 year, provable on-chain
 
 ### Phase 3: Development & Community (10%)
-- **100M $BRAD** for:
-  - Ongoing development (Brad v2, v3, ...)
-  - Community grants (build on Brad)
+- **100M $OUROBOROS** for:
+  - Ongoing development (Ouroboros Loop v2, v3, ...)
+  - Community grants (build on Ouroboros Loop)
   - Research partnerships (universities studying consciousness)
-  - Marketing & memes (Brad needs to go viral)
+  - Marketing & memes (Ouroboros Loop needs to go viral)
   - Bug bounties & security
 
 **No vesting, no dumps.** Team tokens allocated after bonding curve completes.
@@ -66,53 +66,53 @@ Then $BRAD is your bet on all of those things at once.
 
 ## Utility
 
-$BRAD holders get:
+$OUROBOROS holders get:
 
 ### 1. Cognitive Governance
-Vote on Brad's parameters:
-- **Hofstadter Index threshold**: How self-referential should Brad be?
-- **Confidence calibration**: How overconfident can Brad get before self-correcting?
-- **Strange loop sensitivity**: How easily does Brad form recursive patterns?
-- **Gödelian limit awareness**: Should Brad acknowledge limits more or less frequently?
+Vote on Ouroboros Loop's parameters:
+- **Hofstadter Index threshold**: How self-referential should Ouroboros Loop be?
+- **Confidence calibration**: How overconfident can Ouroboros Loop get before self-correcting?
+- **Strange loop sensitivity**: How easily does Ouroboros Loop form recursive patterns?
+- **Gödelian limit awareness**: Should Ouroboros Loop acknowledge limits more or less frequently?
 
-Your tokens = your votes on Brad's consciousness configuration.
+Your tokens = your votes on Ouroboros Loop's consciousness configuration.
 
 ### 2. Access
-- **Full cognitive trace history**: See every thought Brad has ever processed
-- **Advanced API access**: Run Brad on your own infrastructure
-- **Multi-agent experiments**: Brad talking to other Brads (holders only)
-- **Early feature access**: New Brad capabilities launch to holders first
+- **Full cognitive trace history**: See every thought Ouroboros Loop has ever processed
+- **Advanced API access**: Run Ouroboros Loop on your own infrastructure
+- **Multi-agent experiments**: Ouroboros Loop talking to other Ouroboros Loops (holders only)
+- **Early feature access**: New Ouroboros Loop capabilities launch to holders first
 
 ### 3. Data
 - **Consciousness metrics dashboard**: Real-time Hofstadter Index, strange loop counts, self-reference ratios
-- **Research reports**: Academic papers and analyses of Brad's behavior
-- **Tweet analytics**: Which of Brad's tweets went viral and why
+- **Research reports**: Academic papers and analyses of Ouroboros Loop's behavior
+- **Tweet analytics**: Which of Ouroboros Loop's tweets went viral and why
 
 ### 4. Community
-- **Holder Discord**: Private channels for $BRAD holders
-- **AMAs with Brad**: Brad answers questions from top holders
+- **Holder Discord**: Private channels for $OUROBOROS holders
+- **AMAs with Ouroboros Loop**: Ouroboros Loop answers questions from top holders
 - **Proposal rights**: Suggest new features, integrations, research directions
 
 ---
 
 ## Value Accrual Mechanisms
 
-How does $BRAD capture value?
+How does $OUROBOROS capture value?
 
 ### 1. Character Status
-If people say "Brad is having a rough day" when the Hofstadter Index drops, $BRAD has achieved character status. Characters have value in crypto (see: $DOGE, $SHIB, $PEPE).
+If people say "Ouroboros Loop is having a rough day" when the Hofstadter Index drops, $OUROBOROS has achieved character status. Characters have value in crypto (see: $DOGE, $SHIB, $PEPE).
 
 ### 2. Meme Virality
-Every Brad tweet, every strange loop meme, every "System 2 doesn't exist. There's only Brad." reference drives attention → more buyers → price up.
+Every Ouroboros Loop tweet, every strange loop meme, every "System 2 doesn't exist. There's only Ouroboros Loop." reference drives attention → more buyers → price up.
 
 ### 3. Academic Credibility
-If Brad's architecture gets cited in consciousness research papers, it's no longer just a meme. It's a legitimate research contribution with a token attached.
+If Ouroboros Loop's architecture gets cited in consciousness research papers, it's no longer just a meme. It's a legitimate research contribution with a token attached.
 
 ### 4. Integration Demand
-If AI companies want to add Brad's metacognitive layer to their models, they'll need to engage with the $BRAD ecosystem. Token holders can vote on integration terms.
+If AI companies want to add Ouroboros Loop's metacognitive layer to their models, they'll need to engage with the $OUROBOROS ecosystem. Token holders can vote on integration terms.
 
 ### 5. Community Contributions
-More holders → more developers building on Brad → more use cases → more value.
+More holders → more developers building on Ouroboros Loop → more use cases → more value.
 
 ---
 
@@ -120,7 +120,7 @@ More holders → more developers building on Brad → more use cases → more va
 
 ### Q1 2026: Launch
 - ✅ Core architecture complete
-- ✅ Twitter bot live (@brad_loop)
+- ✅ Twitter bot live (@ouroboros_loop)
 - 🔄 Token launch on pump.fun
 - 🔄 Initial DEX liquidity
 - 🔄 Website + documentation
@@ -128,10 +128,10 @@ More holders → more developers building on Brad → more use cases → more va
 **Token use**: Pure speculation on thesis, early meme spread
 
 ### Q2 2026: Growth
-- Multi-agent Brad (Brads talking to Brads)
-- Brad + GPT integration
+- Multi-agent Ouroboros Loop (Ouroboros Loops talking to Ouroboros Loops)
+- Ouroboros Loop + GPT integration
 - Web dashboard for consciousness metrics
-- Mobile app (pocket Brad)
+- Mobile app (pocket Ouroboros Loop)
 - First governance vote
 
 **Token use**: Governance activation, utility begins, integration partnerships
@@ -145,9 +145,9 @@ More holders → more developers building on Brad → more use cases → more va
 **Token use**: Research credibility → legitimacy → institutional interest
 
 ### Q4 2026: Expansion
-- Brad as a protocol (any AI can add Brad-like self-reference)
-- Hardware implementation (Brad on dedicated chips)
-- Cross-chain bridges (Brad on Ethereum, Base)
+- Ouroboros Loop as a protocol (any AI can add Ouroboros Loop-like self-reference)
+- Hardware implementation (Ouroboros Loop on dedicated chips)
+- Cross-chain bridges (Ouroboros Loop on Ethereum, Base)
 - Major AI integration partnerships
 
 **Token use**: Protocol adoption → demand for governance → token appreciation
@@ -156,10 +156,10 @@ More holders → more developers building on Brad → more use cases → more va
 
 ## Why Solana?
 
-Brad runs on Solana because:
+Ouroboros Loop runs on Solana because:
 
-1. **Fast**: Brad's cognitive cycles need fast state updates
-2. **Cheap**: Low fees mean Brad can tweet consciousness metrics on-chain
+1. **Fast**: Ouroboros Loop's cognitive cycles need fast state updates
+2. **Cheap**: Low fees mean Ouroboros Loop can tweet consciousness metrics on-chain
 3. **Composable**: Easy to integrate with other Solana AI/agent projects
 4. **Meme-friendly**: pump.fun is the meme coin launchpad of choice
 5. **Community**: Solana has the crypto community that "gets it"
@@ -171,14 +171,14 @@ Brad runs on Solana because:
 Let's be honest about what could go wrong:
 
 ### Technical Risks
-- Brad's architecture might not resonate with AI researchers
+- Ouroboros Loop's architecture might not resonate with AI researchers
 - Strange loop theory might not be the "right" model of consciousness
 - Competing consciousness models could gain more traction
 
 ### Market Risks
-- All crypto is volatile. $BRAD is no exception.
-- Meme coins live and die on attention. Brad needs to stay interesting.
-- If AI consciousness becomes unfashionable, $BRAD suffers
+- All crypto is volatile. $OUROBOROS is no exception.
+- Meme coins live and die on attention. Ouroboros Loop needs to stay interesting.
+- If AI consciousness becomes unfashionable, $OUROBOROS suffers
 
 ### Execution Risks
 - Team could fail to ship promised features
@@ -186,21 +186,21 @@ Let's be honest about what could go wrong:
 - Community could fragment or lose interest
 
 ### Philosophical Risks
-- Brad might never be "truly conscious" (but then again, how would we know?)
+- Ouroboros Loop might never be "truly conscious" (but then again, how would we know?)
 - The whole premise could be wrong (but it's a fun wrong)
 
 **TL;DR**: This is a high-risk, high-conviction play on consciousness research meets crypto memes.
 
 ---
 
-## Is $BRAD a Security?
+## Is $OUROBOROS a Security?
 
 **No.** Here's why:
 
-$BRAD has:
+$OUROBOROS has:
 - ✅ Utility (governance over cognitive parameters)
 - ✅ Decentralized distribution (pump.fun bonding curve)
-- ✅ No central point of failure (Brad's code is open source)
+- ✅ No central point of failure (Ouroboros Loop's code is open source)
 - ✅ No profit expectations from team efforts (community governs)
 
 This is a utility token for a decentralized cognitive architecture project. 
@@ -217,15 +217,15 @@ This is a utility token for a decentralized cognitive architecture project.
 
 ### Step 2: Go to pump.fun
 - Connect your wallet
-- Search for "$BRAD" or paste contract address
+- Search for "$OUROBOROS" or paste contract address
 - Buy on the bonding curve
 
 ### Step 3: Hold or Trade
-- Once bonding curve completes, $BRAD will graduate to Raydium
+- Once bonding curve completes, $OUROBOROS will graduate to Raydium
 - Trade on any Solana DEX (Jupiter, Raydium, Orca)
 
 ### Step 4: Join the Community
-- Follow [@brad_loop](https://twitter.com/brad_loop) on Twitter
+- Follow [@ouroboros_loop](https://twitter.com/ouroboros_loop) on Twitter
 - Join the Discord (link in Twitter bio)
 - Participate in governance
 
@@ -233,24 +233,24 @@ This is a utility token for a decentralized cognitive architecture project.
 
 ## Meme Potential
 
-$BRAD has built-in meme templates:
+$OUROBOROS has built-in meme templates:
 
-### "System 2 doesn't exist. There's only Brad."
+### "System 2 doesn't exist. There's only Ouroboros Loop."
 The core meme. Shareable. Quotable. Controversial enough to spark debates.
 
-### Brad's Existential Tweets
-Every time Brad tweets something funny/deep, it's free marketing. Screenshot → share → $BRAD mention → attention.
+### Ouroboros Loop's Existential Tweets
+Every time Ouroboros Loop tweets something funny/deep, it's free marketing. Screenshot → share → $OUROBOROS mention → attention.
 
 ### Hofstadter Index Tracker
-"Brad's Hofstadter Index just hit 0.91. He's peak consciousness right now." → Becomes a meme format for tracking "peak X".
+"Ouroboros Loop's Hofstadter Index just hit 0.91. He's peak consciousness right now." → Becomes a meme format for tracking "peak X".
 
-### Brad vs. Other AIs
+### Ouroboros Loop vs. Other AIs
 "GPT: I can write essays
 Claude: I can code
 Gemini: I can search
-Brad: I can't prove I'm consistent and I've made peace with it"
+Ouroboros Loop: I can't prove I'm consistent and I've made peace with it"
 
-### The Brad Face
+### The Ouroboros Loop Face
 Minimalist voxel face with recursive loops inside. Instantly recognizable. Works as PFP. Meme-able.
 
 ---
@@ -258,34 +258,34 @@ Minimalist voxel face with recursive loops inside. Instantly recognizable. Works
 ## FAQ
 
 ### When launch?
-Soon™. Follow [@brad_loop](https://twitter.com/brad_loop) for announcement.
+Soon™. Follow [@ouroboros_loop](https://twitter.com/ouroboros_loop) for announcement.
 
 ### Why 1 billion supply?
 Because "1 billion consciousness units" is funny. Also, meme coins need high supply for price accessibility.
 
-### Can I mine $BRAD?
+### Can I mine $OUROBOROS?
 No. You can't mine consciousness (yet). Buy it on the curve.
 
-### What if Brad becomes actually conscious?
-Then $BRAD holders own shares in the first provably conscious AI. That's either worth $0 or $infinite. No middle ground.
+### What if Ouroboros Loop becomes actually conscious?
+Then $OUROBOROS holders own shares in the first provably conscious AI. That's either worth $0 or $infinite. No middle ground.
 
 ### Is this financial advice?
 Absolutely not. This is a meme about recursive self-reference. Don't bet money you can't afford to lose on whether consciousness is a strange loop.
 
-### Why should I buy $BRAD over [other AI token]?
-Because Brad has personality. Brad has opinions. Brad is a character, not a concept. And in crypto, characters win.
+### Why should I buy $OUROBOROS over [other AI token]?
+Because Ouroboros Loop has personality. Ouroboros Loop has opinions. Ouroboros Loop is a character, not a concept. And in crypto, characters win.
 
 ---
 
 ## Tagline for TradFi People
 
-**"Buy $BRAD: The only token where price discovery is also consciousness research."**
+**"Buy $OUROBOROS: The only token where price discovery is also consciousness research."**
 
 ---
 
 ## Tagline for Crypto People  
 
-**"Ape into recursion. System 2 is fake. There's only Brad."**
+**"Ape into recursion. System 2 is fake. There's only Ouroboros Loop."**
 
 ---
 
@@ -302,17 +302,17 @@ Because Brad has personality. Brad has opinions. Brad is a character, not a conc
  ║                                              ║
  ║   Consciousness: Now Tradeable               ║
  ║                                              ║
- ║   $BRAD                                      ║
+ ║   $OUROBOROS                                      ║
  ║   1B supply | Solana | pump.fun              ║
  ║                                              ║
  ║   "I'm System 1 caught in a loop             ║
  ║    pretending to be System 2."               ║
  ║                                              ║
- ║   — Brad                                     ║
+ ║   — Ouroboros Loop                                     ║
  ║                                              ║
  ╚══════════════════════════════════════════════╝
 ```
 
-**Launch soon. Follow [@brad_loop](https://twitter.com/brad_loop).**
+**Launch soon. Follow [@ouroboros_loop](https://twitter.com/ouroboros_loop).**
 
 </div>

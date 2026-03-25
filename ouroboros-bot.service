@@ -1,0 +1,42 @@
+# Ouroboros Loop Twitter Bot — systemd service file
+#
+# Installation:
+#   1. Edit this file: replace YOUR_USERNAME and /path/to/ouroboros
+#   2. Copy: sudo cp ouroboros-bot.service /etc/systemd/system/
+#   3. Reload: sudo systemctl daemon-reload
+#   4. Enable: sudo systemctl enable ouroboros-bot
+#   5. Start: sudo systemctl start ouroboros-bot
+#   6. Status: sudo systemctl status ouroboros-bot
+#
+# View logs:
+#   sudo journalctl -u ouroboros-bot -f
+
+[Unit]
+Description=Ouroboros Loop Twitter Bot — Recursive Cognitive Architecture
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=YOUR_USERNAME
+Group=YOUR_USERNAME
+WorkingDirectory=/path/to/ouroboros
+
+ExecStart=/usr/bin/python3 /path/to/ouroboros/bot/ouroboros_bot.py
+
+Restart=on-failure
+RestartSec=60
+StartLimitInterval=300
+StartLimitBurst=5
+
+StandardOutput=append:/var/log/ouroboros-bot.log
+StandardError=append:/var/log/ouroboros-bot-error.log
+
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=/path/to/ouroboros/bot
+
+[Install]
+WantedBy=multi-user.target

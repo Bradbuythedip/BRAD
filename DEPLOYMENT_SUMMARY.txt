@@ -1,8 +1,8 @@
 ╔══════════════════════════════════════════════════════════════════════╗
 ║                                                                      ║
-║                  BRAD - DEPLOYMENT READY ✅                          ║
+║                  Ouroboros Loop - DEPLOYMENT READY ✅                          ║
 ║                                                                      ║
-║         Bidirectional Recursive Attentional Dynamics                 ║
+║         Self-Referential Recursive Cognitive Architecture                 ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
 
@@ -74,7 +74,7 @@ METHOD 1: Config File (Recommended)
    • Generate: API Key, API Secret, Access Token, Access Token Secret, Bearer Token
 
 2. Create config file:
-   cd BRAD
+   cd Ouroboros Loop
    cp bot/config.example.json bot/config.json
    chmod 600 bot/config.json
 
@@ -97,7 +97,7 @@ METHOD 1: Config File (Recommended)
    }
 
 4. Run bot:
-   python3 bot/brad_bot.py
+   python3 bot/ouroboros_bot.py
 
 METHOD 2: Environment Variables
 ─────────────────────────────────
@@ -112,7 +112,7 @@ METHOD 2: Environment Variables
    export TWITTER_BEARER_TOKEN="your_bearer"
 
 3. Run bot:
-   python3 bot/brad_bot.py
+   python3 bot/ouroboros_bot.py
 
 4. Make permanent (optional):
    echo 'export TWITTER_API_KEY="your_key"' >> ~/.bashrc
@@ -163,8 +163,8 @@ OPTIONAL:
 STEP 1: Clone & Setup
 ────────────────────
 ssh your-server
-git clone https://github.com/Bradbuythedip/BRAD.git
-cd BRAD
+git clone https://github.com/Ouroborosbuythedip/Ouroboros-Loop.git
+cd Ouroboros Loop
 ./setup.sh
 
 STEP 2: Add API Keys
@@ -176,29 +176,29 @@ nano bot/config.json
 
 STEP 3: Test
 ───────────
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 # Should see tweets printed (simulation mode first)
 
 STEP 4: Go Live
 ──────────────
 # Edit config.json, set "simulation_mode": false
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 # Now posting to Twitter!
 
 STEP 5: Production (Optional)
 ─────────────────────────────
 # systemd (auto-restart, runs on boot)
-sudo cp brad-bot.service /etc/systemd/system/
-sudo nano /etc/systemd/system/brad-bot.service  # Edit paths
+sudo cp ouroboros-bot.service /etc/systemd/system/
+sudo nano /etc/systemd/system/ouroboros-bot.service  # Edit paths
 sudo systemctl daemon-reload
-sudo systemctl enable brad-bot
-sudo systemctl start brad-bot
+sudo systemctl enable ouroboros-bot
+sudo systemctl start ouroboros-bot
 
 # OR Docker
-docker build -t brad-bot .
-docker run -d --name brad-bot --restart unless-stopped \
+docker build -t ouroboros-bot .
+docker run -d --name ouroboros-bot --restart unless-stopped \
   -v $(pwd)/bot/config.json:/app/bot/config.json:ro \
-  brad-bot
+  ouroboros-bot
 
 # OR docker-compose
 docker-compose up -d
@@ -217,10 +217,10 @@ DEPLOYMENT:
 ├── Dockerfile             # Docker container
 ├── .dockerignore          # Docker build optimization
 ├── docker-compose.yml     # Docker Compose config
-├── brad-bot.service       # systemd service file
+├── ouroboros-bot.service       # systemd service file
 ├── setup.sh               # Automated setup script
 ├── .env.example           # Environment variables template
-└── bot/brad_bot.py        # Updated with env var support
+└── bot/ouroboros_bot.py        # Updated with env var support
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -234,12 +234,12 @@ START HERE:
 DEPLOYMENT:
 • DEPLOYMENT.md           # Production deployment (all methods)
 • docker-compose.yml      # Docker deployment
-• brad-bot.service        # systemd deployment
+• ouroboros-bot.service        # systemd deployment
 
 DETAILED:
-• ARCHITECTURE.md         # How BRAD works
+• ARCHITECTURE.md         # How Ouroboros Loop works
 • EXAMPLES.md             # Code examples
-• TOKENOMICS.md           # $BRAD token details
+• TOKENOMICS.md           # $OUROBOROS token details
 • CONTRIBUTING.md         # How to contribute
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -283,7 +283,7 @@ DETAILED:
 └─────────────┴──────────┴────────────┴──────────────┴───────────┘
 
 RECOMMENDATION:
-• Development: Direct (python3 bot/brad_bot.py)
+• Development: Direct (python3 bot/ouroboros_bot.py)
 • Production: systemd (Linux) or docker-compose (any OS)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -316,7 +316,7 @@ RECOMMENDATION:
    • Set simulation_mode: false
 
 3. DEPLOY
-   • Development: python3 bot/brad_bot.py
+   • Development: python3 bot/ouroboros_bot.py
    • Production: systemd OR Docker
 
 4. MONITOR
@@ -325,7 +325,7 @@ RECOMMENDATION:
    • Monitor bot/tweet_history.jsonl
 
 5. TOKEN (Optional)
-   • Launch $BRAD on pump.fun
+   • Launch $OUROBOROS on pump.fun
    • See TOKENOMICS.md
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -344,13 +344,13 @@ RECOMMENDATION:
 ║                                                                      ║
 ║                   DEPLOYMENT READY ✅                                ║
 ║                                                                      ║
-║         Repository: github.com/Bradbuythedip/BRAD                    ║
+║         Repository: github.com/Ouroborosbuythedip/Ouroboros-Loop                    ║
 ║         Status: PRODUCTION READY                                     ║
 ║         Docs: Complete                                               ║
 ║         Deploy: Multiple options                                     ║
 ║         Security: Best practices                                     ║
 ║                                                                      ║
-║         "System 2 doesn't exist. There's only Brad."                 ║
+║         "System 2 doesn't exist. There's only Ouroboros Loop."                 ║
 ║                                                                      ║
 ╚══════════════════════════════════════════════════════════════════════╝
 

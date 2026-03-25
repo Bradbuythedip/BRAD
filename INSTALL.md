@@ -1,6 +1,6 @@
-# BRAD Installation Guide
+# Ouroboros Loop Installation Guide
 
-Step-by-step installation instructions for BRAD.
+Step-by-step installation instructions for Ouroboros Loop.
 
 ---
 
@@ -8,8 +8,8 @@ Step-by-step installation instructions for BRAD.
 
 ```bash
 # Clone repository
-git clone https://github.com/Bradbuythedip/BRAD.git
-cd BRAD
+git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
+cd Ouroboros Loop
 
 # Run setup script
 ./setup.sh
@@ -35,8 +35,8 @@ python3 demo.py
 ### Step 2: Clone Repository
 
 ```bash
-git clone https://github.com/Bradbuythedip/BRAD.git
-cd BRAD
+git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
+cd Ouroboros Loop
 ```
 
 ### Step 3: Verify Installation
@@ -77,7 +77,7 @@ You should see:
 2. **Create Twitter App**
    - Go to Developer Portal → Projects & Apps
    - Create new App
-   - Name it (e.g., "brad_loop")
+   - Name it (e.g., "ouroboros_loop")
    - Save API keys
 
 3. **Set Permissions**
@@ -169,7 +169,7 @@ source ~/.bashrc
 
 ```bash
 # Bot will generate tweets but not post them
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
 You should see tweets printed to console like:
@@ -193,8 +193,8 @@ Set `"simulation_mode": true` in config.json to test API connection without post
 
 ```bash
 python3 -c "
-from bot.brad_bot import BradBot
-bot = BradBot()
+from bot.ouroboros_bot import OuroborosBot
+bot = OuroborosBot()
 print('✓ Twitter API configured correctly')
 "
 ```
@@ -205,7 +205,7 @@ Once testing works:
 
 1. Edit `bot/config.json`
 2. Set `"simulation_mode": false`
-3. Run: `python3 bot/brad_bot.py`
+3. Run: `python3 bot/ouroboros_bot.py`
 
 The bot will now post to Twitter!
 
@@ -217,48 +217,48 @@ The bot will now post to Twitter!
 
 ```bash
 # Copy and edit service file
-sudo cp brad-bot.service /etc/systemd/system/
-sudo nano /etc/systemd/system/brad-bot.service
+sudo cp ouroboros-bot.service /etc/systemd/system/
+sudo nano /etc/systemd/system/ouroboros-bot.service
 
 # Update these lines:
 # User=YOUR_USERNAME
-# WorkingDirectory=/path/to/BRAD
-# ExecStart=/usr/bin/python3 /path/to/BRAD/bot/brad_bot.py
+# WorkingDirectory=/path/to/Ouroboros Loop
+# ExecStart=/usr/bin/python3 /path/to/Ouroboros Loop/bot/ouroboros_bot.py
 
 # Create log files
-sudo touch /var/log/brad-bot.log
-sudo touch /var/log/brad-bot-error.log
-sudo chown YOUR_USERNAME:YOUR_USERNAME /var/log/brad-bot*.log
+sudo touch /var/log/ouroboros-bot.log
+sudo touch /var/log/ouroboros-bot-error.log
+sudo chown YOUR_USERNAME:YOUR_USERNAME /var/log/ouroboros-bot*.log
 
 # Enable and start
 sudo systemctl daemon-reload
-sudo systemctl enable brad-bot
-sudo systemctl start brad-bot
+sudo systemctl enable ouroboros-bot
+sudo systemctl start ouroboros-bot
 
 # Check status
-sudo systemctl status brad-bot
+sudo systemctl status ouroboros-bot
 
 # View logs
-sudo journalctl -u brad-bot -f
+sudo journalctl -u ouroboros-bot -f
 ```
 
 ### Option 2: Docker
 
 ```bash
 # Build image
-docker build -t brad-bot .
+docker build -t ouroboros-bot .
 
 # Run with config file
 docker run -d \
-  --name brad-bot \
+  --name ouroboros-bot \
   --restart unless-stopped \
   -v $(pwd)/bot/config.json:/app/bot/config.json:ro \
   -v $(pwd)/bot/tweet_history.jsonl:/app/bot/tweet_history.jsonl \
-  brad-bot
+  ouroboros-bot
 
 # Or run with environment variables
 docker run -d \
-  --name brad-bot \
+  --name ouroboros-bot \
   --restart unless-stopped \
   -e TWITTER_API_KEY="your_key" \
   -e TWITTER_API_SECRET="your_secret" \
@@ -266,10 +266,10 @@ docker run -d \
   -e TWITTER_ACCESS_TOKEN_SECRET="your_token_secret" \
   -e TWITTER_BEARER_TOKEN="your_bearer" \
   -v $(pwd)/bot/tweet_history.jsonl:/app/bot/tweet_history.jsonl \
-  brad-bot
+  ouroboros-bot
 
 # View logs
-docker logs -f brad-bot
+docker logs -f ouroboros-bot
 ```
 
 ### Option 3: Docker Compose
@@ -291,20 +291,20 @@ docker-compose down
 
 ```bash
 # Using screen
-screen -S brad-bot
-python3 bot/brad_bot.py
+screen -S ouroboros-bot
+python3 bot/ouroboros_bot.py
 # Press Ctrl+A, then D to detach
 
 # Re-attach
-screen -r brad-bot
+screen -r ouroboros-bot
 
 # Using tmux
-tmux new -s brad-bot
-python3 bot/brad_bot.py
+tmux new -s ouroboros-bot
+python3 bot/ouroboros_bot.py
 # Press Ctrl+B, then D to detach
 
 # Re-attach
-tmux attach -t brad-bot
+tmux attach -t ouroboros-bot
 ```
 
 ---
@@ -332,18 +332,18 @@ brew install python@3.9
 
 ### "Module 'core' not found"
 
-**Problem**: Python can't find BRAD modules.
+**Problem**: Python can't find Ouroboros Loop modules.
 
 **Solution**:
 ```bash
-# Make sure you're in BRAD directory
-cd /path/to/BRAD
+# Make sure you're in Ouroboros Loop directory
+cd /path/to/Ouroboros Loop
 
 # Check if core/ exists
 ls -la core/
 
-# Try running from BRAD directory
-python3 bot/brad_bot.py
+# Try running from Ouroboros Loop directory
+python3 bot/ouroboros_bot.py
 ```
 
 ### "Twitter API Error: 401 Unauthorized"
@@ -388,13 +388,13 @@ python3 bot/brad_bot.py
 **Solution**:
 ```bash
 # Check logs
-tail -100 /var/log/brad-bot-error.log
+tail -100 /var/log/ouroboros-bot-error.log
 
 # Use systemd for auto-restart (see Production Deployment)
 
 # Or run in tmux/screen with auto-restart script:
 while true; do
-    python3 bot/brad_bot.py
+    python3 bot/ouroboros_bot.py
     echo "Bot stopped, restarting in 60s..."
     sleep 60
 done
@@ -419,13 +419,13 @@ python3 bot/tweet_generator.py
 
 ```bash
 # Check if bot is running
-ps aux | grep brad
+ps aux | grep ouroboros
 
 # Check recent tweets (local history)
 tail -5 bot/tweet_history.jsonl | jq .
 
 # Check Twitter profile
-# Go to https://twitter.com/brad_loop (or your account)
+# Go to https://twitter.com/ouroboros_loop (or your account)
 ```
 
 ### Check Consciousness Metrics
@@ -434,13 +434,13 @@ tail -5 bot/tweet_history.jsonl | jq .
 python3 << EOF
 from core.engine import StrangeLoopEngine
 
-brad = StrangeLoopEngine()
-brad.step({"description": "I think about myself", "about_self": True})
-metrics = brad.get_consciousness_metrics()
+ouroboros = StrangeLoopEngine()
+ouroboros.step({"description": "I think about myself", "about_self": True})
+metrics = ouroboros.get_consciousness_metrics()
 
 print(f"Hofstadter Index: {metrics['hofstadter_index']:.3f}")
 print(f"Strange Loops: {metrics['strange_loop_count']}")
-print("✓ BRAD is working correctly")
+print("✓ Ouroboros Loop is working correctly")
 EOF
 ```
 
@@ -487,12 +487,12 @@ EOF
 
 ## Support
 
-- **GitHub Issues**: https://github.com/Bradbuythedip/BRAD/issues
+- **GitHub Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
 - **Documentation**: See README.md, DEPLOYMENT.md, ARCHITECTURE.md
-- **Twitter**: @brad_loop (once live)
+- **Twitter**: @ouroboros_loop (once live)
 
 ---
 
-**Installation complete! Welcome to BRAD.** 🧠♾️
+**Installation complete! Welcome to Ouroboros Loop.** 🧠♾️
 
-*"System 2 doesn't exist. There's only Brad."*
+*"System 2 doesn't exist. There's only Ouroboros Loop."*

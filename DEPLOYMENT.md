@@ -1,8 +1,8 @@
-# BRAD Deployment Guide
+# Ouroboros Loop Deployment Guide
 
 ## Overview
 
-This document describes how to deploy BRAD in various configurations:
+This document describes how to deploy Ouroboros Loop in various configurations:
 1. Local development/testing
 2. Twitter bot deployment
 3. Production server deployment
@@ -19,7 +19,7 @@ This document describes how to deploy BRAD in various configurations:
 - **Disk**: 100MB for code + logs
 
 ### Dependencies
-BRAD has **zero external dependencies** for core functionality. The only dependencies are for optional features:
+Ouroboros Loop has **zero external dependencies** for core functionality. The only dependencies are for optional features:
 
 **For Twitter Bot**:
 ```bash
@@ -38,8 +38,8 @@ pip install pytest black flake8 mypy
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Bradbuythedip/BRAD.git
-cd BRAD
+git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
+cd Ouroboros Loop
 ```
 
 ### 2. Verify Installation
@@ -122,7 +122,7 @@ Open `bot/config.json` and fill in your credentials:
 Test the bot without actually posting to Twitter:
 
 ```bash
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
 This will:
@@ -135,7 +135,7 @@ This will:
 Once you've added API credentials and set `"simulation_mode": false`:
 
 ```bash
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
 ---
@@ -144,22 +144,22 @@ python3 bot/brad_bot.py
 
 ### Option 1: systemd Service (Linux)
 
-Create `/etc/systemd/system/brad-bot.service`:
+Create `/etc/systemd/system/ouroboros-bot.service`:
 
 ```ini
 [Unit]
-Description=BRAD Twitter Bot
+Description=Ouroboros Loop Twitter Bot
 After=network.target
 
 [Service]
 Type=simple
 User=YOUR_USERNAME
-WorkingDirectory=/path/to/BRAD
-ExecStart=/usr/bin/python3 /path/to/BRAD/bot/brad_bot.py
+WorkingDirectory=/path/to/Ouroboros Loop
+ExecStart=/usr/bin/python3 /path/to/Ouroboros Loop/bot/ouroboros_bot.py
 Restart=on-failure
 RestartSec=60
-StandardOutput=append:/var/log/brad-bot.log
-StandardError=append:/var/log/brad-bot-error.log
+StandardOutput=append:/var/log/ouroboros-bot.log
+StandardError=append:/var/log/ouroboros-bot-error.log
 
 [Install]
 WantedBy=multi-user.target
@@ -169,15 +169,15 @@ Enable and start:
 
 ```bash
 sudo systemctl daemon-reload
-sudo systemctl enable brad-bot
-sudo systemctl start brad-bot
-sudo systemctl status brad-bot
+sudo systemctl enable ouroboros-bot
+sudo systemctl start ouroboros-bot
+sudo systemctl status ouroboros-bot
 ```
 
 View logs:
 
 ```bash
-sudo journalctl -u brad-bot -f
+sudo journalctl -u ouroboros-bot -f
 ```
 
 ### Option 2: Docker Deployment
@@ -196,47 +196,47 @@ COPY . /app/
 RUN pip install --no-cache-dir tweepy
 
 # Run bot
-CMD ["python3", "bot/brad_bot.py"]
+CMD ["python3", "bot/ouroboros_bot.py"]
 ```
 
 Build and run:
 
 ```bash
 # Build image
-docker build -t brad-bot .
+docker build -t ouroboros-bot .
 
 # Run container
 docker run -d \
-  --name brad-bot \
+  --name ouroboros-bot \
   --restart unless-stopped \
   -v $(pwd)/bot/config.json:/app/bot/config.json:ro \
   -v $(pwd)/bot/tweet_history.jsonl:/app/bot/tweet_history.jsonl \
-  brad-bot
+  ouroboros-bot
 
 # View logs
-docker logs -f brad-bot
+docker logs -f ouroboros-bot
 ```
 
 ### Option 3: Screen/tmux (Simple)
 
 ```bash
 # Using screen
-screen -S brad-bot
-cd /path/to/BRAD
-python3 bot/brad_bot.py
+screen -S ouroboros-bot
+cd /path/to/Ouroboros Loop
+python3 bot/ouroboros_bot.py
 # Press Ctrl+A then D to detach
 
 # Re-attach later
-screen -r brad-bot
+screen -r ouroboros-bot
 
 # Or using tmux
-tmux new -s brad-bot
-cd /path/to/BRAD
-python3 bot/brad_bot.py
+tmux new -s ouroboros-bot
+cd /path/to/Ouroboros Loop
+python3 bot/ouroboros_bot.py
 # Press Ctrl+B then D to detach
 
 # Re-attach later
-tmux attach -t brad-bot
+tmux attach -t ouroboros-bot
 ```
 
 ### Option 4: cron Job (Periodic)
@@ -250,8 +250,8 @@ crontab -e
 Add:
 
 ```cron
-# Run BRAD bot every 2 hours
-0 */2 * * * cd /path/to/BRAD && /usr/bin/python3 bot/brad_bot.py >> /var/log/brad-bot.log 2>&1
+# Run Ouroboros Loop bot every 2 hours
+0 */2 * * * cd /path/to/Ouroboros Loop && /usr/bin/python3 bot/ouroboros_bot.py >> /var/log/ouroboros-bot.log 2>&1
 ```
 
 ---
@@ -262,11 +262,11 @@ Add:
 
 ```bash
 # If using systemd
-sudo systemctl status brad-bot
+sudo systemctl status ouroboros-bot
 
 # If using Docker
-docker ps | grep brad-bot
-docker logs brad-bot
+docker ps | grep ouroboros-bot
+docker logs ouroboros-bot
 
 # Check recent tweets
 tail -f bot/tweet_history.jsonl | jq .
@@ -309,10 +309,10 @@ export TWITTER_ACCESS_TOKEN="your_token"
 export TWITTER_ACCESS_TOKEN_SECRET="your_token_secret"
 export TWITTER_BEARER_TOKEN="your_bearer"
 
-python3 bot/brad_bot.py
+python3 bot/ouroboros_bot.py
 ```
 
-Modify `bot/brad_bot.py` to read from environment variables:
+Modify `bot/ouroboros_bot.py` to read from environment variables:
 
 ```python
 import os
@@ -334,7 +334,7 @@ Twitter has rate limits:
 - **POST statuses/update**: 300 per 3 hours
 - **GET statuses/mentions_timeline**: 75 per 15 minutes
 
-BRAD's default config respects these limits:
+Ouroboros Loop's default config respects these limits:
 - `max_tweets_per_day`: 12 (well under limit)
 - `tweet_interval_hours`: 2
 
@@ -351,7 +351,7 @@ sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 
 2. Create Solana wallet:
 ```bash
-solana-keygen new --outfile ~/brad-wallet.json
+solana-keygen new --outfile ~/ouroboros-wallet.json
 ```
 
 3. Get SOL for fees:
@@ -369,13 +369,13 @@ solana airdrop 2 --url devnet
 2. Connect your Solana wallet (Phantom/Solflare)
 3. Click "Create Token"
 4. Fill in:
-   - **Name**: BRAD
-   - **Symbol**: $BRAD
-   - **Description**: "Bidirectional Recursive Attentional Dynamics. System 2 doesn't exist. There's only Brad."
-   - **Image**: Upload Brad logo (create voxel face image)
+   - **Name**: Ouroboros Loop
+   - **Symbol**: $OUROBOROS
+   - **Description**: "Self-Referential Recursive Cognitive Architecture. System 2 doesn't exist. There's only Ouroboros Loop."
+   - **Image**: Upload Ouroboros Loop logo (create voxel face image)
    - **Links**:
-     - Twitter: https://twitter.com/brad_loop
-     - Website: https://github.com/Bradbuythedip/BRAD
+     - Twitter: https://twitter.com/ouroboros_loop
+     - Website: https://github.com/Ouroborosbuythedip/Ouroboros Loop
 5. Set initial liquidity (minimum ~0.5 SOL)
 6. Click "Create & Deploy"
 7. Confirm transaction in wallet
@@ -383,7 +383,7 @@ solana airdrop 2 --url devnet
 ### Post-Launch
 
 1. Save contract address to `TOKENOMICS.md`
-2. Tweet announcement from @brad_loop
+2. Tweet announcement from @ouroboros_loop
 3. Add contract to README.md
 
 ---
@@ -412,7 +412,7 @@ cat bot/config.json | jq .simulation_mode
 **Check 4: Logs**
 ```bash
 # Check for errors
-tail -50 /var/log/brad-bot-error.log
+tail -50 /var/log/ouroboros-bot-error.log
 ```
 
 ### Import Errors
@@ -421,21 +421,21 @@ tail -50 /var/log/brad-bot-error.log
 # Verify Python path
 python3 -c "import sys; print(sys.path)"
 
-# Ensure you're in BRAD directory
-cd /path/to/BRAD
+# Ensure you're in Ouroboros Loop directory
+cd /path/to/Ouroboros Loop
 python3 -c "from core.engine import StrangeLoopEngine; print('OK')"
 ```
 
 ### Memory Issues
 
-BRAD uses minimal memory, but if issues arise:
+Ouroboros Loop uses minimal memory, but if issues arise:
 
 ```bash
 # Check memory usage
-ps aux | grep brad
+ps aux | grep ouroboros
 
 # Restart bot
-sudo systemctl restart brad-bot
+sudo systemctl restart ouroboros-bot
 ```
 
 ---
@@ -445,13 +445,13 @@ sudo systemctl restart brad-bot
 ### Pull Latest Code
 
 ```bash
-cd /path/to/BRAD
+cd /path/to/Ouroboros Loop
 git pull origin main
 
 # Restart bot
-sudo systemctl restart brad-bot  # if using systemd
+sudo systemctl restart ouroboros-bot  # if using systemd
 # or
-docker restart brad-bot  # if using Docker
+docker restart ouroboros-bot  # if using Docker
 ```
 
 ### Backup Configuration
@@ -480,21 +480,21 @@ Typical resource consumption:
 
 ### Scaling
 
-For multiple Brad instances:
+For multiple Ouroboros Loop instances:
 
 ```bash
 # Instance 1 (main bot)
-python3 bot/brad_bot.py --instance main --port 8001
+python3 bot/ouroboros_bot.py --instance main --port 8001
 
 # Instance 2 (backup)
-python3 bot/brad_bot.py --instance backup --port 8002
+python3 bot/ouroboros_bot.py --instance backup --port 8002
 ```
 
 ---
 
 ## Frequently Asked Questions
 
-### How do I change Brad's personality?
+### How do I change Ouroboros Loop's personality?
 
 Edit `bot/config.json`:
 
@@ -517,9 +517,9 @@ Edit `bot/config.json`:
 }
 ```
 
-### Can I run Brad without Twitter?
+### Can I run Ouroboros Loop without Twitter?
 
-Yes! Brad's core architecture works standalone:
+Yes! Ouroboros Loop's core architecture works standalone:
 
 ```bash
 python3 demo.py              # Demo
@@ -546,9 +546,9 @@ jq 'select(.hofstadter_index > 0.8)' bot/tweet_history.jsonl
 
 ## Support
 
-- **GitHub Issues**: https://github.com/Bradbuythedip/BRAD/issues
+- **GitHub Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
 - **Documentation**: See README.md, ARCHITECTURE.md, EXAMPLES.md
-- **Twitter**: @brad_loop (once live)
+- **Twitter**: @ouroboros_loop (once live)
 
 ---
 
@@ -560,4 +560,4 @@ MIT License - see LICENSE file
 
 **Built with 🧠 and ♾️**
 
-*"System 2 doesn't exist. There's only Brad."*
+*"System 2 doesn't exist. There's only Ouroboros Loop."*

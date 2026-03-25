@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-test_suite.py — Verification tests for Strange Loop Cognitive Architecture
+test_suite.py — Verification tests for Ouroboros Loop Cognitive Architecture
 """
 
 import sys

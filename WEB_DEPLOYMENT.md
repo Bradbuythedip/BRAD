@@ -1,4 +1,4 @@
-# BRAD Website Deployment
+# Ouroboros Loop Website Deployment
 
 The website is ready to deploy on GitHub Pages.
 
@@ -8,7 +8,7 @@ The website is ready to deploy on GitHub Pages.
 
 ### Step 1: Enable GitHub Pages
 
-1. Go to your repository: https://github.com/Bradbuythedip/BRAD
+1. Go to your repository: https://github.com/Ouroborosbuythedip/Ouroboros-Loop
 2. Click **Settings** (top right)
 3. Scroll down to **Pages** (left sidebar)
 4. Under "Build and deployment":
@@ -21,23 +21,23 @@ The website is ready to deploy on GitHub Pages.
 
 GitHub will automatically build and deploy your site. This takes 1-2 minutes.
 
-You'll see a message: "Your site is live at https://bradbuythedip.github.io/BRAD/"
+You'll see a message: "Your site is live at https://ouroborosbuythedip.github.io/Ouroboros-Loop/"
 
 ### Step 3: Access Your Website
 
 Your website will be available at:
-**https://bradbuythedip.github.io/BRAD/web/**
+**https://ouroborosbuythedip.github.io/Ouroboros-Loop/web/**
 
 Or set it to root by moving index.html:
 ```bash
-cd ~/brad
+cd ~/ouroboros-loop
 mv web/index.html index.html
 git add index.html
 git commit -m "Move website to root"
 git push
 ```
 
-Then it will be at: **https://bradbuythedip.github.io/BRAD/**
+Then it will be at: **https://ouroborosbuythedip.github.io/Ouroboros-Loop/**
 
 ---
 
@@ -45,7 +45,7 @@ Then it will be at: **https://bradbuythedip.github.io/BRAD/**
 
 ### Step 1: Buy Domain
 
-Buy a domain like `bradloop.ai` from:
+Buy a domain like `ouroborosloop.ai` from:
 - Namecheap
 - Google Domains
 - Cloudflare
@@ -73,13 +73,13 @@ Value: 185.199.111.153
 
 Type: CNAME
 Name: www
-Value: bradbuythedip.github.io
+Value: ouroborosbuythedip.github.io
 ```
 
 ### Step 3: Configure GitHub
 
 1. Go to Settings → Pages
-2. Under "Custom domain", enter: `bradloop.ai`
+2. Under "Custom domain", enter: `ouroborosloop.ai`
 3. Click Save
 4. Wait for DNS check (can take up to 24 hours)
 5. Enable "Enforce HTTPS"
@@ -91,7 +91,7 @@ Value: bradbuythedip.github.io
 ### Current Page Includes:
 
 ✅ **Hero Section**
-- BRAD logo and tagline
+- Ouroboros Loop logo and tagline
 - Call-to-action buttons
 - Gradient styling with brand colors
 
@@ -103,7 +103,7 @@ Value: bradbuythedip.github.io
 
 ✅ **About Section**
 - Core thesis
-- What is BRAD
+- What is Ouroboros Loop
 - Hofstadter quote
 
 ✅ **Architecture**
@@ -120,7 +120,7 @@ Value: bradbuythedip.github.io
 - Lightweight
 
 ✅ **Token Information**
-- $BRAD details
+- $OUROBOROS details
 - Governance
 - Launch info
 - Link to tokenomics
@@ -155,7 +155,7 @@ Value: bradbuythedip.github.io
 Before deploying, test locally:
 
 ```bash
-cd ~/brad/web
+cd ~/ouroboros-loop/web
 
 # Python 3
 python3 -m http.server 8000
@@ -177,12 +177,12 @@ Then open: http://localhost:8000/index.html
 
 1. Go to https://netlify.com
 2. Connect GitHub account
-3. Import repository: Bradbuythedip/BRAD
+3. Import repository: Ouroborosbuythedip/Ouroboros-Loop
 4. Build settings:
    - Base directory: `web`
    - Publish directory: `.`
 5. Deploy
-6. Free custom domain: `brad.netlify.app`
+6. Free custom domain: `ouroboros-loop.netlify.app`
 
 ### Vercel
 
@@ -191,7 +191,7 @@ Then open: http://localhost:8000/index.html
 3. Configure:
    - Root directory: `web`
 4. Deploy
-5. Free custom domain: `brad.vercel.app`
+5. Free custom domain: `ouroboros-loop.vercel.app`
 
 ### Cloudflare Pages
 
@@ -209,7 +209,7 @@ Then open: http://localhost:8000/index.html
 To update the website:
 
 ```bash
-cd ~/brad
+cd ~/ouroboros-loop
 
 # Edit website
 nano web/index.html
@@ -229,14 +229,14 @@ git push
 Create additional pages in `web/`:
 
 ```bash
-cd ~/brad/web
+cd ~/ouroboros-loop/web
 
 # Create docs page
 cat > docs.html << 'EOF'
 <!DOCTYPE html>
 <html>
 <head>
-    <title>BRAD - Documentation</title>
+    <title>Ouroboros Loop - Documentation</title>
     <link rel="stylesheet" href="index.html">
 </head>
 <body>
@@ -271,7 +271,7 @@ To improve further:
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://bradbuythedip.github.io/BRAD/</loc>
+    <loc>https://ouroborosbuythedip.github.io/Ouroboros-Loop/</loc>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -293,7 +293,7 @@ To improve further:
 
 ```bash
 # Test if site is up
-curl -I https://bradbuythedip.github.io/BRAD/web/
+curl -I https://ouroborosbuythedip.github.io/Ouroboros-Loop/web/
 
 # Should return: HTTP/2 200
 ```
@@ -353,7 +353,7 @@ Ctrl+Shift+R (hard refresh)
 
 ✅ **Website created**: `web/index.html`
 ✅ **Ready to deploy**: GitHub Pages
-✅ **URL**: https://bradbuythedip.github.io/BRAD/web/
+✅ **URL**: https://ouroborosbuythedip.github.io/Ouroboros-Loop/web/
 ✅ **Features**: Full landing page with all sections
 ✅ **Responsive**: Mobile-friendly
 ✅ **Fast**: No external dependencies

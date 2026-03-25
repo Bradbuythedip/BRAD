@@ -1,14 +1,14 @@
 #!/bin/bash
-# BRAD Setup Script
+# Ouroboros Loop Setup Script
 
 set -e
 
-echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║                                                              ║"
-echo "║                    BRAD Setup Script                         ║"
-echo "║         Bidirectional Recursive Attentional Dynamics         ║"
-echo "║                                                              ║"
-echo "╚══════════════════════════════════════════════════════════════╝"
+echo "======================================================================"
+echo "                                                                      "
+echo "                    Ouroboros Loop Setup                               "
+echo "      Self-Referential Recursive Cognitive Architecture               "
+echo "                                                                      "
+echo "======================================================================"
 echo ""
 
 # Detect OS
@@ -28,19 +28,19 @@ echo ""
 echo "Checking Python version..."
 if command -v python3 &> /dev/null; then
     PYTHON_VERSION=$(python3 --version | cut -d' ' -f2)
-    echo "✓ Python 3 found: ${PYTHON_VERSION}"
-    
+    echo "  Python 3 found: ${PYTHON_VERSION}"
+
     MAJOR=$(echo ${PYTHON_VERSION} | cut -d'.' -f1)
     MINOR=$(echo ${PYTHON_VERSION} | cut -d'.' -f2)
-    
+
     if [ "$MAJOR" -ge 3 ] && [ "$MINOR" -ge 7 ]; then
-        echo "✓ Python version is 3.7+"
+        echo "  Python version is 3.7+ [OK]"
     else
-        echo "✗ Python 3.7+ required, found ${PYTHON_VERSION}"
+        echo "  Python 3.7+ required, found ${PYTHON_VERSION} [FAIL]"
         exit 1
     fi
 else
-    echo "✗ Python 3 not found"
+    echo "  Python 3 not found [FAIL]"
     echo "Please install Python 3.7+ from https://www.python.org/"
     exit 1
 fi
@@ -48,70 +48,60 @@ echo ""
 
 # Run tests
 echo "Running test suite..."
-if python3 test_suite.py > /tmp/brad_test.log 2>&1; then
-    echo "✓ All tests passed"
+if python3 test_suite.py > /tmp/ouroboros_test.log 2>&1; then
+    echo "  All tests passed [OK]"
 else
-    echo "✗ Tests failed. Check /tmp/brad_test.log"
-    cat /tmp/brad_test.log
+    echo "  Tests failed. Check /tmp/ouroboros_test.log [FAIL]"
+    cat /tmp/ouroboros_test.log
     exit 1
 fi
 echo ""
 
-# Check for pip (needed for Twitter bot)
+# Check for pip
 echo "Checking for pip..."
 if command -v pip3 &> /dev/null; then
-    echo "✓ pip3 found"
+    echo "  pip3 found [OK]"
 else
-    echo "⚠ pip3 not found (optional, needed for Twitter bot)"
+    echo "  pip3 not found (optional, needed for Twitter bot)"
 fi
 echo ""
 
-# Ask if user wants to set up Twitter bot
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+# Twitter bot setup
+echo "----------------------------------------------------------------------"
 echo "Twitter Bot Setup (optional)"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "----------------------------------------------------------------------"
 read -p "Set up Twitter bot? (y/n) " -n 1 -r
 echo ""
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-    # Install tweepy
     echo "Installing tweepy..."
     pip3 install tweepy
-    echo "✓ tweepy installed"
+    echo "  tweepy installed [OK]"
     echo ""
-    
-    # Create config file
+
     if [ ! -f "bot/config.json" ]; then
         echo "Creating bot/config.json from template..."
         cp bot/config.example.json bot/config.json
         chmod 600 bot/config.json
-        echo "✓ Config file created at bot/config.json"
+        echo "  Config file created at bot/config.json [OK]"
         echo ""
         echo "IMPORTANT: Edit bot/config.json and add your Twitter API credentials"
         echo "Get credentials at: https://developer.twitter.com/"
-        echo ""
-        echo "Or set environment variables:"
-        echo "  export TWITTER_API_KEY='your_key'"
-        echo "  export TWITTER_API_SECRET='your_secret'"
-        echo "  export TWITTER_ACCESS_TOKEN='your_token'"
-        echo "  export TWITTER_ACCESS_TOKEN_SECRET='your_token_secret'"
-        echo "  export TWITTER_BEARER_TOKEN='your_bearer'"
     else
-        echo "✓ bot/config.json already exists"
+        echo "  bot/config.json already exists [OK]"
     fi
     echo ""
-    
-    # Test bot in simulation mode
+
     echo "Testing bot in simulation mode..."
-    timeout 5s python3 bot/brad_bot.py > /dev/null 2>&1 || true
-    echo "✓ Bot test complete"
+    timeout 5s python3 bot/ouroboros_bot.py > /dev/null 2>&1 || true
+    echo "  Bot test complete [OK]"
 fi
 echo ""
 
 # Summary
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
-echo "Setup Complete!"
-echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+echo "======================================================================"
+echo "Setup Complete"
+echo "======================================================================"
 echo ""
 echo "Quick Start:"
 echo "  python3 demo.py              # Run demo"
@@ -121,24 +111,16 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Twitter Bot:"
     echo "  Edit bot/config.json with your API keys, then:"
-    echo "  python3 bot/brad_bot.py      # Run bot"
+    echo "  python3 bot/ouroboros_bot.py  # Run bot"
     echo ""
 fi
+echo "Bondli Trading Bridge:"
+echo "  pip install fastapi uvicorn pydantic"
+echo "  python -m bondli_bridge.server   # Starts on :8421"
+echo ""
 echo "Documentation:"
 echo "  README.md                    # Overview"
 echo "  DEPLOYMENT.md                # Production deployment"
 echo "  ARCHITECTURE.md              # Technical details"
+echo "  bondli_bridge/INTEGRATION.md # Bondli integration"
 echo ""
-echo "Next steps:"
-echo "  1. Read README.md"
-echo "  2. Run python3 demo.py"
-echo "  3. Explore with python3 interactive.py"
-if [[ $REPLY =~ ^[Yy]$ ]]; then
-    echo "  4. Configure Twitter API and launch bot"
-fi
-echo ""
-echo "╔══════════════════════════════════════════════════════════════╗"
-echo "║                                                              ║"
-echo "║  'System 2 doesn't exist. There's only Brad.'                ║"
-echo "║                                                              ║"
-echo "╚══════════════════════════════════════════════════════════════╝"

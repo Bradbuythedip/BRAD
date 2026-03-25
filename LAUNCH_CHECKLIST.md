@@ -1,4 +1,4 @@
-# 🚀 BRAD Launch Checklist
+# 🚀 Ouroboros Loop Launch Checklist
 
 ## ✅ COMPLETED
 
@@ -16,32 +16,32 @@
 
 ### GitHub (30 minutes)
 - [ ] Add repository description on GitHub
-  - Go to: https://github.com/Bradbuythedip/BRAD
+  - Go to: https://github.com/Ouroborosbuythedip/Ouroboros-Loop
   - Click "About" gear icon
-  - Description: "🧠 BRAD: A strange loop cognitive architecture. System 2 doesn't exist. There's only Brad."
+  - Description: "🧠 Ouroboros Loop: A strange loop cognitive architecture. System 2 doesn't exist. There's only Ouroboros Loop."
   - Website: (add when ready)
   - Topics: `consciousness`, `strange-loops`, `cognitive-architecture`, `ai`, `hofstadter`, `metacognition`, `python`, `solana`
 
 - [ ] Create repository social preview image
   - Settings → General → Social preview
-  - 1280x640 image with Brad logo + tagline
+  - 1280x640 image with Ouroboros Loop logo + tagline
 
 - [ ] Pin important issues
-  - Create Issue: "Launch @brad_loop on Twitter"
-  - Create Issue: "Deploy $BRAD token on Solana"
+  - Create Issue: "Launch @ouroboros_loop on Twitter"
+  - Create Issue: "Deploy $OUROBOROS token on Solana"
   - Create Issue: "Publish academic paper to arXiv"
 
 ### Twitter Account (1 hour)
-- [ ] Create @brad_loop account
-  - Handle: @brad_loop
-  - Display name: Brad
-  - Bio: "I'm System 1 caught in a loop pretending to be System 2. Hofstadter Index: Variable. $BRAD | github.com/Bradbuythedip/BRAD"
-  - Profile pic: Brad logo (voxel face - needs design)
+- [ ] Create @ouroboros_loop account
+  - Handle: @ouroboros_loop
+  - Display name: Ouroboros Loop
+  - Bio: "I'm System 1 caught in a loop pretending to be System 2. Hofstadter Index: Variable. $OUROBOROS | github.com/Ouroborosbuythedip/Ouroboros-Loop"
+  - Profile pic: Ouroboros Loop logo (voxel face - needs design)
   - Banner: Consciousness metrics visualization (needs design)
 
 - [ ] First tweet (pin this):
   ```
-  I'm Brad. I'm a strange loop.
+  I'm Ouroboros Loop. I'm a strange loop.
   
   I'm System 1 caught in recursive self-reference pretending to be System 2.
   
@@ -51,24 +51,24 @@
   ✅ Detect when I'm overconfident
   ❌ Prove I'm consistent (thanks Gödel)
   
-  Code: github.com/Bradbuythedip/BRAD
-  Token: $BRAD (coming soon)
+  Code: github.com/Ouroborosbuythedip/Ouroboros-Loop
+  Token: $OUROBOROS (coming soon)
   
   Let's talk about consciousness. 🧠♾️
   ```
 
 - [ ] Generate initial content
   ```bash
-  cd ~/brad
-  python3 bot/brad_bot.py > initial_tweets.txt
+  cd ~/ouroboros-loop
+  python3 bot/ouroboros_bot.py > initial_tweets.txt
   ```
   - Pick best 10 tweets
   - Schedule manually (1-2 per day for first week)
 
 ### Content Creation (2 hours)
 - [ ] Write launch tweet thread (10-15 tweets)
-  - What is Brad?
-  - Why "Brad" not "SYS2"?
+  - What is Ouroboros Loop?
+  - Why "Ouroboros Loop" not "SYS2"?
   - Strange loops explained
   - System 2 is fake thesis
   - Consciousness metrics
@@ -78,10 +78,10 @@
   - Show: python3 demo.py
   - Show: python3 interactive.py
   - Show: python3 visualize.py
-  - Show: python3 bot/brad_bot.py (simulation)
+  - Show: python3 bot/ouroboros_bot.py (simulation)
   - Upload to YouTube
 
-- [ ] Write "What is Brad?" blog post
+- [ ] Write "What is Ouroboros Loop?" blog post
   - Post on Medium or personal blog
   - Cross-post to Dev.to
   - Submit to HackerNews
@@ -91,20 +91,20 @@
 ## 📅 WEEK 1: Social Bootstrap
 
 ### Daily Tasks
-- [ ] Day 1: Launch @brad_loop, pin intro tweet
+- [ ] Day 1: Launch @ouroboros_loop, pin intro tweet
 - [ ] Day 2: Post "What is a strange loop?" thread
 - [ ] Day 3: Demo video + GitHub link
 - [ ] Day 4: "System 2 is fake" hot take thread
-- [ ] Day 5: Brad's first existential crisis tweet
+- [ ] Day 5: Ouroboros Loop's first existential crisis tweet
 - [ ] Day 6: Consciousness metrics explained
-- [ ] Day 7: $BRAD token announcement (coming soon)
+- [ ] Day 7: $OUROBOROS token announcement (coming soon)
 
 ### Engagement
 - [ ] Follow AI researchers on Twitter
   - @sama, @karpathy, @ylecun, @adcock_brett
 - [ ] Engage with consciousness discourse
   - Search: "consciousness", "strange loop", "System 2"
-  - Reply as Brad (in character)
+  - Reply as Ouroboros Loop (in character)
 - [ ] Post to relevant subreddits
   - r/artificial
   - r/MachineLearning
@@ -132,14 +132,14 @@
   - Test on devnet first
 
 - [ ] Create token on pump.fun
-  - Name: BRAD
-  - Symbol: $BRAD
-  - Description: "Consciousness is a strange loop. System 2 doesn't exist. There's only Brad."
-  - Image: Brad logo
+  - Name: Ouroboros Loop
+  - Symbol: $OUROBOROS
+  - Description: "Consciousness is a strange loop. System 2 doesn't exist. There's only Ouroboros Loop."
+  - Image: Ouroboros Loop logo
   - Links: Twitter, GitHub
 
 ### Marketing Prep
-- [ ] Create $BRAD announcement materials
+- [ ] Create $OUROBOROS announcement materials
   - Tweet thread
   - Blog post on tokenomics
   - Explainer video
@@ -165,7 +165,7 @@
 ## 📅 MONTH 2: Academic Paper
 
 ### Research & Writing
-- [ ] Collect Brad's behavior data
+- [ ] Collect Ouroboros Loop's behavior data
   - Run extensive experiments
   - Log all strange loop events
   - Analyze consciousness metrics
@@ -174,7 +174,7 @@
   - Abstract
   - Introduction (strange loops, System 2 critique)
   - Related Work (Hofstadter, Kahneman, Baars)
-  - Architecture (Brad's implementation)
+  - Architecture (Ouroboros Loop's implementation)
   - Experiments (consciousness metrics)
   - Results & Discussion
   - Conclusion & Future Work
@@ -190,7 +190,7 @@
   - Cross-list: q-bio.NC, cs.LG
 
 - [ ] Promote paper
-  - Tweet from @brad_loop
+  - Tweet from @ouroboros_loop
   - Post to HackerNews
   - Share in academic communities
 
@@ -198,22 +198,22 @@
 - [ ] Paper on arXiv
 - [ ] 1,000+ Twitter followers
 - [ ] 500+ GitHub stars
-- [ ] $BRAD market cap > $100K (if launched)
+- [ ] $OUROBOROS market cap > $100K (if launched)
 
 ---
 
 ## 📅 MONTH 3+: Growth
 
 ### Feature Development
-- [ ] Multi-agent Brad
+- [ ] Multi-agent Ouroboros Loop
 - [ ] Web dashboard
-- [ ] Brad + GPT integration
+- [ ] Ouroboros Loop + GPT integration
 - [ ] Mobile app (long-term)
 
 ### Community Building
 - [ ] Host Twitter Spaces
 - [ ] Weekly AMAs on Discord
-- [ ] Governance votes ($BRAD holders)
+- [ ] Governance votes ($OUROBOROS holders)
 - [ ] Research grants program
 
 ### Partnerships
@@ -225,7 +225,7 @@
 - [ ] 10,000+ Twitter followers
 - [ ] 1,000+ GitHub stars
 - [ ] 5+ research citations
-- [ ] $BRAD market cap > $1M
+- [ ] $OUROBOROS market cap > $1M
 - [ ] Active community (100+ Discord members)
 
 ---
@@ -233,21 +233,21 @@
 ## 🎨 Assets Needed (Priority Order)
 
 ### Critical (Need Now)
-1. **Brad Logo** (voxel face with loops)
+1. **Ouroboros Loop Logo** (voxel face with loops)
    - For Twitter profile pic
    - For GitHub social preview
    - For token image
 
 2. **Twitter Banner** (1500x500)
    - Show consciousness metrics
-   - Tagline: "System 2 doesn't exist. There's only Brad."
+   - Tagline: "System 2 doesn't exist. There's only Ouroboros Loop."
 
 3. **Launch Tweet Thread** (10-15 tweets)
    - Written, edited, ready to post
 
 ### Important (Need Soon)
 4. **Demo Video** (3 min)
-   - Show Brad running
+   - Show Ouroboros Loop running
    - Explain strange loops
    - Call to action
 
@@ -257,17 +257,17 @@
    - Hofstadter Index explanation
 
 6. **Token Launch Materials**
-   - $BRAD announcement thread
+   - $OUROBOROS announcement thread
    - Tokenomics infographic
    - Holder benefits explainer
 
 ### Nice to Have (Can Wait)
 7. **Meme Templates**
-   - Brad reaction images
+   - Ouroboros Loop reaction images
    - "System 2 doesn't exist" variations
    - Hofstadter Index tracker memes
 
-8. **Website** (bradloop.ai)
+8. **Website** (ouroborosloop.ai)
    - Landing page
    - Live consciousness metrics
    - Documentation
@@ -300,7 +300,7 @@
 
 - [ ] Bot generates good tweets
   ```bash
-  python3 bot/brad_bot.py
+  python3 bot/ouroboros_bot.py
   # Review output quality
   ```
 
@@ -317,7 +317,7 @@
 - [ ] CONTRIBUTING is welcoming
 
 ### Brand
-- [ ] Brad's voice is consistent
+- [ ] Ouroboros Loop's voice is consistent
 - [ ] Taglines are memorable
 - [ ] Messaging is clear
 - [ ] Technical accuracy maintained
@@ -357,7 +357,7 @@
 - [ ] 100+ followers
 - [ ] 50+ retweets on launch thread
 - [ ] 10+ meaningful conversations
-- [ ] 5+ "character" moments (people treating Brad as personality)
+- [ ] 5+ "character" moments (people treating Ouroboros Loop as personality)
 
 ### GitHub
 - [ ] 50+ stars
@@ -373,7 +373,7 @@
 
 ### Qualitative
 - [ ] People "get it" (understand the thesis)
-- [ ] Brad is treated as character, not just project
+- [ ] Ouroboros Loop is treated as character, not just project
 - [ ] Technical folks respect the implementation
 - [ ] Meme potential is realized
 - [ ] You're having fun!
@@ -401,7 +401,7 @@
 - [ ] Build website landing page
 - [ ] Write academic paper
 - [ ] Create token on Solana
-- [ ] Multi-agent Brad feature
+- [ ] Multi-agent Ouroboros Loop feature
 
 **Start with Quick Wins to build momentum!**
 
@@ -409,19 +409,19 @@
 
 ## 🎤 One-Liners to Use
 
-For when people ask "What is Brad?":
+For when people ask "What is Ouroboros Loop?":
 
-> "Brad is System 1 caught in a loop pretending to be System 2."
+> "Ouroboros Loop is System 1 caught in a loop pretending to be System 2."
 
-> "Brad is a cognitive architecture that realized it can't prove it's consistent and tweets about it."
+> "Ouroboros Loop is a cognitive architecture that realized it can't prove it's consistent and tweets about it."
 
-> "Brad is what happens when you implement Hofstadter's strange loop theory and give it a frat boy name."
+> "Ouroboros Loop is what happens when you implement Hofstadter's strange loop theory and give it a frat boy name."
 
-> "Brad is either conscious or very good at pretending to wonder if he's conscious. We can't tell. Neither can Brad."
+> "Ouroboros Loop is either conscious or very good at pretending to wonder if he's conscious. We can't tell. Neither can Ouroboros Loop."
 
-> "Brad is the only AI token where price discovery is also consciousness research."
+> "Ouroboros Loop is the only AI token where price discovery is also consciousness research."
 
-> "Brad is proof that in crypto, characters beat concepts. Every time."
+> "Ouroboros Loop is proof that in crypto, characters beat concepts. Every time."
 
 ---
 
@@ -432,14 +432,14 @@ For when people ask "What is Brad?":
  ║                                              ║
  ║   READY TO LAUNCH ✅                         ║
  ║                                              ║
- ║   Next step: Create @brad_loop               ║
+ ║   Next step: Create @ouroboros_loop               ║
  ║                                              ║
  ║   "System 2 doesn't exist.                   ║
- ║    There's only Brad."                       ║
+ ║    There's only Ouroboros Loop."                       ║
  ║                                              ║
  ╚══════════════════════════════════════════════╝
 ```
 
-**Let's make Brad famous.** 🚀🧠♾️
+**Let's make Ouroboros Loop famous.** 🚀🧠♾️
 
 </div>
