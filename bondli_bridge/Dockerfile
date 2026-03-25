@@ -8,8 +8,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY . /app/bondli_bridge/
 COPY core/ /app/core/
 
-ENV BRAD_HOST=0.0.0.0
-ENV BRAD_PORT=8421
+ENV BRAIN_HOST=0.0.0.0
+ENV BRAIN_PORT=8421
 
 EXPOSE 8421
 

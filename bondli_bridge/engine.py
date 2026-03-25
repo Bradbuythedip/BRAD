@@ -1,17 +1,22 @@
 """
-engine.py — The Trading Strange Loop Engine
+engine.py — Brain: Recursive Cognitive Trading Engine
 
-Main orchestrator that runs the cognitive trading cycle.
-Wires together:
-  Level 0: MarketWorldModel — sees tokens, wallets, regime
-  Level 1: TradingSelfModel — makes APE/SKIP/EXIT decisions
-  Level 2: TradingMetaCognitive — watches L1, forces corrections
+Main orchestrator implementing the three-level strange loop cognitive
+cycle for autonomous trading decisions.
 
-The strange loop: L2 detects L1 is making bad trades → restructures L1 →
-L1 changes how it evaluates tokens in L0 → L0's attention shifts →
-different tokens surface → L1 makes different decisions → L2 observes...
+Hierarchy:
+  Level 0: MarketWorldModel    — Perceptual grounding (tokens, wallets, regime)
+  Level 1: TradingSelfModel    — Strategic reasoning (APE/SKIP/EXIT decisions)
+  Level 2: TradingMetaCognitive — Meta-cognitive oversight (bias detection,
+                                   strategy adaptation, downward causation)
 
-Bondli calls this via the FastAPI server. Each call runs one cognitive cycle.
+The recursive loop: L2 detects systematic errors in L1 -> restructures L1's
+strategy/confidence -> L1 modulates L0's attention weights -> different tokens
+receive focus -> L1 produces different decisions -> L2 observes updated
+performance -> cycle continues.
+
+Each evaluate_token() call executes one complete cognitive cycle.
+Bondli's Node.js backend communicates via the FastAPI server (server.py).
 """
 
 from typing import Dict, List, Optional

@@ -1,8 +1,9 @@
 """
-config.py — Configuration for the Bondli cognitive bridge.
+config.py — Configuration for the Brain cognitive trading bridge.
 
-All thresholds, limits, and tuning parameters live here.
-Bondli can override any of these via the /config endpoint or env vars.
+Defines all thresholds, risk limits, strategy parameters, and cognitive
+tuning constants. Values are overridable via environment variables
+(prefix: BRAIN_) or the /config API endpoint at runtime.
 """
 
 import os
@@ -54,7 +55,7 @@ class StrategyConfig:
 
 @dataclass
 class CognitiveConfig:
-    """BRAD cognitive engine tuning."""
+    """Cognitive engine tuning parameters."""
     meta_eval_frequency: int = 3             # Meta-cognitive evaluates every N cycles
     attention_capacity: int = 10             # Max tokens to track simultaneously
     self_referential_boost: float = 0.15     # Salience boost for self-referential events
@@ -82,25 +83,25 @@ class BridgeConfig:
         config = cls()
 
         # Server
-        config.host = os.getenv("BRAD_HOST", config.host)
-        config.port = int(os.getenv("BRAD_PORT", config.port))
-        config.debug = os.getenv("BRAD_DEBUG", "false").lower() == "true"
+        config.host = os.getenv("BRAIN_HOST", config.host)
+        config.port = int(os.getenv("BRAIN_PORT", config.port))
+        config.debug = os.getenv("BRAIN_DEBUG", "false").lower() == "true"
 
         # Risk overrides
         config.risk.max_position_size_sol = float(
-            os.getenv("BRAD_MAX_POSITION_SOL", config.risk.max_position_size_sol))
+            os.getenv("BRAIN_MAX_POSITION_SOL", config.risk.max_position_size_sol))
         config.risk.max_concurrent_positions = int(
-            os.getenv("BRAD_MAX_POSITIONS", config.risk.max_concurrent_positions))
+            os.getenv("BRAIN_MAX_POSITIONS", config.risk.max_concurrent_positions))
         config.risk.max_portfolio_exposure_sol = float(
-            os.getenv("BRAD_MAX_EXPOSURE_SOL", config.risk.max_portfolio_exposure_sol))
+            os.getenv("BRAIN_MAX_EXPOSURE_SOL", config.risk.max_portfolio_exposure_sol))
         config.risk.max_drawdown_pct = float(
-            os.getenv("BRAD_MAX_DRAWDOWN", config.risk.max_drawdown_pct))
+            os.getenv("BRAIN_MAX_DRAWDOWN", config.risk.max_drawdown_pct))
 
         # Scoring overrides
         config.scoring.min_score_to_ape = float(
-            os.getenv("BRAD_MIN_SCORE_APE", config.scoring.min_score_to_ape))
+            os.getenv("BRAIN_MIN_SCORE_APE", config.scoring.min_score_to_ape))
         config.scoring.rug_signal_max = int(
-            os.getenv("BRAD_RUG_SIGNAL_MAX", config.scoring.rug_signal_max))
+            os.getenv("BRAIN_RUG_SIGNAL_MAX", config.scoring.rug_signal_max))
 
         return config
 

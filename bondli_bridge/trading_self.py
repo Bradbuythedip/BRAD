@@ -1,13 +1,17 @@
 """
-trading_self.py — Level 1: The Trading Self
+trading_self.py — Level 1: Strategic Reasoning Layer
 
-Extends BRAD's SelfModel with trading-specific reasoning.
-Selects strategies, manages goals, and intervenes on the market
-world model (downward causation = the strange loop in action).
+Extends the base SelfModel with trading-specific decision logic.
+Implements strategy selection, goal-driven evaluation, and downward
+causation on the market world model (Level 0) via attention modulation.
 
-Key responsibility: Given market data, decide APE / SKIP / EXIT / HOLD.
-The meta-cognitive layer (Level 2) watches these decisions and
-forces corrections when performance degrades.
+Primary responsibility: Given scored token data and market context,
+produce a structured decision (APE / SKIP / EXIT / HOLD) with an
+auditable reasoning chain. Position sizing follows a half-Kelly
+criterion adapted for regime-dependent risk adjustment.
+
+The meta-cognitive layer (Level 2) monitors these decisions and
+applies corrective interventions when systematic errors are detected.
 """
 
 from typing import Dict, List, Optional, Tuple
@@ -82,11 +86,11 @@ class TradingSelfModel(SelfModel):
     """
     Level 1 of the trading cognitive hierarchy.
 
-    Extends BRAD's self-model with:
-    - Trading strategy management and selection
-    - Position-aware decision making
-    - Performance self-assessment
-    - Downward causation on market attention
+    Extends the base self-model with:
+    - Multi-strategy management with regime-conditional selection
+    - Position-aware gating (exposure, liquidity, rug detection)
+    - Performance self-assessment via confidence state tracking
+    - Downward causation on Level 0 attention weights
     """
 
     def __init__(self, config: BridgeConfig = None):

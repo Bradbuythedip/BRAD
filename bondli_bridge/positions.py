@@ -1,8 +1,10 @@
 """
-positions.py — Position tracking for the cognitive trading layer.
+positions.py — Position lifecycle management for the cognitive trading layer.
 
-Tracks open positions, P&L, and trade history. Feeds data into the
-self-model so BRAD can reason about its own trading performance.
+Tracks open positions, profit/loss accounting, and trade history. Provides
+aggregate statistics that feed into the self-model (Level 1) for
+performance-aware decision making and the meta-cognitive layer (Level 2)
+for strategy effectiveness evaluation.
 """
 
 from dataclasses import dataclass, field
