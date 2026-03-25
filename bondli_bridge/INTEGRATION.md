@@ -2,7 +2,7 @@
 
 ## Overview
 
-Brain is a self-correcting cognitive trading layer that implements Hofstadter's strange loop architecture for autonomous decision-making on Solana. It sits between Bondli's ML scoring pipeline and its trade execution engine, providing structured entry/exit decisions with auditable reasoning chains.
+Brain is a self-correcting cognitive trading layer that implements Hofstadter's strange loop architecture for autonomous decision-making. It sits between Bondli's ML scoring pipeline and its trade execution engine, providing structured entry/exit decisions with auditable reasoning chains.
 
 The core mechanism: a three-level cognitive hierarchy where higher levels monitor and restructure lower levels (downward causation), creating a recursive self-referential loop that adapts to changing market conditions and corrects systematic decision-making errors.
 

@@ -2,7 +2,7 @@
 bondli_bridge — Recursive cognitive trading architecture for Bondli
 
 Implements a three-level strange loop cognitive hierarchy for autonomous
-trading decision-making on Solana. Based on Hofstadter's theory of
+trading decision-making. Based on Hofstadter's theory of
 self-referential systems, adapted for real-time market microstructure.
 
 Architecture:

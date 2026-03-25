@@ -2,7 +2,7 @@
 
 **Self-Referential Recursive Cognitive Architecture**
 
-A computational implementation of Hofstadter's strange loop theory of consciousness, applied to autonomous trading intelligence on Solana.
+A computational implementation of Hofstadter's strange loop theory of consciousness, applied to autonomous trading intelligence.
 
 ---
 
@@ -175,29 +175,10 @@ See [DEPLOYMENT.md](DEPLOYMENT.md) for production deployment (systemd, Docker).
 
 ---
 
-## Token
-
-**$OUROBOROS** is a Solana token representing governance over the cognitive architecture's parameters.
-
-- **Supply**: 1,000,000,000
-- **Network**: Solana
-- **Launch**: pump.fun (fair launch, no presale)
-
-Token holders can vote on:
-- Hofstadter Index thresholds
-- Confidence calibration parameters
-- Strange loop sensitivity
-- Meta-cognitive intervention rules
-
-See [TOKENOMICS.md](TOKENOMICS.md) for details.
-
----
-
 ## Documentation
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)** — Technical architecture deep dive
 - **[DEPLOYMENT.md](DEPLOYMENT.md)** — Production deployment guide
-- **[TOKENOMICS.md](TOKENOMICS.md)** — Token economics and governance
 - **[CONTRIBUTING.md](CONTRIBUTING.md)** — Contribution guidelines
 - **[bondli_bridge/INTEGRATION.md](bondli_bridge/INTEGRATION.md)** — Bondli trading integration
 
