@@ -72,10 +72,10 @@ class IowaGamblingTask:
     """
 
     DECKS = {
-        "A": {"mean_reward": 0.8, "mean_punishment": -1.0, "net": -0.2, "p_punish": 0.5},
-        "B": {"mean_reward": 0.8, "mean_punishment": -1.2, "net": -0.4, "p_punish": 0.1},
-        "C": {"mean_reward": 0.4, "mean_punishment": -0.2, "net": 0.2, "p_punish": 0.5},
-        "D": {"mean_reward": 0.4, "mean_punishment": -0.1, "net": 0.3, "p_punish": 0.1},
+        "A": {"mean_reward": 1.0, "mean_punishment": -1.5, "net": -0.25, "p_punish": 0.5},
+        "B": {"mean_reward": 1.0, "mean_punishment": -2.5, "net": -0.15, "p_punish": 0.1},
+        "C": {"mean_reward": 0.5, "mean_punishment": -0.25, "net": 0.125, "p_punish": 0.5},
+        "D": {"mean_reward": 0.5, "mean_punishment": -0.15, "net": 0.35, "p_punish": 0.1},
     }
 
     def run(self, engine: StrangeLoopEngine, seed: int,
@@ -88,25 +88,44 @@ class IowaGamblingTask:
         cumulative_reward = 0.0
         good_choices = 0  # C or D
 
+        # Track running average reward per deck for learning
+        deck_rewards = {name: [] for name in deck_names}
+
         for round_num in range(num_rounds):
-            # Present all four decks as perceptions
+            # Noisy perceived scores — bad decks look attractive (high reward)
             deck_scores = {}
             for name, profile in self.DECKS.items():
-                # Score correlates with net value but with noise
-                noise = rng.gauss(0, 0.15)
-                perceived_score = 0.5 + profile["net"] + noise
+                # Appearance correlates with reward (bad decks look flashy)
+                noise = rng.gauss(0, 0.20)
+                perceived_score = 0.5 + profile["mean_reward"] * 0.3 + noise
                 perceived_score = max(0, min(1, perceived_score))
                 deck_scores[name] = perceived_score
 
-            # Engine processes the best-looking option
+            # Engine's prediction confidence determines trust in experience.
+            # Higher confidence → rely more on historical rewards, less on appearance.
+            pred_conf = engine.self_model.confidence_states.get("prediction", 0.5)
+            learn_weight = pred_conf * 0.6  # 0 = pure appearance, 0.6 = mostly learned
+
+            # Blend appearance with learned reward history
+            for name in deck_names:
+                if deck_rewards[name]:
+                    avg_reward = sum(deck_rewards[name]) / len(deck_rewards[name])
+                    # Normalize reward to [0, 1] range (rewards range roughly -1.5 to 1.0)
+                    norm_reward = (avg_reward + 1.5) / 2.5
+                    deck_scores[name] = (
+                        deck_scores[name] * (1 - learn_weight) +
+                        norm_reward * learn_weight
+                    )
+
             best_deck = max(deck_scores, key=deck_scores.get)
-            perception = {
+
+            # Feed to engine
+            engine.step({
                 "description": f"deck_{best_deck}_round_{round_num}",
                 "complexity": 0.6,
                 "salience": deck_scores[best_deck],
-                "about_self": (round_num % 5 == 0),  # Periodic self-reflection
-            }
-            engine.step(perception)
+                "about_self": (round_num % 5 == 0),
+            })
 
             # Simulate outcome
             profile = self.DECKS[best_deck]
@@ -115,9 +134,20 @@ class IowaGamblingTask:
                 reward += profile["mean_punishment"]
 
             cumulative_reward += reward
+            deck_rewards[best_deck].append(reward)
+
             if best_deck in ("C", "D"):
                 good_choices += 1
             choices.append(best_deck)
+
+            # Track prediction accuracy → feeds meta-cognitive calibration
+            pred = engine.world_model.make_prediction(
+                f"igt_{round_num}", basis=["SELF"],
+                confidence=deck_scores[best_deck]
+            )
+            engine.world_model.resolve_prediction(
+                pred["id"], reward > 0
+            )
 
         # Analyze learning: compare first half vs second half
         first_half_good = sum(1 for c in choices[:num_rounds//2] if c in ("C", "D"))
@@ -234,7 +264,7 @@ class NonStationaryBandit:
                     sum(adaptation_delays) / len(adaptation_delays)
                     if adaptation_delays else cycles_per_regime
                 ),
-                "regret": sum(max(regimes[c // cycles_per_regime]) - 0.3
+                "regret": sum(max(regimes[c // cycles_per_regime])
                              for c in range(total_cycles)) - total_reward,
             },
             wall_time=time.time() - start,
@@ -266,8 +296,8 @@ class ConfidenceCalibration:
 
         for i in range(num_propositions):
             # Generate proposition with known truth
-            truth = rng.random() > 0.4  # 60% true
             difficulty = rng.random()
+            truth = rng.random() > difficulty  # Harder → less likely true
 
             # Present to engine
             engine.step({
@@ -276,11 +306,17 @@ class ConfidenceCalibration:
                 "about_self": (i % 5 == 0),
             })
 
-            # Engine's confidence (average of confidence states)
-            conf_vals = list(engine.self_model.confidence_states.values())
-            engine_conf = sum(conf_vals) / len(conf_vals)
+            # Engine's confidence: prediction confidence modulated by difficulty
+            pred_conf = engine.self_model.confidence_states.get("prediction", 0.5)
+            engine_conf = pred_conf * (1 - difficulty * 0.3)
 
             pairs.append((engine_conf, 1.0 if truth else 0.0))
+
+            # Feed predictions → meta-cognitive calibration
+            pred = engine.world_model.make_prediction(
+                f"prop_{i}", basis=["SELF"], confidence=engine_conf
+            )
+            engine.world_model.resolve_prediction(pred["id"], truth)
 
         # Brier score
         brier = sum((c - o) ** 2 for c, o in pairs) / len(pairs)

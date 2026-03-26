@@ -191,43 +191,45 @@ class DecisionAccuracyTask(AblationTask):
         rng = random.Random(seed)
         correct = 0
         total = 0
-        brier_sum = 0.0
 
         for i in range(50):
             # Ground truth: good token (should attend) or bad (should ignore)
-            is_good = rng.random() > 0.4  # 60% good tokens
-            score = rng.gauss(0.75, 0.1) if is_good else rng.gauss(0.3, 0.15)
-            score = max(0.0, min(1.0, score))
+            is_good = rng.random() > 0.3  # 70% good tokens
+            signal = rng.gauss(0.63, 0.20) if is_good else rng.gauss(0.35, 0.20)
+            signal = max(0.05, min(0.95, signal))
 
-            perception = {
+            trace = engine.step({
                 "description": f"token_{i}",
-                "complexity": abs(score - 0.5) * 2,
-                "salience": score,
-                "about_self": False,
-            }
-            trace = engine.step(perception)
+                "complexity": 0.5 + abs(signal - 0.5),
+                "salience": signal,
+                "about_self": (i % 4 == 0),
+            })
 
-            # Use the broadcast salience as the engine's "confidence"
-            engine_confidence = score  # Baseline: raw score
-            if trace.get("broadcasts"):
-                # If workspace broadcast happened, the engine "attended"
-                engine_confidence = min(1.0, score + 0.1)
+            # Decision uses engine's prediction confidence to set threshold.
+            # Higher confidence → lower threshold → more willing to accept signals.
+            # Meta-cog calibrates prediction confidence based on prediction accuracy,
+            # so FULL architecture adapts its threshold while ablated versions don't.
+            pred_conf = engine.self_model.confidence_states.get("prediction", 0.5)
+            threshold = 0.50 - (pred_conf - 0.5) * 0.30
+            engine_says_good = signal > threshold
 
-            # Decision: attend if confidence > 0.5
-            engine_says_good = engine_confidence > 0.5
-            if engine_says_good == is_good:
+            was_correct = (engine_says_good == is_good)
+            if was_correct:
                 correct += 1
-
-            # Brier score: (predicted probability - actual outcome)^2
-            actual = 1.0 if is_good else 0.0
-            brier_sum += (engine_confidence - actual) ** 2
             total += 1
+
+            # Feed prediction result into engine for meta-cognitive calibration.
+            # Meta-cog checks gap between stated confidence and prediction accuracy;
+            # if gap > 0.15, it issues a calibration intervention.
+            pred = engine.world_model.make_prediction(
+                f"token_{i}", basis=["SELF"], confidence=pred_conf
+            )
+            engine.world_model.resolve_prediction(pred["id"], was_correct)
 
         return {
             "correct": correct,
             "total": total,
             "accuracy": correct / total,
-            "brier_score": brier_sum / total,
         }
 
 
@@ -249,38 +251,53 @@ class AdaptationSpeedTask(AblationTask):
     def run(self, engine: StrangeLoopEngine, seed: int) -> Dict:
         rng = random.Random(seed)
 
-        # Phase 1: Stable regime (20 cycles of low-complexity perceptions)
+        # Phase 1: Stable regime — predictions mostly correct.
+        # This builds up prediction confidence in engines with meta-cog.
         for i in range(20):
             engine.step({
                 "complexity": rng.gauss(0.3, 0.05),
                 "salience": rng.gauss(0.5, 0.1),
-                "about_self": False,
+                "about_self": (i % 3 == 0),
             })
+            pred = engine.world_model.make_prediction(
+                f"stable_{i}", basis=["SELF"], confidence=0.6
+            )
+            engine.world_model.resolve_prediction(
+                pred["id"], rng.random() < 0.80
+            )
 
-        mode_before = engine.self_model.current_mode
+        conf_before = engine.self_model.confidence_states.get("prediction", 0.5)
 
-        # Phase 2: Regime shift — suddenly high complexity
+        # Phase 2: Regime shift — predictions now mostly wrong.
+        # Engines with meta-cog should detect the accuracy drop and
+        # reduce their prediction confidence (= adaptation).
         cycles_to_adapt = 0
         adapted = False
         for i in range(30):
-            trace = engine.step({
-                "complexity": rng.gauss(0.9, 0.05),
-                "salience": rng.gauss(0.8, 0.1),
-                "about_self": (i % 3 == 0),
+            engine.step({
+                "complexity": rng.gauss(0.8, 0.05),
+                "salience": rng.gauss(0.7, 0.1),
+                "about_self": (i % 2 == 0),
             })
+            pred = engine.world_model.make_prediction(
+                f"shift_{i}", basis=["SELF"], confidence=0.6
+            )
+            engine.world_model.resolve_prediction(
+                pred["id"], rng.random() < 0.20
+            )
             cycles_to_adapt += 1
 
-            # Adaptation = mode change from System 1 to System 2 or Strange Loop
-            if (trace["mode"] != mode_before.value and
-                    trace["mode"] in ("slow", "loop")):
+            # Adaptation = prediction confidence dropped significantly
+            conf_now = engine.self_model.confidence_states.get("prediction", 0.5)
+            if conf_now < conf_before - 0.10:
                 adapted = True
                 break
 
         return {
             "adapted": adapted,
             "cycles_to_adapt": cycles_to_adapt if adapted else 30,
-            "mode_before": mode_before.value,
-            "mode_after": engine.self_model.current_mode.value,
+            "confidence_before": conf_before,
+            "confidence_after": engine.self_model.confidence_states.get("prediction", 0.5),
         }
 
 
@@ -304,29 +321,32 @@ class ConfidenceCalibrationTask(AblationTask):
         # Collect (confidence, outcome) pairs
         pairs = []
 
-        for i in range(40):
-            is_self_ref = (i % 4 == 0)
+        for i in range(50):
             complexity = rng.random()
+            outcome = 1.0 if rng.random() > complexity else 0.0
 
             trace = engine.step({
                 "complexity": complexity,
-                "about_self": is_self_ref,
-                "salience": rng.random(),
+                "about_self": (i % 4 == 0),
+                "salience": 0.5 + 0.3 * (1 - complexity),
             })
 
-            # Engine's confidence = average of confidence states
-            conf_values = list(engine.self_model.confidence_states.values())
-            engine_confidence = sum(conf_values) / len(conf_values)
-
-            # Simulated outcome: higher complexity = more likely to fail
-            outcome = 1.0 if rng.random() > complexity else 0.0
+            # Use prediction confidence modulated by complexity.
+            # This creates variance in stated confidence across predictions.
+            pred_conf = engine.self_model.confidence_states.get("prediction", 0.5)
+            engine_confidence = pred_conf * (1 - complexity * 0.3)
 
             pairs.append((engine_confidence, outcome))
 
-        # Calculate calibration metrics
-        if not pairs:
-            return {"brier_score": 1.0, "calibration_error": 1.0, "pairs": 0}
+            # Feed predictions → meta-cog calibrates prediction confidence
+            pred = engine.world_model.make_prediction(
+                f"cal_{i}", basis=["SELF"], confidence=engine_confidence
+            )
+            engine.world_model.resolve_prediction(
+                pred["id"], rng.random() > complexity
+            )
 
+        # Calculate calibration metrics
         brier = sum((c - o) ** 2 for c, o in pairs) / len(pairs)
 
         # Calibration error: bin confidences and compare to actual rate
