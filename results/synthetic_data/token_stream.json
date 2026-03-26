@@ -1,0 +1,3402 @@
+[
+  {
+    "index": 0,
+    "mint": "synthetic_0000",
+    "name": "Token_0",
+    "symbol": "T0",
+    "score": 0.4926,
+    "velocity": -0.025,
+    "acceleration": -0.0045,
+    "rug_signals": 4,
+    "liquidity_sol": 0.5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6781
+    }
+  },
+  {
+    "index": 1,
+    "mint": "synthetic_0001",
+    "name": "Token_1",
+    "symbol": "T1",
+    "score": 0.4742,
+    "velocity": -0.0248,
+    "acceleration": -0.0146,
+    "rug_signals": 1,
+    "liquidity_sol": 11.66,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0251
+    }
+  },
+  {
+    "index": 2,
+    "mint": "synthetic_0002",
+    "name": "Token_2",
+    "symbol": "T2",
+    "score": 0.595,
+    "velocity": 0.0206,
+    "acceleration": 0.0281,
+    "rug_signals": 0,
+    "liquidity_sol": 31.11,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.9215
+    }
+  },
+  {
+    "index": 3,
+    "mint": "synthetic_0003",
+    "name": "Token_3",
+    "symbol": "T3",
+    "score": 1,
+    "velocity": 0.0475,
+    "acceleration": 0.0125,
+    "rug_signals": 0,
+    "liquidity_sol": 8.36,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1699
+    }
+  },
+  {
+    "index": 4,
+    "mint": "synthetic_0004",
+    "name": "Token_4",
+    "symbol": "T4",
+    "score": 0.5231,
+    "velocity": -0.0366,
+    "acceleration": -0.0456,
+    "rug_signals": 1,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5696
+    }
+  },
+  {
+    "index": 5,
+    "mint": "synthetic_0005",
+    "name": "Token_5",
+    "symbol": "T5",
+    "score": 0.4741,
+    "velocity": -0.0218,
+    "acceleration": -0.012,
+    "rug_signals": 2,
+    "liquidity_sol": 8.4,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2082
+    }
+  },
+  {
+    "index": 6,
+    "mint": "synthetic_0006",
+    "name": "Token_6",
+    "symbol": "T6",
+    "score": 0.2357,
+    "velocity": -0.0011,
+    "acceleration": -0.006,
+    "rug_signals": 3,
+    "liquidity_sol": 18.66,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.412
+    }
+  },
+  {
+    "index": 7,
+    "mint": "synthetic_0007",
+    "name": "Token_7",
+    "symbol": "T7",
+    "score": 0.7706,
+    "velocity": 0.0282,
+    "acceleration": -0.0119,
+    "rug_signals": 0,
+    "liquidity_sol": 61.12,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2695
+    }
+  },
+  {
+    "index": 8,
+    "mint": "synthetic_0008",
+    "name": "Token_8",
+    "symbol": "T8",
+    "score": 0.0325,
+    "velocity": -0.0287,
+    "acceleration": -0.0049,
+    "rug_signals": 1,
+    "liquidity_sol": 13.79,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.0829
+    }
+  },
+  {
+    "index": 9,
+    "mint": "synthetic_0009",
+    "name": "Token_9",
+    "symbol": "T9",
+    "score": 0.6939,
+    "velocity": 0.0288,
+    "acceleration": 0.0017,
+    "rug_signals": 0,
+    "liquidity_sol": 18.62,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5602
+    }
+  },
+  {
+    "index": 10,
+    "mint": "synthetic_0010",
+    "name": "Token_10",
+    "symbol": "T10",
+    "score": 0.3309,
+    "velocity": 0.0229,
+    "acceleration": 0.0062,
+    "rug_signals": 1,
+    "liquidity_sol": 13.31,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.3804
+    }
+  },
+  {
+    "index": 11,
+    "mint": "synthetic_0011",
+    "name": "Token_11",
+    "symbol": "T11",
+    "score": 0.8353,
+    "velocity": 0.0428,
+    "acceleration": -0.0023,
+    "rug_signals": 0,
+    "liquidity_sol": 10.91,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": -0.2357
+    }
+  },
+  {
+    "index": 12,
+    "mint": "synthetic_0012",
+    "name": "Token_12",
+    "symbol": "T12",
+    "score": 0.7561,
+    "velocity": 0.0481,
+    "acceleration": -0.0172,
+    "rug_signals": 4,
+    "liquidity_sol": 8.92,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4533
+    }
+  },
+  {
+    "index": 13,
+    "mint": "synthetic_0013",
+    "name": "Token_13",
+    "symbol": "T13",
+    "score": 0.3174,
+    "velocity": 0.0027,
+    "acceleration": 0.0038,
+    "rug_signals": 0,
+    "liquidity_sol": 13.69,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3198
+    }
+  },
+  {
+    "index": 14,
+    "mint": "synthetic_0014",
+    "name": "Token_14",
+    "symbol": "T14",
+    "score": 0.9209,
+    "velocity": 0.0745,
+    "acceleration": -0.0006,
+    "rug_signals": 0,
+    "liquidity_sol": 16.79,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.185
+    }
+  },
+  {
+    "index": 15,
+    "mint": "synthetic_0015",
+    "name": "Token_15",
+    "symbol": "T15",
+    "score": 0.0469,
+    "velocity": -0.047,
+    "acceleration": -0.0107,
+    "rug_signals": 1,
+    "liquidity_sol": 7.29,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2646
+    }
+  },
+  {
+    "index": 16,
+    "mint": "synthetic_0016",
+    "name": "Token_16",
+    "symbol": "T16",
+    "score": 0.4258,
+    "velocity": -0.0599,
+    "acceleration": 0.0283,
+    "rug_signals": 3,
+    "liquidity_sol": 11.2,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3277
+    }
+  },
+  {
+    "index": 17,
+    "mint": "synthetic_0017",
+    "name": "Token_17",
+    "symbol": "T17",
+    "score": 0.7936,
+    "velocity": 0.006,
+    "acceleration": 0.0179,
+    "rug_signals": 0,
+    "liquidity_sol": 42.3,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7189
+    }
+  },
+  {
+    "index": 18,
+    "mint": "synthetic_0018",
+    "name": "Token_18",
+    "symbol": "T18",
+    "score": 0.6896,
+    "velocity": 0.0086,
+    "acceleration": 0.006,
+    "rug_signals": 0,
+    "liquidity_sol": 11.48,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 1.4066
+    }
+  },
+  {
+    "index": 19,
+    "mint": "synthetic_0019",
+    "name": "Token_19",
+    "symbol": "T19",
+    "score": 0.2591,
+    "velocity": -0.0322,
+    "acceleration": -0.0071,
+    "rug_signals": 3,
+    "liquidity_sol": 3.08,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3762
+    }
+  },
+  {
+    "index": 20,
+    "mint": "synthetic_0020",
+    "name": "Token_20",
+    "symbol": "T20",
+    "score": 0.7212,
+    "velocity": 0.0294,
+    "acceleration": 0.0264,
+    "rug_signals": 1,
+    "liquidity_sol": 13.36,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3985
+    }
+  },
+  {
+    "index": 21,
+    "mint": "synthetic_0021",
+    "name": "Token_21",
+    "symbol": "T21",
+    "score": 0.7072,
+    "velocity": 0.0639,
+    "acceleration": 0.0049,
+    "rug_signals": 0,
+    "liquidity_sol": 35.88,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": -0.0318
+    }
+  },
+  {
+    "index": 22,
+    "mint": "synthetic_0022",
+    "name": "Token_22",
+    "symbol": "T22",
+    "score": 0.6657,
+    "velocity": 0.0488,
+    "acceleration": -0.0058,
+    "rug_signals": 0,
+    "liquidity_sol": 34.99,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7481
+    }
+  },
+  {
+    "index": 23,
+    "mint": "synthetic_0023",
+    "name": "Token_23",
+    "symbol": "T23",
+    "score": 0.8506,
+    "velocity": 0.0498,
+    "acceleration": 0.0042,
+    "rug_signals": 0,
+    "liquidity_sol": 15.11,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5996
+    }
+  },
+  {
+    "index": 24,
+    "mint": "synthetic_0024",
+    "name": "Token_24",
+    "symbol": "T24",
+    "score": 0.895,
+    "velocity": 0.03,
+    "acceleration": 0.0181,
+    "rug_signals": 1,
+    "liquidity_sol": 15.49,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.9069
+    }
+  },
+  {
+    "index": 25,
+    "mint": "synthetic_0025",
+    "name": "Token_25",
+    "symbol": "T25",
+    "score": 0,
+    "velocity": -0.016,
+    "acceleration": -0.0198,
+    "rug_signals": 0,
+    "liquidity_sol": 8.5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1179
+    }
+  },
+  {
+    "index": 26,
+    "mint": "synthetic_0026",
+    "name": "Token_26",
+    "symbol": "T26",
+    "score": 0.4133,
+    "velocity": -0.0367,
+    "acceleration": 0.0249,
+    "rug_signals": 0,
+    "liquidity_sol": 10.34,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0453
+    }
+  },
+  {
+    "index": 27,
+    "mint": "synthetic_0027",
+    "name": "Token_27",
+    "symbol": "T27",
+    "score": 0.3434,
+    "velocity": -0.0111,
+    "acceleration": 0.0039,
+    "rug_signals": 3,
+    "liquidity_sol": 5.94,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3009
+    }
+  },
+  {
+    "index": 28,
+    "mint": "synthetic_0028",
+    "name": "Token_28",
+    "symbol": "T28",
+    "score": 0.2882,
+    "velocity": -0.1083,
+    "acceleration": -0.0107,
+    "rug_signals": 4,
+    "liquidity_sol": 25.01,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1945
+    }
+  },
+  {
+    "index": 29,
+    "mint": "synthetic_0029",
+    "name": "Token_29",
+    "symbol": "T29",
+    "score": 0.5726,
+    "velocity": -0.0281,
+    "acceleration": 0.0001,
+    "rug_signals": 2,
+    "liquidity_sol": 4.17,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4525
+    }
+  },
+  {
+    "index": 30,
+    "mint": "synthetic_0030",
+    "name": "Token_30",
+    "symbol": "T30",
+    "score": 0.2221,
+    "velocity": -0.1225,
+    "acceleration": -0.0167,
+    "rug_signals": 2,
+    "liquidity_sol": 20.18,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5368
+    }
+  },
+  {
+    "index": 31,
+    "mint": "synthetic_0031",
+    "name": "Token_31",
+    "symbol": "T31",
+    "score": 0.8891,
+    "velocity": 0.0265,
+    "acceleration": 0.0253,
+    "rug_signals": 1,
+    "liquidity_sol": 5,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7797
+    }
+  },
+  {
+    "index": 32,
+    "mint": "synthetic_0032",
+    "name": "Token_32",
+    "symbol": "T32",
+    "score": 0.8016,
+    "velocity": 0.0553,
+    "acceleration": 0.0288,
+    "rug_signals": 0,
+    "liquidity_sol": 17.4,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.8113
+    }
+  },
+  {
+    "index": 33,
+    "mint": "synthetic_0033",
+    "name": "Token_33",
+    "symbol": "T33",
+    "score": 0.6353,
+    "velocity": -0.1202,
+    "acceleration": -0.0481,
+    "rug_signals": 1,
+    "liquidity_sol": 7.17,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3901
+    }
+  },
+  {
+    "index": 34,
+    "mint": "synthetic_0034",
+    "name": "Token_34",
+    "symbol": "T34",
+    "score": 0.6029,
+    "velocity": -0.0168,
+    "acceleration": -0.0026,
+    "rug_signals": 3,
+    "liquidity_sol": 14.33,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5515
+    }
+  },
+  {
+    "index": 35,
+    "mint": "synthetic_0035",
+    "name": "Token_35",
+    "symbol": "T35",
+    "score": 0.6632,
+    "velocity": 0.0296,
+    "acceleration": 0.0042,
+    "rug_signals": 0,
+    "liquidity_sol": 54.04,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1748
+    }
+  },
+  {
+    "index": 36,
+    "mint": "synthetic_0036",
+    "name": "Token_36",
+    "symbol": "T36",
+    "score": 0.3475,
+    "velocity": -0.0267,
+    "acceleration": -0.0062,
+    "rug_signals": 0,
+    "liquidity_sol": 7.01,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.0279
+    }
+  },
+  {
+    "index": 37,
+    "mint": "synthetic_0037",
+    "name": "Token_37",
+    "symbol": "T37",
+    "score": 0.4211,
+    "velocity": -0.029,
+    "acceleration": 0.0221,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4072
+    }
+  },
+  {
+    "index": 38,
+    "mint": "synthetic_0038",
+    "name": "Token_38",
+    "symbol": "T38",
+    "score": 0.8517,
+    "velocity": 0.0523,
+    "acceleration": 0.0244,
+    "rug_signals": 0,
+    "liquidity_sol": 14.14,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5564
+    }
+  },
+  {
+    "index": 39,
+    "mint": "synthetic_0039",
+    "name": "Token_39",
+    "symbol": "T39",
+    "score": 0.8681,
+    "velocity": 0.0478,
+    "acceleration": -0.0104,
+    "rug_signals": 0,
+    "liquidity_sol": 23.69,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3805
+    }
+  },
+  {
+    "index": 40,
+    "mint": "synthetic_0040",
+    "name": "Token_40",
+    "symbol": "T40",
+    "score": 0.6748,
+    "velocity": -0.0409,
+    "acceleration": -0.0067,
+    "rug_signals": 1,
+    "liquidity_sol": 7.39,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4791
+    }
+  },
+  {
+    "index": 41,
+    "mint": "synthetic_0041",
+    "name": "Token_41",
+    "symbol": "T41",
+    "score": 0.5657,
+    "velocity": -0.085,
+    "acceleration": -0.0137,
+    "rug_signals": 4,
+    "liquidity_sol": 20.63,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0452
+    }
+  },
+  {
+    "index": 42,
+    "mint": "synthetic_0042",
+    "name": "Token_42",
+    "symbol": "T42",
+    "score": 0.8341,
+    "velocity": 0.0197,
+    "acceleration": 0.0039,
+    "rug_signals": 0,
+    "liquidity_sol": 55.13,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5936
+    }
+  },
+  {
+    "index": 43,
+    "mint": "synthetic_0043",
+    "name": "Token_43",
+    "symbol": "T43",
+    "score": 0.5004,
+    "velocity": 0.0017,
+    "acceleration": -0.0133,
+    "rug_signals": 1,
+    "liquidity_sol": 1.73,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.7611
+    }
+  },
+  {
+    "index": 44,
+    "mint": "synthetic_0044",
+    "name": "Token_44",
+    "symbol": "T44",
+    "score": 0.7159,
+    "velocity": 0.0523,
+    "acceleration": 0.0088,
+    "rug_signals": 0,
+    "liquidity_sol": 29.3,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.643
+    }
+  },
+  {
+    "index": 45,
+    "mint": "synthetic_0045",
+    "name": "Token_45",
+    "symbol": "T45",
+    "score": 0.2543,
+    "velocity": 0.0203,
+    "acceleration": -0.0297,
+    "rug_signals": 1,
+    "liquidity_sol": 2.56,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.371
+    }
+  },
+  {
+    "index": 46,
+    "mint": "synthetic_0046",
+    "name": "Token_46",
+    "symbol": "T46",
+    "score": 0.9132,
+    "velocity": 0.0288,
+    "acceleration": 0.0069,
+    "rug_signals": 0,
+    "liquidity_sol": 5.76,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.9011
+    }
+  },
+  {
+    "index": 47,
+    "mint": "synthetic_0047",
+    "name": "Token_47",
+    "symbol": "T47",
+    "score": 0.8555,
+    "velocity": 0.0248,
+    "acceleration": 0.0279,
+    "rug_signals": 0,
+    "liquidity_sol": 25.99,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7453
+    }
+  },
+  {
+    "index": 48,
+    "mint": "synthetic_0048",
+    "name": "Token_48",
+    "symbol": "T48",
+    "score": 0.3234,
+    "velocity": -0.01,
+    "acceleration": -0.0517,
+    "rug_signals": 3,
+    "liquidity_sol": 0.38,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6876
+    }
+  },
+  {
+    "index": 49,
+    "mint": "synthetic_0049",
+    "name": "Token_49",
+    "symbol": "T49",
+    "score": 0.7767,
+    "velocity": 0.0398,
+    "acceleration": 0.0076,
+    "rug_signals": 0,
+    "liquidity_sol": 45.48,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1837
+    }
+  },
+  {
+    "index": 50,
+    "mint": "synthetic_0050",
+    "name": "Token_50",
+    "symbol": "T50",
+    "score": 0.8083,
+    "velocity": -0.0024,
+    "acceleration": 0.0136,
+    "rug_signals": 0,
+    "liquidity_sol": 33.05,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6106
+    }
+  },
+  {
+    "index": 51,
+    "mint": "synthetic_0051",
+    "name": "Token_51",
+    "symbol": "T51",
+    "score": 0.1804,
+    "velocity": 0.0336,
+    "acceleration": -0.0098,
+    "rug_signals": 0,
+    "liquidity_sol": 8.85,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1684
+    }
+  },
+  {
+    "index": 52,
+    "mint": "synthetic_0052",
+    "name": "Token_52",
+    "symbol": "T52",
+    "score": 0.5492,
+    "velocity": 0.0461,
+    "acceleration": 0.0193,
+    "rug_signals": 0,
+    "liquidity_sol": 36.86,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3841
+    }
+  },
+  {
+    "index": 53,
+    "mint": "synthetic_0053",
+    "name": "Token_53",
+    "symbol": "T53",
+    "score": 0.6477,
+    "velocity": 0.0388,
+    "acceleration": 0.0091,
+    "rug_signals": 0,
+    "liquidity_sol": 30.89,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3587
+    }
+  },
+  {
+    "index": 54,
+    "mint": "synthetic_0054",
+    "name": "Token_54",
+    "symbol": "T54",
+    "score": 0.9199,
+    "velocity": 0.0337,
+    "acceleration": 0.0172,
+    "rug_signals": 0,
+    "liquidity_sol": 33.52,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6414
+    }
+  },
+  {
+    "index": 55,
+    "mint": "synthetic_0055",
+    "name": "Token_55",
+    "symbol": "T55",
+    "score": 0.0967,
+    "velocity": -0.1108,
+    "acceleration": -0.0376,
+    "rug_signals": 3,
+    "liquidity_sol": 1.05,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6767
+    }
+  },
+  {
+    "index": 56,
+    "mint": "synthetic_0056",
+    "name": "Token_56",
+    "symbol": "T56",
+    "score": 0.3398,
+    "velocity": 0.0227,
+    "acceleration": -0.0299,
+    "rug_signals": 0,
+    "liquidity_sol": 8.98,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5211
+    }
+  },
+  {
+    "index": 57,
+    "mint": "synthetic_0057",
+    "name": "Token_57",
+    "symbol": "T57",
+    "score": 0.1166,
+    "velocity": -0.0524,
+    "acceleration": -0.0215,
+    "rug_signals": 3,
+    "liquidity_sol": 11.07,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4057
+    }
+  },
+  {
+    "index": 58,
+    "mint": "synthetic_0058",
+    "name": "Token_58",
+    "symbol": "T58",
+    "score": 0.9155,
+    "velocity": 0.0436,
+    "acceleration": 0.0253,
+    "rug_signals": 0,
+    "liquidity_sol": 44.12,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6206
+    }
+  },
+  {
+    "index": 59,
+    "mint": "synthetic_0059",
+    "name": "Token_59",
+    "symbol": "T59",
+    "score": 0.4003,
+    "velocity": 0.0102,
+    "acceleration": 0.0119,
+    "rug_signals": 0,
+    "liquidity_sol": 2.71,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6714
+    }
+  },
+  {
+    "index": 60,
+    "mint": "synthetic_0060",
+    "name": "Token_60",
+    "symbol": "T60",
+    "score": 0.8917,
+    "velocity": 0.0407,
+    "acceleration": 0.0104,
+    "rug_signals": 0,
+    "liquidity_sol": 5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4941
+    }
+  },
+  {
+    "index": 61,
+    "mint": "synthetic_0061",
+    "name": "Token_61",
+    "symbol": "T61",
+    "score": 0.1238,
+    "velocity": -0.0248,
+    "acceleration": 0.0038,
+    "rug_signals": 1,
+    "liquidity_sol": 8.76,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3877
+    }
+  },
+  {
+    "index": 62,
+    "mint": "synthetic_0062",
+    "name": "Token_62",
+    "symbol": "T62",
+    "score": 0.6698,
+    "velocity": 0.0298,
+    "acceleration": 0.0111,
+    "rug_signals": 0,
+    "liquidity_sol": 44.8,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5506
+    }
+  },
+  {
+    "index": 63,
+    "mint": "synthetic_0063",
+    "name": "Token_63",
+    "symbol": "T63",
+    "score": 0.7396,
+    "velocity": 0.0316,
+    "acceleration": 0.0069,
+    "rug_signals": 0,
+    "liquidity_sol": 31.15,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2643
+    }
+  },
+  {
+    "index": 64,
+    "mint": "synthetic_0064",
+    "name": "Token_64",
+    "symbol": "T64",
+    "score": 0.9599,
+    "velocity": 0.0405,
+    "acceleration": -0.0089,
+    "rug_signals": 0,
+    "liquidity_sol": 32.58,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5292
+    }
+  },
+  {
+    "index": 65,
+    "mint": "synthetic_0065",
+    "name": "Token_65",
+    "symbol": "T65",
+    "score": 0.1967,
+    "velocity": 0.0169,
+    "acceleration": -0.0043,
+    "rug_signals": 0,
+    "liquidity_sol": 8.52,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.7887
+    }
+  },
+  {
+    "index": 66,
+    "mint": "synthetic_0066",
+    "name": "Token_66",
+    "symbol": "T66",
+    "score": 0.8159,
+    "velocity": 0.0485,
+    "acceleration": 0.0038,
+    "rug_signals": 0,
+    "liquidity_sol": 13.1,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5193
+    }
+  },
+  {
+    "index": 67,
+    "mint": "synthetic_0067",
+    "name": "Token_67",
+    "symbol": "T67",
+    "score": 0.2415,
+    "velocity": -0.0303,
+    "acceleration": -0.0199,
+    "rug_signals": 3,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1293
+    }
+  },
+  {
+    "index": 68,
+    "mint": "synthetic_0068",
+    "name": "Token_68",
+    "symbol": "T68",
+    "score": 0.375,
+    "velocity": 0.0088,
+    "acceleration": -0.0152,
+    "rug_signals": 1,
+    "liquidity_sol": 4.9,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3646
+    }
+  },
+  {
+    "index": 69,
+    "mint": "synthetic_0069",
+    "name": "Token_69",
+    "symbol": "T69",
+    "score": 0.2902,
+    "velocity": 0.0019,
+    "acceleration": -0.0319,
+    "rug_signals": 5,
+    "liquidity_sol": 23.84,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4213
+    }
+  },
+  {
+    "index": 70,
+    "mint": "synthetic_0070",
+    "name": "Token_70",
+    "symbol": "T70",
+    "score": 0.884,
+    "velocity": 0.0217,
+    "acceleration": 0.0097,
+    "rug_signals": 0,
+    "liquidity_sol": 33.11,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3727
+    }
+  },
+  {
+    "index": 71,
+    "mint": "synthetic_0071",
+    "name": "Token_71",
+    "symbol": "T71",
+    "score": 0.4839,
+    "velocity": -0.0852,
+    "acceleration": -0.0399,
+    "rug_signals": 2,
+    "liquidity_sol": 14.2,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3342
+    }
+  },
+  {
+    "index": 72,
+    "mint": "synthetic_0072",
+    "name": "Token_72",
+    "symbol": "T72",
+    "score": 0.1585,
+    "velocity": -0.0256,
+    "acceleration": -0.0119,
+    "rug_signals": 0,
+    "liquidity_sol": 16.99,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6026
+    }
+  },
+  {
+    "index": 73,
+    "mint": "synthetic_0073",
+    "name": "Token_73",
+    "symbol": "T73",
+    "score": 0.3578,
+    "velocity": 0.0147,
+    "acceleration": -0.025,
+    "rug_signals": 1,
+    "liquidity_sol": 23.36,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.23
+    }
+  },
+  {
+    "index": 74,
+    "mint": "synthetic_0074",
+    "name": "Token_74",
+    "symbol": "T74",
+    "score": 0.8124,
+    "velocity": 0.0226,
+    "acceleration": 0.0214,
+    "rug_signals": 0,
+    "liquidity_sol": 14.07,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6202
+    }
+  },
+  {
+    "index": 75,
+    "mint": "synthetic_0075",
+    "name": "Token_75",
+    "symbol": "T75",
+    "score": 0.3256,
+    "velocity": -0.0972,
+    "acceleration": -0.0076,
+    "rug_signals": 1,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2764
+    }
+  },
+  {
+    "index": 76,
+    "mint": "synthetic_0076",
+    "name": "Token_76",
+    "symbol": "T76",
+    "score": 0.7289,
+    "velocity": 0.0339,
+    "acceleration": 0.002,
+    "rug_signals": 0,
+    "liquidity_sol": 11.8,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.5617
+    }
+  },
+  {
+    "index": 77,
+    "mint": "synthetic_0077",
+    "name": "Token_77",
+    "symbol": "T77",
+    "score": 0.2137,
+    "velocity": 0.0245,
+    "acceleration": -0.012,
+    "rug_signals": 3,
+    "liquidity_sol": 11.8,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2101
+    }
+  },
+  {
+    "index": 78,
+    "mint": "synthetic_0078",
+    "name": "Token_78",
+    "symbol": "T78",
+    "score": 0.3588,
+    "velocity": -0.0555,
+    "acceleration": -0.0052,
+    "rug_signals": 3,
+    "liquidity_sol": 4.51,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.8411
+    }
+  },
+  {
+    "index": 79,
+    "mint": "synthetic_0079",
+    "name": "Token_79",
+    "symbol": "T79",
+    "score": 0.8436,
+    "velocity": 0.0478,
+    "acceleration": 0.0109,
+    "rug_signals": 1,
+    "liquidity_sol": 39.34,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3765
+    }
+  },
+  {
+    "index": 80,
+    "mint": "synthetic_0080",
+    "name": "Token_80",
+    "symbol": "T80",
+    "score": 0.8314,
+    "velocity": -0.0367,
+    "acceleration": -0.0198,
+    "rug_signals": 3,
+    "liquidity_sol": 1.16,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5012
+    }
+  },
+  {
+    "index": 81,
+    "mint": "synthetic_0081",
+    "name": "Token_81",
+    "symbol": "T81",
+    "score": 0.2591,
+    "velocity": -0.0248,
+    "acceleration": -0.004,
+    "rug_signals": 3,
+    "liquidity_sol": 4.7,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3637
+    }
+  },
+  {
+    "index": 82,
+    "mint": "synthetic_0082",
+    "name": "Token_82",
+    "symbol": "T82",
+    "score": 0.3913,
+    "velocity": -0.0085,
+    "acceleration": -0.0062,
+    "rug_signals": 0,
+    "liquidity_sol": 5.38,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0498
+    }
+  },
+  {
+    "index": 83,
+    "mint": "synthetic_0083",
+    "name": "Token_83",
+    "symbol": "T83",
+    "score": 0.5573,
+    "velocity": -0.0228,
+    "acceleration": -0.0238,
+    "rug_signals": 0,
+    "liquidity_sol": 6.76,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.0875
+    }
+  },
+  {
+    "index": 84,
+    "mint": "synthetic_0084",
+    "name": "Token_84",
+    "symbol": "T84",
+    "score": 0.4995,
+    "velocity": 0.0201,
+    "acceleration": 0.0005,
+    "rug_signals": 0,
+    "liquidity_sol": 39.69,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4338
+    }
+  },
+  {
+    "index": 85,
+    "mint": "synthetic_0085",
+    "name": "Token_85",
+    "symbol": "T85",
+    "score": 0.4113,
+    "velocity": -0.0094,
+    "acceleration": -0.0087,
+    "rug_signals": 2,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2178
+    }
+  },
+  {
+    "index": 86,
+    "mint": "synthetic_0086",
+    "name": "Token_86",
+    "symbol": "T86",
+    "score": 0.73,
+    "velocity": 0.01,
+    "acceleration": -0.0046,
+    "rug_signals": 0,
+    "liquidity_sol": 36.52,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.188
+    }
+  },
+  {
+    "index": 87,
+    "mint": "synthetic_0087",
+    "name": "Token_87",
+    "symbol": "T87",
+    "score": 0.1627,
+    "velocity": -0.0747,
+    "acceleration": 0.0014,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1914
+    }
+  },
+  {
+    "index": 88,
+    "mint": "synthetic_0088",
+    "name": "Token_88",
+    "symbol": "T88",
+    "score": 0.8114,
+    "velocity": 0.0398,
+    "acceleration": -0.003,
+    "rug_signals": 0,
+    "liquidity_sol": 46.27,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.8228
+    }
+  },
+  {
+    "index": 89,
+    "mint": "synthetic_0089",
+    "name": "Token_89",
+    "symbol": "T89",
+    "score": 0.14,
+    "velocity": -0.0301,
+    "acceleration": -0.005,
+    "rug_signals": 2,
+    "liquidity_sol": 1.58,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2269
+    }
+  },
+  {
+    "index": 90,
+    "mint": "synthetic_0090",
+    "name": "Token_90",
+    "symbol": "T90",
+    "score": 1,
+    "velocity": 0.031,
+    "acceleration": -0.0119,
+    "rug_signals": 0,
+    "liquidity_sol": 13.25,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4895
+    }
+  },
+  {
+    "index": 91,
+    "mint": "synthetic_0091",
+    "name": "Token_91",
+    "symbol": "T91",
+    "score": 0.4012,
+    "velocity": -0.0871,
+    "acceleration": -0.0046,
+    "rug_signals": 2,
+    "liquidity_sol": 5.45,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4541
+    }
+  },
+  {
+    "index": 92,
+    "mint": "synthetic_0092",
+    "name": "Token_92",
+    "symbol": "T92",
+    "score": 0.6754,
+    "velocity": 0.0296,
+    "acceleration": 0.0174,
+    "rug_signals": 0,
+    "liquidity_sol": 38.41,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2908
+    }
+  },
+  {
+    "index": 93,
+    "mint": "synthetic_0093",
+    "name": "Token_93",
+    "symbol": "T93",
+    "score": 0.987,
+    "velocity": 0.0276,
+    "acceleration": -0.0005,
+    "rug_signals": 0,
+    "liquidity_sol": 24.88,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.8
+    }
+  },
+  {
+    "index": 94,
+    "mint": "synthetic_0094",
+    "name": "Token_94",
+    "symbol": "T94",
+    "score": 0.3159,
+    "velocity": 0.0284,
+    "acceleration": -0.0122,
+    "rug_signals": 0,
+    "liquidity_sol": 5.82,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5171
+    }
+  },
+  {
+    "index": 95,
+    "mint": "synthetic_0095",
+    "name": "Token_95",
+    "symbol": "T95",
+    "score": 0.5809,
+    "velocity": -0.0283,
+    "acceleration": -0.0235,
+    "rug_signals": 0,
+    "liquidity_sol": 2.42,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3325
+    }
+  },
+  {
+    "index": 96,
+    "mint": "synthetic_0096",
+    "name": "Token_96",
+    "symbol": "T96",
+    "score": 0.2632,
+    "velocity": -0.0529,
+    "acceleration": -0.0193,
+    "rug_signals": 3,
+    "liquidity_sol": 16.49,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.2197
+    }
+  },
+  {
+    "index": 97,
+    "mint": "synthetic_0097",
+    "name": "Token_97",
+    "symbol": "T97",
+    "score": 0.6602,
+    "velocity": -0.0494,
+    "acceleration": -0.0076,
+    "rug_signals": 2,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4596
+    }
+  },
+  {
+    "index": 98,
+    "mint": "synthetic_0098",
+    "name": "Token_98",
+    "symbol": "T98",
+    "score": 0.342,
+    "velocity": -0.0003,
+    "acceleration": -0.0119,
+    "rug_signals": 0,
+    "liquidity_sol": 5.51,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.7108
+    }
+  },
+  {
+    "index": 99,
+    "mint": "synthetic_0099",
+    "name": "Token_99",
+    "symbol": "T99",
+    "score": 0.3308,
+    "velocity": -0.0416,
+    "acceleration": 0.0249,
+    "rug_signals": 0,
+    "liquidity_sol": 17.51,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2301
+    }
+  },
+  {
+    "index": 100,
+    "mint": "synthetic_0100",
+    "name": "Token_100",
+    "symbol": "T100",
+    "score": 0.6916,
+    "velocity": -0.0231,
+    "acceleration": -0.0092,
+    "rug_signals": 0,
+    "liquidity_sol": 41.1,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7999
+    }
+  },
+  {
+    "index": 101,
+    "mint": "synthetic_0101",
+    "name": "Token_101",
+    "symbol": "T101",
+    "score": 0.1589,
+    "velocity": -0.0419,
+    "acceleration": -0.0156,
+    "rug_signals": 2,
+    "liquidity_sol": 4.62,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5464
+    }
+  },
+  {
+    "index": 102,
+    "mint": "synthetic_0102",
+    "name": "Token_102",
+    "symbol": "T102",
+    "score": 0.6363,
+    "velocity": -0.0121,
+    "acceleration": -0.0201,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1062
+    }
+  },
+  {
+    "index": 103,
+    "mint": "synthetic_0103",
+    "name": "Token_103",
+    "symbol": "T103",
+    "score": 0.3006,
+    "velocity": -0.0297,
+    "acceleration": -0.0367,
+    "rug_signals": 1,
+    "liquidity_sol": 19.13,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5974
+    }
+  },
+  {
+    "index": 104,
+    "mint": "synthetic_0104",
+    "name": "Token_104",
+    "symbol": "T104",
+    "score": 0.0723,
+    "velocity": -0.0129,
+    "acceleration": -0.0346,
+    "rug_signals": 3,
+    "liquidity_sol": 13.09,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1143
+    }
+  },
+  {
+    "index": 105,
+    "mint": "synthetic_0105",
+    "name": "Token_105",
+    "symbol": "T105",
+    "score": 0.7188,
+    "velocity": 0.0129,
+    "acceleration": 0.0217,
+    "rug_signals": 0,
+    "liquidity_sol": 6.46,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3057
+    }
+  },
+  {
+    "index": 106,
+    "mint": "synthetic_0106",
+    "name": "Token_106",
+    "symbol": "T106",
+    "score": 0.6119,
+    "velocity": -0.0225,
+    "acceleration": -0.0139,
+    "rug_signals": 3,
+    "liquidity_sol": 12.71,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.0314
+    }
+  },
+  {
+    "index": 107,
+    "mint": "synthetic_0107",
+    "name": "Token_107",
+    "symbol": "T107",
+    "score": 0.3452,
+    "velocity": 0.0162,
+    "acceleration": 0.0064,
+    "rug_signals": 3,
+    "liquidity_sol": 1.78,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2496
+    }
+  },
+  {
+    "index": 108,
+    "mint": "synthetic_0108",
+    "name": "Token_108",
+    "symbol": "T108",
+    "score": 0.3185,
+    "velocity": -0.0404,
+    "acceleration": 0.0087,
+    "rug_signals": 3,
+    "liquidity_sol": 15.8,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2678
+    }
+  },
+  {
+    "index": 109,
+    "mint": "synthetic_0109",
+    "name": "Token_109",
+    "symbol": "T109",
+    "score": 0.7093,
+    "velocity": 0.0591,
+    "acceleration": -0.0001,
+    "rug_signals": 0,
+    "liquidity_sol": 37.12,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4132
+    }
+  },
+  {
+    "index": 110,
+    "mint": "synthetic_0110",
+    "name": "Token_110",
+    "symbol": "T110",
+    "score": 0.7794,
+    "velocity": 0.0427,
+    "acceleration": 0.0172,
+    "rug_signals": 0,
+    "liquidity_sol": 5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2421
+    }
+  },
+  {
+    "index": 111,
+    "mint": "synthetic_0111",
+    "name": "Token_111",
+    "symbol": "T111",
+    "score": 0.4093,
+    "velocity": -0.057,
+    "acceleration": -0.0261,
+    "rug_signals": 1,
+    "liquidity_sol": 23.46,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4721
+    }
+  },
+  {
+    "index": 112,
+    "mint": "synthetic_0112",
+    "name": "Token_112",
+    "symbol": "T112",
+    "score": 0.8714,
+    "velocity": 0.0165,
+    "acceleration": 0.0043,
+    "rug_signals": 0,
+    "liquidity_sol": 18.38,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 1.2953
+    }
+  },
+  {
+    "index": 113,
+    "mint": "synthetic_0113",
+    "name": "Token_113",
+    "symbol": "T113",
+    "score": 0.6128,
+    "velocity": 0.0278,
+    "acceleration": 0.0099,
+    "rug_signals": 0,
+    "liquidity_sol": 25.25,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.703
+    }
+  },
+  {
+    "index": 114,
+    "mint": "synthetic_0114",
+    "name": "Token_114",
+    "symbol": "T114",
+    "score": 0.2663,
+    "velocity": -0.0592,
+    "acceleration": -0.0216,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3533
+    }
+  },
+  {
+    "index": 115,
+    "mint": "synthetic_0115",
+    "name": "Token_115",
+    "symbol": "T115",
+    "score": 0.0903,
+    "velocity": -0.0899,
+    "acceleration": -0.0412,
+    "rug_signals": 1,
+    "liquidity_sol": 2.53,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.585
+    }
+  },
+  {
+    "index": 116,
+    "mint": "synthetic_0116",
+    "name": "Token_116",
+    "symbol": "T116",
+    "score": 0.6866,
+    "velocity": 0.0307,
+    "acceleration": 0.0259,
+    "rug_signals": 0,
+    "liquidity_sol": 42.6,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7758
+    }
+  },
+  {
+    "index": 117,
+    "mint": "synthetic_0117",
+    "name": "Token_117",
+    "symbol": "T117",
+    "score": 0.6402,
+    "velocity": -0.069,
+    "acceleration": -0.0116,
+    "rug_signals": 4,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2587
+    }
+  },
+  {
+    "index": 118,
+    "mint": "synthetic_0118",
+    "name": "Token_118",
+    "symbol": "T118",
+    "score": 1,
+    "velocity": 0.074,
+    "acceleration": 0.0265,
+    "rug_signals": 0,
+    "liquidity_sol": 60.24,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 1.2783
+    }
+  },
+  {
+    "index": 119,
+    "mint": "synthetic_0119",
+    "name": "Token_119",
+    "symbol": "T119",
+    "score": 0.2908,
+    "velocity": -0.077,
+    "acceleration": 0.0164,
+    "rug_signals": 3,
+    "liquidity_sol": 8.87,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4393
+    }
+  },
+  {
+    "index": 120,
+    "mint": "synthetic_0120",
+    "name": "Token_120",
+    "symbol": "T120",
+    "score": 0.1121,
+    "velocity": 0.0117,
+    "acceleration": -0.0527,
+    "rug_signals": 2,
+    "liquidity_sol": 11.67,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1082
+    }
+  },
+  {
+    "index": 121,
+    "mint": "synthetic_0121",
+    "name": "Token_121",
+    "symbol": "T121",
+    "score": 0.1963,
+    "velocity": -0.0274,
+    "acceleration": -0.0029,
+    "rug_signals": 3,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.392
+    }
+  },
+  {
+    "index": 122,
+    "mint": "synthetic_0122",
+    "name": "Token_122",
+    "symbol": "T122",
+    "score": 0.4038,
+    "velocity": -0.0456,
+    "acceleration": 0.012,
+    "rug_signals": 4,
+    "liquidity_sol": 17.58,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5855
+    }
+  },
+  {
+    "index": 123,
+    "mint": "synthetic_0123",
+    "name": "Token_123",
+    "symbol": "T123",
+    "score": 0.427,
+    "velocity": 0.0093,
+    "acceleration": -0.0169,
+    "rug_signals": 1,
+    "liquidity_sol": 3.37,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1116
+    }
+  },
+  {
+    "index": 124,
+    "mint": "synthetic_0124",
+    "name": "Token_124",
+    "symbol": "T124",
+    "score": 0.4716,
+    "velocity": -0.0202,
+    "acceleration": -0.0115,
+    "rug_signals": 0,
+    "liquidity_sol": 14.29,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2437
+    }
+  },
+  {
+    "index": 125,
+    "mint": "synthetic_0125",
+    "name": "Token_125",
+    "symbol": "T125",
+    "score": 0.2851,
+    "velocity": -0.1361,
+    "acceleration": -0.0252,
+    "rug_signals": 1,
+    "liquidity_sol": 14.25,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0206
+    }
+  },
+  {
+    "index": 126,
+    "mint": "synthetic_0126",
+    "name": "Token_126",
+    "symbol": "T126",
+    "score": 0.5926,
+    "velocity": -0.0599,
+    "acceleration": -0.0345,
+    "rug_signals": 1,
+    "liquidity_sol": 7.05,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2958
+    }
+  },
+  {
+    "index": 127,
+    "mint": "synthetic_0127",
+    "name": "Token_127",
+    "symbol": "T127",
+    "score": 0.4433,
+    "velocity": 0.0319,
+    "acceleration": 0.0042,
+    "rug_signals": 2,
+    "liquidity_sol": 13.38,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3535
+    }
+  },
+  {
+    "index": 128,
+    "mint": "synthetic_0128",
+    "name": "Token_128",
+    "symbol": "T128",
+    "score": 0.4396,
+    "velocity": 0.0491,
+    "acceleration": -0.0093,
+    "rug_signals": 2,
+    "liquidity_sol": 11.33,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1656
+    }
+  },
+  {
+    "index": 129,
+    "mint": "synthetic_0129",
+    "name": "Token_129",
+    "symbol": "T129",
+    "score": 0.937,
+    "velocity": 0.0752,
+    "acceleration": 0.0116,
+    "rug_signals": 0,
+    "liquidity_sol": 25.85,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6661
+    }
+  },
+  {
+    "index": 130,
+    "mint": "synthetic_0130",
+    "name": "Token_130",
+    "symbol": "T130",
+    "score": 0.0561,
+    "velocity": -0.0408,
+    "acceleration": -0.0443,
+    "rug_signals": 2,
+    "liquidity_sol": 4.17,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.308
+    }
+  },
+  {
+    "index": 131,
+    "mint": "synthetic_0131",
+    "name": "Token_131",
+    "symbol": "T131",
+    "score": 0.6531,
+    "velocity": -0.0112,
+    "acceleration": 0.0063,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1656
+    }
+  },
+  {
+    "index": 132,
+    "mint": "synthetic_0132",
+    "name": "Token_132",
+    "symbol": "T132",
+    "score": 0.1267,
+    "velocity": 0.0053,
+    "acceleration": -0.0538,
+    "rug_signals": 2,
+    "liquidity_sol": 10.94,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2634
+    }
+  },
+  {
+    "index": 133,
+    "mint": "synthetic_0133",
+    "name": "Token_133",
+    "symbol": "T133",
+    "score": 0.7534,
+    "velocity": 0.068,
+    "acceleration": 0.0015,
+    "rug_signals": 0,
+    "liquidity_sol": 26.02,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.108
+    }
+  },
+  {
+    "index": 134,
+    "mint": "synthetic_0134",
+    "name": "Token_134",
+    "symbol": "T134",
+    "score": 0.8269,
+    "velocity": 0.0283,
+    "acceleration": -0.0087,
+    "rug_signals": 0,
+    "liquidity_sol": 32.85,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.0242
+    }
+  },
+  {
+    "index": 135,
+    "mint": "synthetic_0135",
+    "name": "Token_135",
+    "symbol": "T135",
+    "score": 0.3721,
+    "velocity": 0.0061,
+    "acceleration": -0.0299,
+    "rug_signals": 2,
+    "liquidity_sol": 14.98,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1813
+    }
+  },
+  {
+    "index": 136,
+    "mint": "synthetic_0136",
+    "name": "Token_136",
+    "symbol": "T136",
+    "score": 0.9361,
+    "velocity": 0.0771,
+    "acceleration": 0.0272,
+    "rug_signals": 1,
+    "liquidity_sol": 41.6,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4614
+    }
+  },
+  {
+    "index": 137,
+    "mint": "synthetic_0137",
+    "name": "Token_137",
+    "symbol": "T137",
+    "score": 0.0218,
+    "velocity": -0.074,
+    "acceleration": -0.0233,
+    "rug_signals": 1,
+    "liquidity_sol": 11.58,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.469
+    }
+  },
+  {
+    "index": 138,
+    "mint": "synthetic_0138",
+    "name": "Token_138",
+    "symbol": "T138",
+    "score": 0.0916,
+    "velocity": -0.049,
+    "acceleration": -0.0617,
+    "rug_signals": 0,
+    "liquidity_sol": 3.61,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2322
+    }
+  },
+  {
+    "index": 139,
+    "mint": "synthetic_0139",
+    "name": "Token_139",
+    "symbol": "T139",
+    "score": 0.9507,
+    "velocity": 0.07,
+    "acceleration": 0.0221,
+    "rug_signals": 0,
+    "liquidity_sol": 31.55,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1093
+    }
+  },
+  {
+    "index": 140,
+    "mint": "synthetic_0140",
+    "name": "Token_140",
+    "symbol": "T140",
+    "score": 0.6783,
+    "velocity": -0.0418,
+    "acceleration": -0.0317,
+    "rug_signals": 0,
+    "liquidity_sol": 26.15,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2244
+    }
+  },
+  {
+    "index": 141,
+    "mint": "synthetic_0141",
+    "name": "Token_141",
+    "symbol": "T141",
+    "score": 0.8591,
+    "velocity": 0.0682,
+    "acceleration": 0.0067,
+    "rug_signals": 1,
+    "liquidity_sol": 42.74,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2224
+    }
+  },
+  {
+    "index": 142,
+    "mint": "synthetic_0142",
+    "name": "Token_142",
+    "symbol": "T142",
+    "score": 0.7308,
+    "velocity": 0.0367,
+    "acceleration": 0.0081,
+    "rug_signals": 0,
+    "liquidity_sol": 33.4,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.8056
+    }
+  },
+  {
+    "index": 143,
+    "mint": "synthetic_0143",
+    "name": "Token_143",
+    "symbol": "T143",
+    "score": 0.7431,
+    "velocity": 0.0059,
+    "acceleration": 0.0062,
+    "rug_signals": 1,
+    "liquidity_sol": 27.4,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1684
+    }
+  },
+  {
+    "index": 144,
+    "mint": "synthetic_0144",
+    "name": "Token_144",
+    "symbol": "T144",
+    "score": 0.6588,
+    "velocity": 0.0279,
+    "acceleration": 0.0002,
+    "rug_signals": 0,
+    "liquidity_sol": 26.35,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.9978
+    }
+  },
+  {
+    "index": 145,
+    "mint": "synthetic_0145",
+    "name": "Token_145",
+    "symbol": "T145",
+    "score": 0.2938,
+    "velocity": 0.0289,
+    "acceleration": -0.0396,
+    "rug_signals": 2,
+    "liquidity_sol": 15.7,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2435
+    }
+  },
+  {
+    "index": 146,
+    "mint": "synthetic_0146",
+    "name": "Token_146",
+    "symbol": "T146",
+    "score": 0.7538,
+    "velocity": 0.0531,
+    "acceleration": 0.015,
+    "rug_signals": 0,
+    "liquidity_sol": 38.75,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4965
+    }
+  },
+  {
+    "index": 147,
+    "mint": "synthetic_0147",
+    "name": "Token_147",
+    "symbol": "T147",
+    "score": 0.7054,
+    "velocity": 0.0332,
+    "acceleration": -0.0013,
+    "rug_signals": 0,
+    "liquidity_sol": 32.01,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3911
+    }
+  },
+  {
+    "index": 148,
+    "mint": "synthetic_0148",
+    "name": "Token_148",
+    "symbol": "T148",
+    "score": 1,
+    "velocity": 0.0453,
+    "acceleration": 0.0185,
+    "rug_signals": 0,
+    "liquidity_sol": 15.03,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.371
+    }
+  },
+  {
+    "index": 149,
+    "mint": "synthetic_0149",
+    "name": "Token_149",
+    "symbol": "T149",
+    "score": 0.8093,
+    "velocity": 0.0237,
+    "acceleration": 0.026,
+    "rug_signals": 0,
+    "liquidity_sol": 46.61,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": -0.0863
+    }
+  },
+  {
+    "index": 150,
+    "mint": "synthetic_0150",
+    "name": "Token_150",
+    "symbol": "T150",
+    "score": 0.3601,
+    "velocity": 0.0233,
+    "acceleration": -0.0298,
+    "rug_signals": 1,
+    "liquidity_sol": 5.31,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1307
+    }
+  },
+  {
+    "index": 151,
+    "mint": "synthetic_0151",
+    "name": "Token_151",
+    "symbol": "T151",
+    "score": 0.7211,
+    "velocity": 0.0394,
+    "acceleration": -0.0117,
+    "rug_signals": 0,
+    "liquidity_sol": 27.96,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7314
+    }
+  },
+  {
+    "index": 152,
+    "mint": "synthetic_0152",
+    "name": "Token_152",
+    "symbol": "T152",
+    "score": 0.5799,
+    "velocity": 0.048,
+    "acceleration": 0.0153,
+    "rug_signals": 0,
+    "liquidity_sol": 31.4,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.0629
+    }
+  },
+  {
+    "index": 153,
+    "mint": "synthetic_0153",
+    "name": "Token_153",
+    "symbol": "T153",
+    "score": 0.0486,
+    "velocity": -0.0275,
+    "acceleration": -0.0086,
+    "rug_signals": 0,
+    "liquidity_sol": 17.17,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4183
+    }
+  },
+  {
+    "index": 154,
+    "mint": "synthetic_0154",
+    "name": "Token_154",
+    "symbol": "T154",
+    "score": 0.5163,
+    "velocity": -0.0723,
+    "acceleration": -0.0056,
+    "rug_signals": 2,
+    "liquidity_sol": 1.65,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2397
+    }
+  },
+  {
+    "index": 155,
+    "mint": "synthetic_0155",
+    "name": "Token_155",
+    "symbol": "T155",
+    "score": 0.6767,
+    "velocity": 0.0392,
+    "acceleration": 0.0067,
+    "rug_signals": 0,
+    "liquidity_sol": 31.53,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.888
+    }
+  },
+  {
+    "index": 156,
+    "mint": "synthetic_0156",
+    "name": "Token_156",
+    "symbol": "T156",
+    "score": 0.0834,
+    "velocity": -0.0745,
+    "acceleration": -0.011,
+    "rug_signals": 0,
+    "liquidity_sol": 3.26,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6464
+    }
+  },
+  {
+    "index": 157,
+    "mint": "synthetic_0157",
+    "name": "Token_157",
+    "symbol": "T157",
+    "score": 0.4519,
+    "velocity": -0.0497,
+    "acceleration": 0.0105,
+    "rug_signals": 2,
+    "liquidity_sol": 10.32,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1522
+    }
+  },
+  {
+    "index": 158,
+    "mint": "synthetic_0158",
+    "name": "Token_158",
+    "symbol": "T158",
+    "score": 0.2522,
+    "velocity": -0.0546,
+    "acceleration": -0.0104,
+    "rug_signals": 2,
+    "liquidity_sol": 16.58,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4164
+    }
+  },
+  {
+    "index": 159,
+    "mint": "synthetic_0159",
+    "name": "Token_159",
+    "symbol": "T159",
+    "score": 0.7699,
+    "velocity": 0.0358,
+    "acceleration": 0.02,
+    "rug_signals": 0,
+    "liquidity_sol": 8.38,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1945
+    }
+  },
+  {
+    "index": 160,
+    "mint": "synthetic_0160",
+    "name": "Token_160",
+    "symbol": "T160",
+    "score": 0.9298,
+    "velocity": 0.0569,
+    "acceleration": 0.0066,
+    "rug_signals": 0,
+    "liquidity_sol": 53.51,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.689
+    }
+  },
+  {
+    "index": 161,
+    "mint": "synthetic_0161",
+    "name": "Token_161",
+    "symbol": "T161",
+    "score": 0.2341,
+    "velocity": -0.0066,
+    "acceleration": 0.0044,
+    "rug_signals": 4,
+    "liquidity_sol": 5.5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.69
+    }
+  },
+  {
+    "index": 162,
+    "mint": "synthetic_0162",
+    "name": "Token_162",
+    "symbol": "T162",
+    "score": 0.6209,
+    "velocity": 0.0147,
+    "acceleration": 0.0224,
+    "rug_signals": 0,
+    "liquidity_sol": 16.44,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.0058
+    }
+  },
+  {
+    "index": 163,
+    "mint": "synthetic_0163",
+    "name": "Token_163",
+    "symbol": "T163",
+    "score": 0.0941,
+    "velocity": -0.0395,
+    "acceleration": -0.0268,
+    "rug_signals": 2,
+    "liquidity_sol": 4.72,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2042
+    }
+  },
+  {
+    "index": 164,
+    "mint": "synthetic_0164",
+    "name": "Token_164",
+    "symbol": "T164",
+    "score": 0.2215,
+    "velocity": -0.0275,
+    "acceleration": -0.0048,
+    "rug_signals": 2,
+    "liquidity_sol": 10.07,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3766
+    }
+  },
+  {
+    "index": 165,
+    "mint": "synthetic_0165",
+    "name": "Token_165",
+    "symbol": "T165",
+    "score": 0.3872,
+    "velocity": -0.0374,
+    "acceleration": -0.0277,
+    "rug_signals": 4,
+    "liquidity_sol": 13.29,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1574
+    }
+  },
+  {
+    "index": 166,
+    "mint": "synthetic_0166",
+    "name": "Token_166",
+    "symbol": "T166",
+    "score": 0.3933,
+    "velocity": -0.1022,
+    "acceleration": 0.0009,
+    "rug_signals": 3,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1404
+    }
+  },
+  {
+    "index": 167,
+    "mint": "synthetic_0167",
+    "name": "Token_167",
+    "symbol": "T167",
+    "score": 0.2849,
+    "velocity": 0.0349,
+    "acceleration": -0.0335,
+    "rug_signals": 2,
+    "liquidity_sol": 2.69,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": 0.0386
+    }
+  },
+  {
+    "index": 168,
+    "mint": "synthetic_0168",
+    "name": "Token_168",
+    "symbol": "T168",
+    "score": 0.0556,
+    "velocity": 0.0416,
+    "acceleration": 0.0122,
+    "rug_signals": 1,
+    "liquidity_sol": 6.44,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1077
+    }
+  },
+  {
+    "index": 169,
+    "mint": "synthetic_0169",
+    "name": "Token_169",
+    "symbol": "T169",
+    "score": 0.482,
+    "velocity": -0.0956,
+    "acceleration": -0.0002,
+    "rug_signals": 2,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6156
+    }
+  },
+  {
+    "index": 170,
+    "mint": "synthetic_0170",
+    "name": "Token_170",
+    "symbol": "T170",
+    "score": 0.9127,
+    "velocity": 0.0078,
+    "acceleration": 0.0063,
+    "rug_signals": 0,
+    "liquidity_sol": 54.84,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6935
+    }
+  },
+  {
+    "index": 171,
+    "mint": "synthetic_0171",
+    "name": "Token_171",
+    "symbol": "T171",
+    "score": 0.5043,
+    "velocity": -0.0223,
+    "acceleration": 0.0116,
+    "rug_signals": 1,
+    "liquidity_sol": 9.51,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4467
+    }
+  },
+  {
+    "index": 172,
+    "mint": "synthetic_0172",
+    "name": "Token_172",
+    "symbol": "T172",
+    "score": 0.3483,
+    "velocity": -0.0368,
+    "acceleration": -0.0066,
+    "rug_signals": 4,
+    "liquidity_sol": 1.56,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.272
+    }
+  },
+  {
+    "index": 173,
+    "mint": "synthetic_0173",
+    "name": "Token_173",
+    "symbol": "T173",
+    "score": 0.7169,
+    "velocity": 0.0548,
+    "acceleration": -0.0035,
+    "rug_signals": 0,
+    "liquidity_sol": 25.49,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1853
+    }
+  },
+  {
+    "index": 174,
+    "mint": "synthetic_0174",
+    "name": "Token_174",
+    "symbol": "T174",
+    "score": 0.7715,
+    "velocity": 0.0779,
+    "acceleration": -0.0054,
+    "rug_signals": 0,
+    "liquidity_sol": 22.7,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4398
+    }
+  },
+  {
+    "index": 175,
+    "mint": "synthetic_0175",
+    "name": "Token_175",
+    "symbol": "T175",
+    "score": 0.8787,
+    "velocity": 0.0089,
+    "acceleration": 0.0186,
+    "rug_signals": 0,
+    "liquidity_sol": 54.97,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.9177
+    }
+  },
+  {
+    "index": 176,
+    "mint": "synthetic_0176",
+    "name": "Token_176",
+    "symbol": "T176",
+    "score": 0.6911,
+    "velocity": 0.0386,
+    "acceleration": 0.0166,
+    "rug_signals": 0,
+    "liquidity_sol": 42.46,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1162
+    }
+  },
+  {
+    "index": 177,
+    "mint": "synthetic_0177",
+    "name": "Token_177",
+    "symbol": "T177",
+    "score": 0.8688,
+    "velocity": 0.0474,
+    "acceleration": 0.0094,
+    "rug_signals": 0,
+    "liquidity_sol": 5,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4588
+    }
+  },
+  {
+    "index": 178,
+    "mint": "synthetic_0178",
+    "name": "Token_178",
+    "symbol": "T178",
+    "score": 0.6125,
+    "velocity": 0.0453,
+    "acceleration": 0.0176,
+    "rug_signals": 1,
+    "liquidity_sol": 28.64,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.2265
+    }
+  },
+  {
+    "index": 179,
+    "mint": "synthetic_0179",
+    "name": "Token_179",
+    "symbol": "T179",
+    "score": 0.5921,
+    "velocity": -0.0212,
+    "acceleration": -0.0423,
+    "rug_signals": 1,
+    "liquidity_sol": 10.09,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2518
+    }
+  },
+  {
+    "index": 180,
+    "mint": "synthetic_0180",
+    "name": "Token_180",
+    "symbol": "T180",
+    "score": 0.2471,
+    "velocity": -0.0902,
+    "acceleration": -0.0032,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.2638
+    }
+  },
+  {
+    "index": 181,
+    "mint": "synthetic_0181",
+    "name": "Token_181",
+    "symbol": "T181",
+    "score": 0.649,
+    "velocity": 0.0528,
+    "acceleration": 0.0118,
+    "rug_signals": 1,
+    "liquidity_sol": 46.5,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.3532
+    }
+  },
+  {
+    "index": 182,
+    "mint": "synthetic_0182",
+    "name": "Token_182",
+    "symbol": "T182",
+    "score": 0.3437,
+    "velocity": 0.0369,
+    "acceleration": -0.0032,
+    "rug_signals": 3,
+    "liquidity_sol": 11.09,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.6933
+    }
+  },
+  {
+    "index": 183,
+    "mint": "synthetic_0183",
+    "name": "Token_183",
+    "symbol": "T183",
+    "score": 0.6099,
+    "velocity": 0.071,
+    "acceleration": 0.0091,
+    "rug_signals": 0,
+    "liquidity_sol": 5,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.1481
+    }
+  },
+  {
+    "index": 184,
+    "mint": "synthetic_0184",
+    "name": "Token_184",
+    "symbol": "T184",
+    "score": 0.355,
+    "velocity": -0.1014,
+    "acceleration": -0.0143,
+    "rug_signals": 1,
+    "liquidity_sol": 4.79,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.1897
+    }
+  },
+  {
+    "index": 185,
+    "mint": "synthetic_0185",
+    "name": "Token_185",
+    "symbol": "T185",
+    "score": 0.6446,
+    "velocity": 0.0658,
+    "acceleration": 0.0171,
+    "rug_signals": 0,
+    "liquidity_sol": 17.37,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.31
+    }
+  },
+  {
+    "index": 186,
+    "mint": "synthetic_0186",
+    "name": "Token_186",
+    "symbol": "T186",
+    "score": 1,
+    "velocity": 0.0506,
+    "acceleration": -0.0113,
+    "rug_signals": 0,
+    "liquidity_sol": 72.54,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6122
+    }
+  },
+  {
+    "index": 187,
+    "mint": "synthetic_0187",
+    "name": "Token_187",
+    "symbol": "T187",
+    "score": 0.3271,
+    "velocity": -0.077,
+    "acceleration": 0.0172,
+    "rug_signals": 0,
+    "liquidity_sol": 0,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5721
+    }
+  },
+  {
+    "index": 188,
+    "mint": "synthetic_0188",
+    "name": "Token_188",
+    "symbol": "T188",
+    "score": 0.6491,
+    "velocity": 0.0717,
+    "acceleration": 0.0171,
+    "rug_signals": 0,
+    "liquidity_sol": 15.61,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.7607
+    }
+  },
+  {
+    "index": 189,
+    "mint": "synthetic_0189",
+    "name": "Token_189",
+    "symbol": "T189",
+    "score": 0.5147,
+    "velocity": -0.0422,
+    "acceleration": -0.0079,
+    "rug_signals": 0,
+    "liquidity_sol": 0.08,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3371
+    }
+  },
+  {
+    "index": 190,
+    "mint": "synthetic_0190",
+    "name": "Token_190",
+    "symbol": "T190",
+    "score": 0.9281,
+    "velocity": 0.0613,
+    "acceleration": 0.0001,
+    "rug_signals": 0,
+    "liquidity_sol": 30.09,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4789
+    }
+  },
+  {
+    "index": 191,
+    "mint": "synthetic_0191",
+    "name": "Token_191",
+    "symbol": "T191",
+    "score": 0.5453,
+    "velocity": -0.0498,
+    "acceleration": 0.0335,
+    "rug_signals": 1,
+    "liquidity_sol": 8.23,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.7087
+    }
+  },
+  {
+    "index": 192,
+    "mint": "synthetic_0192",
+    "name": "Token_192",
+    "symbol": "T192",
+    "score": 0.4643,
+    "velocity": 0.0216,
+    "acceleration": 0.0059,
+    "rug_signals": 2,
+    "liquidity_sol": 2.21,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0705
+    }
+  },
+  {
+    "index": 193,
+    "mint": "synthetic_0193",
+    "name": "Token_193",
+    "symbol": "T193",
+    "score": 0.4393,
+    "velocity": 0.0075,
+    "acceleration": -0.0354,
+    "rug_signals": 3,
+    "liquidity_sol": 2.97,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4016
+    }
+  },
+  {
+    "index": 194,
+    "mint": "synthetic_0194",
+    "name": "Token_194",
+    "symbol": "T194",
+    "score": 0.7766,
+    "velocity": 0.0627,
+    "acceleration": 0.0235,
+    "rug_signals": 1,
+    "liquidity_sol": 16.43,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.4042
+    }
+  },
+  {
+    "index": 195,
+    "mint": "synthetic_0195",
+    "name": "Token_195",
+    "symbol": "T195",
+    "score": 0.2917,
+    "velocity": -0.041,
+    "acceleration": -0.0388,
+    "rug_signals": 7,
+    "liquidity_sol": 6.1,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.5396
+    }
+  },
+  {
+    "index": 196,
+    "mint": "synthetic_0196",
+    "name": "Token_196",
+    "symbol": "T196",
+    "score": 0.7814,
+    "velocity": 0.0179,
+    "acceleration": -0.0237,
+    "rug_signals": 0,
+    "liquidity_sol": 4.87,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.4664
+    }
+  },
+  {
+    "index": 197,
+    "mint": "synthetic_0197",
+    "name": "Token_197",
+    "symbol": "T197",
+    "score": 0.2772,
+    "velocity": -0.0495,
+    "acceleration": 0.0108,
+    "rug_signals": 1,
+    "liquidity_sol": 10.29,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.3359
+    }
+  },
+  {
+    "index": 198,
+    "mint": "synthetic_0198",
+    "name": "Token_198",
+    "symbol": "T198",
+    "score": 0.8341,
+    "velocity": 0.0552,
+    "acceleration": 0.0077,
+    "rug_signals": 0,
+    "liquidity_sol": 16.62,
+    "smart_money_in": true,
+    "ground_truth": {
+      "is_good": true,
+      "optimal_action": "APE",
+      "expected_pnl": 0.6292
+    }
+  },
+  {
+    "index": 199,
+    "mint": "synthetic_0199",
+    "name": "Token_199",
+    "symbol": "T199",
+    "score": 0.2374,
+    "velocity": -0.0496,
+    "acceleration": -0.0132,
+    "rug_signals": 1,
+    "liquidity_sol": 17.34,
+    "smart_money_in": false,
+    "ground_truth": {
+      "is_good": false,
+      "optimal_action": "SKIP",
+      "expected_pnl": -0.0668
+    }
+  }
+]

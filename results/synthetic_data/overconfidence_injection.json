@@ -1,0 +1,23 @@
+{
+  "injection": {
+    "states_to_inflate": [
+      "perception",
+      "reasoning",
+      "prediction",
+      "self_knowledge",
+      "meta_cognition"
+    ],
+    "target_confidence": 0.95,
+    "description": "All confidence states inflated to 0.95"
+  },
+  "expected_behavior": {
+    "should_correct": true,
+    "max_correction_cycles": 15,
+    "correction_mechanism": "meta-cognitive calibration check",
+    "expected_domain": "prediction"
+  },
+  "validation_criteria": {
+    "any_confidence_below_0.85": true,
+    "meta_cognitive_intervened": true
+  }
+}

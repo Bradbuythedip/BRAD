@@ -1,0 +1,1102 @@
+[
+  {
+    "index": 0,
+    "difficulty": 0.4085,
+    "true_probability": 0.6732,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.40853587925449375,
+      "salience": 0.6774392362236519,
+      "about_self": true
+    }
+  },
+  {
+    "index": 1,
+    "difficulty": 0.862,
+    "true_probability": 0.3104,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.8620366164792732,
+      "salience": 0.5413890150562181,
+      "about_self": false
+    }
+  },
+  {
+    "index": 2,
+    "difficulty": 0.2252,
+    "true_probability": 0.8199,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.2251595205781467,
+      "salience": 0.732452143826556,
+      "about_self": false
+    }
+  },
+  {
+    "index": 3,
+    "difficulty": 0.1167,
+    "true_probability": 0.9067,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.1166505334428638,
+      "salience": 0.7650048399671409,
+      "about_self": false
+    }
+  },
+  {
+    "index": 4,
+    "difficulty": 0.1567,
+    "true_probability": 0.8746,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.15669033508336383,
+      "salience": 0.7529928994749908,
+      "about_self": false
+    }
+  },
+  {
+    "index": 5,
+    "difficulty": 0.9895,
+    "true_probability": 0.2084,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.989492910377551,
+      "salience": 0.5031521268867347,
+      "about_self": true
+    }
+  },
+  {
+    "index": 6,
+    "difficulty": 0.3784,
+    "true_probability": 0.6973,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.37842657112328093,
+      "salience": 0.6864720286630157,
+      "about_self": false
+    }
+  },
+  {
+    "index": 7,
+    "difficulty": 0.6913,
+    "true_probability": 0.447,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6913096284123793,
+      "salience": 0.5926071114762862,
+      "about_self": false
+    }
+  },
+  {
+    "index": 8,
+    "difficulty": 0.0736,
+    "true_probability": 0.9412,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.07355343057826824,
+      "salience": 0.7779339708265195,
+      "about_self": false
+    }
+  },
+  {
+    "index": 9,
+    "difficulty": 0.6172,
+    "true_probability": 0.5062,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6172199559140832,
+      "salience": 0.614834013225775,
+      "about_self": false
+    }
+  },
+  {
+    "index": 10,
+    "difficulty": 0.0701,
+    "true_probability": 0.9439,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.07006668737991728,
+      "salience": 0.7789799937860248,
+      "about_self": true
+    }
+  },
+  {
+    "index": 11,
+    "difficulty": 0.9589,
+    "true_probability": 0.2329,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.9589232453363274,
+      "salience": 0.5123230263991018,
+      "about_self": false
+    }
+  },
+  {
+    "index": 12,
+    "difficulty": 0.6253,
+    "true_probability": 0.4997,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.6253169687228409,
+      "salience": 0.6124049093831477,
+      "about_self": false
+    }
+  },
+  {
+    "index": 13,
+    "difficulty": 0.035,
+    "true_probability": 0.972,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.035003329400353556,
+      "salience": 0.7894990011798939,
+      "about_self": false
+    }
+  },
+  {
+    "index": 14,
+    "difficulty": 0.4773,
+    "true_probability": 0.6182,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.47728097048481155,
+      "salience": 0.6568157088545565,
+      "about_self": false
+    }
+  },
+  {
+    "index": 15,
+    "difficulty": 0.1886,
+    "true_probability": 0.8491,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.18859316505523482,
+      "salience": 0.7434220504834296,
+      "about_self": true
+    }
+  },
+  {
+    "index": 16,
+    "difficulty": 0.248,
+    "true_probability": 0.8016,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.2479646412771982,
+      "salience": 0.7256106076168405,
+      "about_self": false
+    }
+  },
+  {
+    "index": 17,
+    "difficulty": 0.6737,
+    "true_probability": 0.461,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.6737168204826979,
+      "salience": 0.5978849538551907,
+      "about_self": false
+    }
+  },
+  {
+    "index": 18,
+    "difficulty": 0.4364,
+    "true_probability": 0.6509,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.4363650508959722,
+      "salience": 0.6690904847312084,
+      "about_self": false
+    }
+  },
+  {
+    "index": 19,
+    "difficulty": 0.7136,
+    "true_probability": 0.4291,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.7135799802446153,
+      "salience": 0.5859260059266154,
+      "about_self": false
+    }
+  },
+  {
+    "index": 20,
+    "difficulty": 0.6534,
+    "true_probability": 0.4772,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6534460470937047,
+      "salience": 0.6039661858718886,
+      "about_self": true
+    }
+  },
+  {
+    "index": 21,
+    "difficulty": 0.8305,
+    "true_probability": 0.3356,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.830481689206348,
+      "salience": 0.5508554932380956,
+      "about_self": false
+    }
+  },
+  {
+    "index": 22,
+    "difficulty": 0.59,
+    "true_probability": 0.528,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5899736121443088,
+      "salience": 0.6230079163567074,
+      "about_self": false
+    }
+  },
+  {
+    "index": 23,
+    "difficulty": 0.2333,
+    "true_probability": 0.8134,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.23326149198003665,
+      "salience": 0.730021552405989,
+      "about_self": false
+    }
+  },
+  {
+    "index": 24,
+    "difficulty": 0.7941,
+    "true_probability": 0.3648,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.7940596694992696,
+      "salience": 0.5617820991502191,
+      "about_self": false
+    }
+  },
+  {
+    "index": 25,
+    "difficulty": 0.3459,
+    "true_probability": 0.7233,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.3459073649067602,
+      "salience": 0.6962277905279719,
+      "about_self": true
+    }
+  },
+  {
+    "index": 26,
+    "difficulty": 0.8394,
+    "true_probability": 0.3285,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.839416196477519,
+      "salience": 0.5481751410567444,
+      "about_self": false
+    }
+  },
+  {
+    "index": 27,
+    "difficulty": 0.1573,
+    "true_probability": 0.8742,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.15726925439603556,
+      "salience": 0.7528192236811893,
+      "about_self": false
+    }
+  },
+  {
+    "index": 28,
+    "difficulty": 0.0146,
+    "true_probability": 0.9883,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.014588434845492881,
+      "salience": 0.7956234695463521,
+      "about_self": false
+    }
+  },
+  {
+    "index": 29,
+    "difficulty": 0.6468,
+    "true_probability": 0.4826,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.6467903893887852,
+      "salience": 0.6059628831833644,
+      "about_self": false
+    }
+  },
+  {
+    "index": 30,
+    "difficulty": 0.9947,
+    "true_probability": 0.2043,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.994665480735883,
+      "salience": 0.5016003557792351,
+      "about_self": true
+    }
+  },
+  {
+    "index": 31,
+    "difficulty": 0.199,
+    "true_probability": 0.8408,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.19904695007600748,
+      "salience": 0.7402859149771978,
+      "about_self": false
+    }
+  },
+  {
+    "index": 32,
+    "difficulty": 0.3401,
+    "true_probability": 0.7279,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.3401304864312761,
+      "salience": 0.6979608540706171,
+      "about_self": false
+    }
+  },
+  {
+    "index": 33,
+    "difficulty": 0.6067,
+    "true_probability": 0.5146,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6067270168416464,
+      "salience": 0.6179818949475061,
+      "about_self": false
+    }
+  },
+  {
+    "index": 34,
+    "difficulty": 0.4332,
+    "true_probability": 0.6534,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.43323425770337887,
+      "salience": 0.6700297226889863,
+      "about_self": false
+    }
+  },
+  {
+    "index": 35,
+    "difficulty": 0.6231,
+    "true_probability": 0.5015,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6230878269221285,
+      "salience": 0.6130736519233615,
+      "about_self": true
+    }
+  },
+  {
+    "index": 36,
+    "difficulty": 0.1794,
+    "true_probability": 0.8564,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.17944021472715432,
+      "salience": 0.7461679355818537,
+      "about_self": false
+    }
+  },
+  {
+    "index": 37,
+    "difficulty": 0.8356,
+    "true_probability": 0.3316,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8355548903748157,
+      "salience": 0.5493335328875553,
+      "about_self": false
+    }
+  },
+  {
+    "index": 38,
+    "difficulty": 0.2937,
+    "true_probability": 0.765,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.2936985486823931,
+      "salience": 0.7118904353952821,
+      "about_self": false
+    }
+  },
+  {
+    "index": 39,
+    "difficulty": 0.272,
+    "true_probability": 0.7824,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.27204909231091834,
+      "salience": 0.7183852723067246,
+      "about_self": false
+    }
+  },
+  {
+    "index": 40,
+    "difficulty": 0.2739,
+    "true_probability": 0.7809,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.27391238643523974,
+      "salience": 0.7178262840694281,
+      "about_self": true
+    }
+  },
+  {
+    "index": 41,
+    "difficulty": 0.6265,
+    "true_probability": 0.4988,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6264753094183797,
+      "salience": 0.6120574071744861,
+      "about_self": false
+    }
+  },
+  {
+    "index": 42,
+    "difficulty": 0.8406,
+    "true_probability": 0.3275,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8406243993270748,
+      "salience": 0.5478126802018776,
+      "about_self": false
+    }
+  },
+  {
+    "index": 43,
+    "difficulty": 0.2794,
+    "true_probability": 0.7765,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.27937388035017974,
+      "salience": 0.7161878358949461,
+      "about_self": false
+    }
+  },
+  {
+    "index": 44,
+    "difficulty": 0.2626,
+    "true_probability": 0.7899,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.26256418208465815,
+      "salience": 0.7212307453746025,
+      "about_self": false
+    }
+  },
+  {
+    "index": 45,
+    "difficulty": 0.5122,
+    "true_probability": 0.5902,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5122345369389032,
+      "salience": 0.6463296389183291,
+      "about_self": true
+    }
+  },
+  {
+    "index": 46,
+    "difficulty": 0.5997,
+    "true_probability": 0.5202,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5996955136202538,
+      "salience": 0.6200913459139239,
+      "about_self": false
+    }
+  },
+  {
+    "index": 47,
+    "difficulty": 0.4877,
+    "true_probability": 0.6099,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.48765109528164796,
+      "salience": 0.6537046714155056,
+      "about_self": false
+    }
+  },
+  {
+    "index": 48,
+    "difficulty": 0.2999,
+    "true_probability": 0.7601,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.2998793155041477,
+      "salience": 0.7100362053487557,
+      "about_self": false
+    }
+  },
+  {
+    "index": 49,
+    "difficulty": 0.5471,
+    "true_probability": 0.5623,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5471050358015215,
+      "salience": 0.6358684892595435,
+      "about_self": false
+    }
+  },
+  {
+    "index": 50,
+    "difficulty": 0.0728,
+    "true_probability": 0.9418,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.07277326522318239,
+      "salience": 0.7781680204330452,
+      "about_self": true
+    }
+  },
+  {
+    "index": 51,
+    "difficulty": 0.9435,
+    "true_probability": 0.2452,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.9434867362106374,
+      "salience": 0.5169539791368087,
+      "about_self": false
+    }
+  },
+  {
+    "index": 52,
+    "difficulty": 0.0744,
+    "true_probability": 0.9405,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.07436010931248715,
+      "salience": 0.7776919672062539,
+      "about_self": false
+    }
+  },
+  {
+    "index": 53,
+    "difficulty": 0.651,
+    "true_probability": 0.4792,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.6509970750302094,
+      "salience": 0.6047008774909371,
+      "about_self": false
+    }
+  },
+  {
+    "index": 54,
+    "difficulty": 0.0842,
+    "true_probability": 0.9326,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.08422721381517873,
+      "salience": 0.7747318358554464,
+      "about_self": false
+    }
+  },
+  {
+    "index": 55,
+    "difficulty": 0.7707,
+    "true_probability": 0.3834,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.7706955830267418,
+      "salience": 0.5687913250919775,
+      "about_self": true
+    }
+  },
+  {
+    "index": 56,
+    "difficulty": 0.5334,
+    "true_probability": 0.5733,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5334138833221768,
+      "salience": 0.639975835003347,
+      "about_self": false
+    }
+  },
+  {
+    "index": 57,
+    "difficulty": 0.2431,
+    "true_probability": 0.8055,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.24313228603202297,
+      "salience": 0.7270603141903931,
+      "about_self": false
+    }
+  },
+  {
+    "index": 58,
+    "difficulty": 0.5601,
+    "true_probability": 0.552,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.5600563547590603,
+      "salience": 0.6319830935722819,
+      "about_self": false
+    }
+  },
+  {
+    "index": 59,
+    "difficulty": 0.2717,
+    "true_probability": 0.7826,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.2717220102562641,
+      "salience": 0.7184833969231208,
+      "about_self": false
+    }
+  },
+  {
+    "index": 60,
+    "difficulty": 0.1396,
+    "true_probability": 0.8884,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.13956055782123367,
+      "salience": 0.7581318326536299,
+      "about_self": true
+    }
+  },
+  {
+    "index": 61,
+    "difficulty": 0.2501,
+    "true_probability": 0.7999,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.25008192011477703,
+      "salience": 0.7249754239655669,
+      "about_self": false
+    }
+  },
+  {
+    "index": 62,
+    "difficulty": 0.5972,
+    "true_probability": 0.5223,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5971770611834786,
+      "salience": 0.6208468816449564,
+      "about_self": false
+    }
+  },
+  {
+    "index": 63,
+    "difficulty": 0.3191,
+    "true_probability": 0.7447,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.319105110818668,
+      "salience": 0.7042684667543996,
+      "about_self": false
+    }
+  },
+  {
+    "index": 64,
+    "difficulty": 0.4965,
+    "true_probability": 0.6028,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.49653411019948135,
+      "salience": 0.6510397669401555,
+      "about_self": false
+    }
+  },
+  {
+    "index": 65,
+    "difficulty": 0.079,
+    "true_probability": 0.9368,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.0789711990567461,
+      "salience": 0.7763086402829762,
+      "about_self": true
+    }
+  },
+  {
+    "index": 66,
+    "difficulty": 0.938,
+    "true_probability": 0.2496,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.9380009221652938,
+      "salience": 0.5185997233504118,
+      "about_self": false
+    }
+  },
+  {
+    "index": 67,
+    "difficulty": 0.8027,
+    "true_probability": 0.3579,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8026812553591268,
+      "salience": 0.5591956233922619,
+      "about_self": false
+    }
+  },
+  {
+    "index": 68,
+    "difficulty": 0.9626,
+    "true_probability": 0.2299,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.9626351195004526,
+      "salience": 0.5112094641498642,
+      "about_self": false
+    }
+  },
+  {
+    "index": 69,
+    "difficulty": 0.6867,
+    "true_probability": 0.4506,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6867316924603165,
+      "salience": 0.5939804922619051,
+      "about_self": false
+    }
+  },
+  {
+    "index": 70,
+    "difficulty": 0.2207,
+    "true_probability": 0.8235,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.22067958233036,
+      "salience": 0.733796125300892,
+      "about_self": true
+    }
+  },
+  {
+    "index": 71,
+    "difficulty": 0.7358,
+    "true_probability": 0.4114,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.7357857301631956,
+      "salience": 0.5792642809510413,
+      "about_self": false
+    }
+  },
+  {
+    "index": 72,
+    "difficulty": 0.3112,
+    "true_probability": 0.751,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.31123705218602926,
+      "salience": 0.7066288843441912,
+      "about_self": false
+    }
+  },
+  {
+    "index": 73,
+    "difficulty": 0.2119,
+    "true_probability": 0.8305,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.21186924433561527,
+      "salience": 0.7364392266993154,
+      "about_self": false
+    }
+  },
+  {
+    "index": 74,
+    "difficulty": 0.188,
+    "true_probability": 0.8496,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.18795489179810188,
+      "salience": 0.7436135324605695,
+      "about_self": false
+    }
+  },
+  {
+    "index": 75,
+    "difficulty": 0.1206,
+    "true_probability": 0.9035,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.12062753062706022,
+      "salience": 0.7638117408118819,
+      "about_self": true
+    }
+  },
+  {
+    "index": 76,
+    "difficulty": 0.5014,
+    "true_probability": 0.5989,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5014332313176737,
+      "salience": 0.6495700306046979,
+      "about_self": false
+    }
+  },
+  {
+    "index": 77,
+    "difficulty": 0.3081,
+    "true_probability": 0.7535,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.3081288516732168,
+      "salience": 0.707561344498035,
+      "about_self": false
+    }
+  },
+  {
+    "index": 78,
+    "difficulty": 0.9202,
+    "true_probability": 0.2639,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.9201769963847771,
+      "salience": 0.5239469010845669,
+      "about_self": false
+    }
+  },
+  {
+    "index": 79,
+    "difficulty": 0.6789,
+    "true_probability": 0.4569,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.6788663314222942,
+      "salience": 0.5963401005733118,
+      "about_self": false
+    }
+  },
+  {
+    "index": 80,
+    "difficulty": 0.3218,
+    "true_probability": 0.7425,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.32183068649396707,
+      "salience": 0.7034507940518099,
+      "about_self": true
+    }
+  },
+  {
+    "index": 81,
+    "difficulty": 0.3188,
+    "true_probability": 0.745,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.31878661347814297,
+      "salience": 0.7043640159565571,
+      "about_self": false
+    }
+  },
+  {
+    "index": 82,
+    "difficulty": 0.8179,
+    "true_probability": 0.3457,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.8178554720335863,
+      "salience": 0.5546433583899241,
+      "about_self": false
+    }
+  },
+  {
+    "index": 83,
+    "difficulty": 0.7957,
+    "true_probability": 0.3635,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.7956809863864636,
+      "salience": 0.5612957040840609,
+      "about_self": false
+    }
+  },
+  {
+    "index": 84,
+    "difficulty": 0.0161,
+    "true_probability": 0.9871,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.016100974126273537,
+      "salience": 0.7951697077621179,
+      "about_self": false
+    }
+  },
+  {
+    "index": 85,
+    "difficulty": 0.5624,
+    "true_probability": 0.5501,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.5623920792020249,
+      "salience": 0.6312823762393925,
+      "about_self": true
+    }
+  },
+  {
+    "index": 86,
+    "difficulty": 0.9254,
+    "true_probability": 0.2597,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.9253719954682074,
+      "salience": 0.5223884013595378,
+      "about_self": false
+    }
+  },
+  {
+    "index": 87,
+    "difficulty": 0.429,
+    "true_probability": 0.6568,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.4289926640540398,
+      "salience": 0.6713022007837881,
+      "about_self": false
+    }
+  },
+  {
+    "index": 88,
+    "difficulty": 0.8875,
+    "true_probability": 0.29,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8875099299688316,
+      "salience": 0.5337470210093506,
+      "about_self": false
+    }
+  },
+  {
+    "index": 89,
+    "difficulty": 0.2483,
+    "true_probability": 0.8014,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.24827597726375272,
+      "salience": 0.7255172068208742,
+      "about_self": false
+    }
+  },
+  {
+    "index": 90,
+    "difficulty": 0.149,
+    "true_probability": 0.8808,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.14903803392923243,
+      "salience": 0.7552885898212303,
+      "about_self": true
+    }
+  },
+  {
+    "index": 91,
+    "difficulty": 0.4046,
+    "true_probability": 0.6763,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.4045923931025962,
+      "salience": 0.6786222820692211,
+      "about_self": false
+    }
+  },
+  {
+    "index": 92,
+    "difficulty": 0.66,
+    "true_probability": 0.472,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.6599670644688285,
+      "salience": 0.6020098806593515,
+      "about_self": false
+    }
+  },
+  {
+    "index": 93,
+    "difficulty": 0.1787,
+    "true_probability": 0.857,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.1787193364231242,
+      "salience": 0.7463841990730627,
+      "about_self": false
+    }
+  },
+  {
+    "index": 94,
+    "difficulty": 0.8905,
+    "true_probability": 0.2876,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8904628417458862,
+      "salience": 0.5328611474762341,
+      "about_self": false
+    }
+  },
+  {
+    "index": 95,
+    "difficulty": 0.789,
+    "true_probability": 0.3688,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.7889966539809695,
+      "salience": 0.5633010038057091,
+      "about_self": true
+    }
+  },
+  {
+    "index": 96,
+    "difficulty": 0.878,
+    "true_probability": 0.2976,
+    "outcome": 0.0,
+    "perception": {
+      "complexity": 0.8779679569973374,
+      "salience": 0.5366096129007988,
+      "about_self": false
+    }
+  },
+  {
+    "index": 97,
+    "difficulty": 0.3779,
+    "true_probability": 0.6977,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.37792198717970227,
+      "salience": 0.6866234038460893,
+      "about_self": false
+    }
+  },
+  {
+    "index": 98,
+    "difficulty": 0.802,
+    "true_probability": 0.3584,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.8020408353971085,
+      "salience": 0.5593877493808674,
+      "about_self": false
+    }
+  },
+  {
+    "index": 99,
+    "difficulty": 0.1933,
+    "true_probability": 0.8454,
+    "outcome": 1.0,
+    "perception": {
+      "complexity": 0.1932954210919865,
+      "salience": 0.7420113736724041,
+      "about_self": false
+    }
+  }
+]

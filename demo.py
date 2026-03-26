@@ -4,8 +4,9 @@ demo.py — Ouroboros Loop Cognitive Architecture Demo
 """
 
 import sys
+import os
 import json
-sys.path.insert(0, '/home/computeruse/ouroboros-loop')
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from core.engine import StrangeLoopEngine
 
@@ -164,7 +165,8 @@ def run_demo():
         "consciousness_metrics": consciousness_metrics
     }
     
-    with open('/home/computeruse/ouroboros-loop/demo_output.json', 'w') as f:
+    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'demo_output.json')
+    with open(output_path, 'w') as f:
         json.dump(output, f, indent=2, default=str)
     
     print("  Full output saved to demo_output.json\n")
