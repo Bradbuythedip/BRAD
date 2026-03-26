@@ -1,0 +1,21 @@
+{
+  "seed": 42,
+  "datasets": {
+    "token_stream.json": {
+      "records": 200,
+      "path": "results/synthetic_data/token_stream.json"
+    },
+    "regime_sequence.json": {
+      "records": 150,
+      "path": "results/synthetic_data/regime_sequence.json"
+    },
+    "calibration_scenarios.json": {
+      "records": 100,
+      "path": "results/synthetic_data/calibration_scenarios.json"
+    },
+    "overconfidence_injection.json": {
+      "records": 1,
+      "path": "results/synthetic_data/overconfidence_injection.json"
+    }
+  }
+}
