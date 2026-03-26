@@ -152,27 +152,6 @@ state = ouroboros.get_state()
 print(f"Entities: {len(state['world_model']['entities'])}")
 ```
 
-## Token Deployment (Solana)
-
-```bash
-# Install Solana CLI
-sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
-
-# Create wallet
-solana-keygen new --outfile ~/ouroboros-wallet.json
-
-# Get SOL (devnet for testing)
-solana airdrop 2 --url devnet
-
-# Deploy on pump.fun
-# 1. Go to https://pump.fun
-# 2. Connect wallet
-# 3. Create token: Ouroboros Loop / $OUROBOROS
-# 4. Upload logo, add description
-# 5. Set initial liquidity
-# 6. Deploy
-```
-
 ## Troubleshooting
 
 | Problem | Solution |
@@ -218,8 +197,6 @@ Ouroboros Loop/
 
 - **Repo**: https://github.com/Ouroborosbuythedip/Ouroboros Loop
 - **Twitter Dev**: https://developer.twitter.com/
-- **Solana**: https://solana.com/
-- **pump.fun**: https://pump.fun/
 
 ## Support
 

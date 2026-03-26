@@ -389,7 +389,7 @@ Contributors will be recognized:
 - In README.md contributors section
 - In release notes for their contributions
 - In the Hall of Fame (for major contributions)
-- With $OUROBOROS tokens (once launched, for significant contributions)
+- With special recognition for significant contributions
 
 ---
 

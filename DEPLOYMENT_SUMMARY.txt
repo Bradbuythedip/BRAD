@@ -239,7 +239,6 @@ DEPLOYMENT:
 DETAILED:
 • ARCHITECTURE.md         # How Ouroboros Loop works
 • EXAMPLES.md             # Code examples
-• TOKENOMICS.md           # $OUROBOROS token details
 • CONTRIBUTING.md         # How to contribute
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -323,10 +322,6 @@ RECOMMENDATION:
    • Watch logs
    • Check Twitter profile
    • Monitor bot/tweet_history.jsonl
-
-5. TOKEN (Optional)
-   • Launch $OUROBOROS on pump.fun
-   • See TOKENOMICS.md
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 

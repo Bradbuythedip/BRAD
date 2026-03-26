@@ -74,12 +74,6 @@ Your website will be at:
    - Gödelian Limits, Twitter Bot, Lightweight
    - Hover effects
 
-✅ Token Information
-   - $OUROBOROS details
-   - Supply: 1B on Solana
-   - Governance capabilities
-   - Link to tokenomics
-
 ✅ Gödelian Blind Spots
    - Consistency (Gödel)
    - Halting (Turing)
@@ -93,7 +87,7 @@ Your website will be at:
 ✅ Footer
    - Hofstadter quote
    - Ouroboros Loop tagline
-   - Social links (GitHub, Twitter, Token, Docs)
+   - Social links (GitHub, Twitter, Docs)
    - License info
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
@@ -209,7 +203,6 @@ Performance:
 ✅ Ouroboros Loop branding applied
 ✅ Code examples included
 ✅ Links to GitHub/docs
-✅ Token information
 ✅ SEO optimized
 ✅ Social media ready
 ✅ Pushed to GitHub
