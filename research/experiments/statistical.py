@@ -138,8 +138,10 @@ def cohens_d(group1: List[float], group2: List[float]) -> float:
     v1, v2 = variance(group1), variance(group2)
 
     pooled_var = ((n1 - 1) * v1 + (n2 - 1) * v2) / (n1 + n2 - 2)
-    pooled_std = math.sqrt(pooled_var) if pooled_var > 0 else 1e-10
+    if pooled_var == 0:
+        return 0.0  # Both groups constant — no meaningful effect size
 
+    pooled_std = math.sqrt(pooled_var)
     return (m1 - m2) / pooled_std
 
 
@@ -412,8 +414,9 @@ def print_comparison_table(results: Dict[str, TestResult],
     print(f"  {'-'*18} {'-'*8} {'-'*8} {'-'*8} {'-'*8} {'-'*8} {'-'*5}")
 
     for name, result in results.items():
+        d_display = max(-99.99, min(99.99, result.effect_size))
         print(f"  {name:<18} {result.statistic:>8.1f} {result.p_value:>8.4f} "
-              f"{result.effect_size:>8.3f} {result.ci_lower:>8.4f} "
+              f"{d_display:>8.3f} {result.ci_lower:>8.4f} "
               f"{result.ci_upper:>8.4f} {result.significance_stars:>5}")
 
 

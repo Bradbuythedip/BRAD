@@ -37,36 +37,43 @@ The Strange Loop Cognitive Architecture is a three-level hierarchical system wit
 
 ```python
 class Entity:
-    - id: str
-    - type: str  
+    - id: str                    # "SELF" for self-reference
+    - name: str
+    - entity_type: str           # "object", "agent", "concept", "self"
     - properties: Dict
-    - attention_weight: float
-    - is_self: bool
+    - confidence: float          # Decays over time
+    - provenance: str            # "intrinsic", "perception", etc.
 ```
+
+Attention is tracked separately in `WorldModel.attention_weights: Dict[str, float]`.
 
 **Responsibilities:**
 - Store entities (concepts, objects, self-representation)
 - Manage beliefs with confidence scores
-- Implement attention mechanism
-- Track what's "in focus"
+- Implement attention mechanism via `set_attention()` / `get_focus()`
+- Track predictions and their accuracy
 
 **Self-Reference Implementation:**
 
-The world model includes an entity with `is_self=True`:
+The world model includes a `SELF` entity with `entity_type="self"`:
 
 ```python
-{
-    "id": "SELF",
-    "type": "cognitive_system",
-    "properties": {
-        "is_self_referential": True,
-        "capable_of_reasoning": True
+Entity(
+    id="SELF",
+    name="self",
+    entity_type="self",
+    properties={
+        "type": "cognitive_agent",
+        "architecture": "strange_loop",
+        "is_self_aware": False,     # Updated by meta-cognition
+        "strange_loop_depth": 0     # Updated each cycle
     },
-    "is_self": True
-}
+    confidence=1.0,
+    provenance="intrinsic"
+)
 ```
 
-This is the **seed** of the strange loop — the system represents itself within its own model.
+This is the **seed** of the strange loop — the system represents itself within its own model. The `SELF` entity cannot be removed (`remove_entity` refuses `entity_id == "SELF"`).
 
 ### 2. Self Model (Level 1)
 
@@ -123,15 +130,18 @@ def intervene_on_world(self, world_model, intervention):
 
 ```python
 class BlindSpot:
-    - id: str
+    - id: str                   # "godel_self_consistency", etc.
     - description: str
-    - reasoning: str
+    - domain: str               # "self_knowledge", "prediction"
+    - detection_method: str
     - is_fundamental: bool
-    - is_resolved: bool  # Always False for Gödelian spots
+    - is_resolved: bool         # Always False for Gödelian spots
 
 class MetaPattern:
-    - description: str
-    - detected_count: int
+    - name: str
+    - pattern_type: str
+    - confidence: float         # Grows with occurrences
+    - is_problematic: bool
 ```
 
 **Responsibilities:**
@@ -146,7 +156,7 @@ Three fundamental limits hardcoded:
 
 1. **Consistency Blind Spot**
    - Cannot prove own consistency
-   - Based on Gödel's First Incompleteness Theorem
+   - Based on Gödel's Second Incompleteness Theorem
    
 2. **Halting Blind Spot**
    - Cannot predict own halting
@@ -178,15 +188,23 @@ class CognitiveEvent:
 
 **Mechanism:**
 
+Events are submitted to a priority queue. Self-referential events get a salience boost (+0.15). The highest-salience event wins the competition and is broadcast to all registered listeners:
+
 ```python
-def broadcast(self, event: CognitiveEvent):
-    if event.salience > threshold:
-        # Add to workspace (visible to all levels)
-        self.workspace_contents.append(event)
-        
-        # Track self-referential broadcasts (key metric!)
-        if event.is_self_referential:
-            self.self_ref_broadcast_count += 1
+def submit(self, event: CognitiveEvent):
+    adjusted_salience = event.salience + 0.05
+    if event.is_self_referential:
+        adjusted_salience += 0.15  # Self-ref gets priority
+    heapq.heappush(self._competition_queue, (-adjusted_salience, ...))
+
+def compete(self) -> CognitiveEvent:
+    winner = heapq.heappop(self._competition_queue)
+    self.total_broadcasts += 1
+    if winner.is_self_referential:
+        self.self_referential_broadcasts += 1
+    for callback in self._listeners.values():
+        callback(winner)
+    return winner
 ```
 
 **Consciousness Connection:**
@@ -225,17 +243,18 @@ In Global Workspace Theory, **consciousness = broadcasting**. High-salience, sel
 
 **Strange Loop Detection:**
 
+A `LevelCrossing` is "strange" when it involves downward causation (higher level modifying lower level):
+
 ```python
-def _is_strange_crossing(self, crossing: LevelCrossing) -> bool:
-    # Strange = downward causation
-    # Moving from higher level to lower level
-    
-    if crossing.from_level > crossing.to_level:
-        if crossing.direction == "downward":
-            return True  # STRANGE LOOP DETECTED
-    
-    return False
+@property
+def is_strange(self) -> bool:
+    return (self.from_level > self.to_level and
+            self.direction == "downward")
 ```
+
+The engine counts strange loops across two paths:
+- L1 → L0: self-model intervenes on world model (attention, self-update)
+- L2 → L1: meta-cognition restructures self-model (confidence calibration)
 
 ## Data Flow
 
@@ -292,45 +311,35 @@ def select_reasoning_mode(context):
 ### Hofstadter Index Calculation
 
 ```python
-def calculate_hofstadter_index():
-    # How "strange" is the loop?
-    strangeness_ratio = strange_crossings / total_crossings
-    
-    # How self-aware?
-    self_ref_ratio = self_ref_broadcasts / total_broadcasts
-    
-    # How goal-aligned?
-    goal_alignment = completed_goals / total_goals
-    
-    # How aware of limits?
-    godel_awareness = detected_blind_spots / 3
-    
-    # Weighted composite
-    HI = (strangeness_ratio * 0.4 +
-          self_ref_ratio * 0.3 +
-          goal_alignment * 0.2 +
-          godel_awareness * 0.1)
-    
-    return HI
+def _calculate_hofstadter_index(self, state):
+    if self.cycle_count == 0:
+        return 0.0
+
+    # Depth: strange loops per cycle (normalized by expected rate 0.3)
+    depth = min(1.0, self.total_strange_loops / (self.cycle_count * 0.3))
+
+    # Tangle: fraction of level crossings that are strange
+    tangle = strange_crossings / max(1, total_crossings)
+
+    # Weighted composite (equal weight)
+    return depth * 0.5 + tangle * 0.5
 ```
+
+See `research/formal/axioms.py` for the formal 4-component definition with proofs of boundedness, monotonicity, and zero-at-init.
 
 ### Attention Mechanism
 
 ```python
-def get_focused_entities(world_model):
-    # Softmax-like attention
-    entities = world_model.entities.values()
-    weights = [e.attention_weight for e in entities]
-    
-    # Normalize
-    total = sum(weights)
-    normalized = [w/total for w in weights]
-    
-    # Return top-k
-    return sorted(zip(entities, normalized), 
-                  key=lambda x: x[1], 
-                  reverse=True)[:5]
+def get_focus(self, top_n: int = 5) -> List[Tuple[str, float]]:
+    """Return (entity_id, attention_weight) sorted by attention."""
+    return sorted(
+        self.attention_weights.items(),
+        key=lambda x: x[1],
+        reverse=True
+    )[:top_n]
 ```
+
+Attention weights are set by `set_attention(entity_id, weight)`, clamped to [0, 1]. This can be called by the self-model (downward causation) to redirect focus.
 
 ## Consciousness Metrics
 
@@ -601,17 +610,19 @@ def trace_crossings(engine, num_cycles):
 ```python
 def inspect_state(engine):
     state = engine.get_full_state()
-    
+
     print("=== World Model ===")
-    for entity in state['world_model']['entities']:
-        print(f"  {entity['id']}: attention={entity['attention_weight']:.2f}")
-    
+    print(f"  Entities: {state['world_model']['entity_count']}")
+    print(f"  Focus: {state['world_model']['focus']}")
+
     print("\n=== Self Model ===")
+    print(f"  Mode: {state['self_model']['mode']}")
+    print(f"  Confidence: {state['self_model']['confidence']}")
     for goal_id, goal in state['self_model']['goals'].items():
-        print(f"  {goal['desc']}: {goal['progress']:.1%}")
-    
+        print(f"  Goal: {goal['desc']} ({goal['progress']:.0%})")
+
     print("\n=== Meta-Cognitive ===")
-    for bs in state['meta_cognitive']['blind_spots'].values():
+    for bs_id, bs in state['meta_cognitive']['blind_spots'].items():
         print(f"  ⊘ {bs['description']}")
 ```
 
