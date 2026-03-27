@@ -8,8 +8,8 @@ Step-by-step installation instructions for Ouroboros Loop.
 
 ```bash
 # Clone repository
-git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
-cd Ouroboros Loop
+git clone https://github.com/Bradbuythedip/brad.git
+cd brad
 
 # Run setup script
 ./setup.sh
@@ -35,8 +35,8 @@ python3 demo.py
 ### Step 2: Clone Repository
 
 ```bash
-git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
-cd Ouroboros Loop
+git clone https://github.com/Bradbuythedip/brad.git
+cd brad
 ```
 
 ### Step 3: Verify Installation
@@ -169,7 +169,7 @@ source ~/.bashrc
 
 ```bash
 # Bot will generate tweets but not post them
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 You should see tweets printed to console like:
@@ -205,7 +205,7 @@ Once testing works:
 
 1. Edit `bot/config.json`
 2. Set `"simulation_mode": false`
-3. Run: `python3 bot/ouroboros_bot.py`
+3. Run: `python3 bot/brad_bot.py`
 
 The bot will now post to Twitter!
 
@@ -222,8 +222,8 @@ sudo nano /etc/systemd/system/ouroboros-bot.service
 
 # Update these lines:
 # User=YOUR_USERNAME
-# WorkingDirectory=/path/to/Ouroboros Loop
-# ExecStart=/usr/bin/python3 /path/to/Ouroboros Loop/bot/ouroboros_bot.py
+# WorkingDirectory=/path/to/brad
+# ExecStart=/usr/bin/python3 /path/to/brad/bot/brad_bot.py
 
 # Create log files
 sudo touch /var/log/ouroboros-bot.log
@@ -292,7 +292,7 @@ docker-compose down
 ```bash
 # Using screen
 screen -S ouroboros-bot
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 # Press Ctrl+A, then D to detach
 
 # Re-attach
@@ -300,7 +300,7 @@ screen -r ouroboros-bot
 
 # Using tmux
 tmux new -s ouroboros-bot
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 # Press Ctrl+B, then D to detach
 
 # Re-attach
@@ -337,13 +337,13 @@ brew install python@3.9
 **Solution**:
 ```bash
 # Make sure you're in Ouroboros Loop directory
-cd /path/to/Ouroboros Loop
+cd /path/to/brad
 
 # Check if core/ exists
 ls -la core/
 
 # Try running from Ouroboros Loop directory
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 ### "Twitter API Error: 401 Unauthorized"
@@ -394,7 +394,7 @@ tail -100 /var/log/ouroboros-bot-error.log
 
 # Or run in tmux/screen with auto-restart script:
 while true; do
-    python3 bot/ouroboros_bot.py
+    python3 bot/brad_bot.py
     echo "Bot stopped, restarting in 60s..."
     sleep 60
 done
@@ -487,7 +487,7 @@ EOF
 
 ## Support
 
-- **GitHub Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
+- **GitHub Issues**: https://github.com/Bradbuythedip/brad/issues
 - **Documentation**: See README.md, DEPLOYMENT.md, ARCHITECTURE.md
 - **Twitter**: @ouroboros_loop (once live)
 

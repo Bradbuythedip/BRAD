@@ -5,7 +5,6 @@
 ### 1. Run the Demo
 
 ```bash
-cd /home/computeruse/strange-loop
 python3 demo.py
 ```
 

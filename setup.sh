@@ -93,7 +93,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo ""
 
     echo "Testing bot in simulation mode..."
-    timeout 5s python3 bot/ouroboros_bot.py > /dev/null 2>&1 || true
+    timeout 5s python3 bot/brad_bot.py > /dev/null 2>&1 || true
     echo "  Bot test complete [OK]"
 fi
 echo ""
@@ -111,7 +111,7 @@ echo ""
 if [[ $REPLY =~ ^[Yy]$ ]]; then
     echo "Twitter Bot:"
     echo "  Edit bot/config.json with your API keys, then:"
-    echo "  python3 bot/ouroboros_bot.py  # Run bot"
+    echo "  python3 bot/brad_bot.py  # Run bot"
     echo ""
 fi
 echo "Bondli Trading Bridge:"

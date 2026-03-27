@@ -4,7 +4,8 @@ interactive.py — Interactive REPL for Ouroboros Loop exploration
 """
 
 import sys
-sys.path.insert(0, '/home/computeruse/ouroboros-loop')
+import os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from core.engine import StrangeLoopEngine
 from core.structures import Goal, GoalPriority

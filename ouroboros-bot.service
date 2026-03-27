@@ -22,7 +22,7 @@ User=YOUR_USERNAME
 Group=YOUR_USERNAME
 WorkingDirectory=/path/to/ouroboros
 
-ExecStart=/usr/bin/python3 /path/to/ouroboros/bot/ouroboros_bot.py
+ExecStart=/usr/bin/python3 /path/to/ouroboros/bot/brad_bot.py
 
 Restart=on-failure
 RestartSec=60
