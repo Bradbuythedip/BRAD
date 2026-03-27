@@ -442,7 +442,14 @@ class TradingEngine:
             self._cognitive_trace = self._cognitive_trace[-max_trace:]
 
     def _world_listener(self, event: CognitiveEvent):
-        pass
+        """Handle broadcasts relevant to the world model."""
+        if hasattr(self.world, 'update_self') and event.is_self_referential:
+            self.world.update_self({
+                "last_broadcast_type": event.event_type.value,
+                "last_broadcast_salience": event.salience,
+            })
 
     def _self_listener(self, event: CognitiveEvent):
-        pass
+        """Handle broadcasts relevant to the self model."""
+        if event.source_level == 2 and hasattr(self.self_model, 'process_meta_feedback'):
+            self.self_model.process_meta_feedback(event.content)
