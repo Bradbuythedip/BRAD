@@ -62,6 +62,11 @@ class CognitiveConfig:
     strange_loop_threshold: int = 5          # Min strange loops for "self-aware" status
     blind_spot_check_frequency: int = 10     # Check for trading blind spots every N cycles
     max_cognitive_trace: int = 500           # Keep last N cycle traces
+    # Phase 1 consciousness: self-prediction loop
+    self_prediction_enabled: bool = True     # Enable self-prediction before each decision
+    prediction_error_alpha: float = 0.2     # EMA smoothing for prediction error
+    system2_error_threshold: float = 0.6    # Error above this triggers System 2
+    system1_error_threshold: float = 0.3    # Error below this allows System 1
 
 
 @dataclass
@@ -136,6 +141,8 @@ class BridgeConfig:
                 "meta_eval_frequency": self.cognitive.meta_eval_frequency,
                 "attention_capacity": self.cognitive.attention_capacity,
                 "strange_loop_threshold": self.cognitive.strange_loop_threshold,
+                "self_prediction_enabled": self.cognitive.self_prediction_enabled,
+                "system2_error_threshold": self.cognitive.system2_error_threshold,
             },
             "server": {
                 "host": self.host,

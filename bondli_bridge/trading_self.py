@@ -112,6 +112,7 @@ class TradingSelfModel(SelfModel):
             "regime_read": 0.4,   # Confidence in regime classification
             "strategy": 0.5,      # Confidence in current strategy
             "risk_mgmt": 0.6,     # Confidence in position sizing
+            "self_knowledge": 0.3, # Phase 1: how well we predict our own decisions
         }
 
         # Initialize strategies
@@ -151,6 +152,132 @@ class TradingSelfModel(SelfModel):
         ]
         for name, desc in patterns:
             self.reasoning_patterns[name] = ReasoningPattern(name, desc)
+
+    # ═══════════════════════════════════════
+    # SELF-PREDICTION (Phase 1 Consciousness)
+    # ═══════════════════════════════════════
+
+    def predict_own_decision(self, token_data: Dict, market_summary: Dict) -> Dict:
+        """
+        Before deciding, predict what we WILL decide.
+
+        This is the core of the self-prediction loop. The self-model
+        uses its knowledge of its own gates, thresholds, and recent
+        behavior to predict its own output. The prediction is compared
+        against the actual decision after evaluate_token() runs.
+
+        Uses fast heuristics (System 1 self-model) — NOT the full
+        evaluation logic. The whole point is that this is an imperfect
+        model of ourselves, and the error signal drives learning.
+        """
+        mint = token_data.get("mint", "")
+        score = token_data.get("score", 0.0)
+        velocity = token_data.get("velocity", 0.0)
+        rug_signals = token_data.get("rug_signals", 0)
+        smart_money = token_data.get("smart_money_in", False)
+        liquidity = token_data.get("liquidity_sol", 0.0)
+
+        # Quick gate predictions (these are deterministic, easy to predict)
+        if self._paused:
+            return {"action": "SKIP", "confidence": 0.9, "reasoning": "paused"}
+        if self._in_cooldown():
+            return {"action": "SKIP", "confidence": 0.8, "reasoning": "cooldown"}
+        if self.positions.has_position(mint):
+            return {"action": "SKIP", "confidence": 1.0, "reasoning": "has_position"}
+        if rug_signals >= self.config.scoring.rug_signal_max + 1:
+            return {"action": "SKIP", "confidence": 0.95, "reasoning": "rug"}
+        if liquidity < self.config.risk.min_liquidity_sol:
+            return {"action": "SKIP", "confidence": 0.8, "reasoning": "low_liquidity"}
+        if self.positions.open_count >= self.config.risk.max_concurrent_positions:
+            return {"action": "SKIP", "confidence": 0.9, "reasoning": "max_positions"}
+        if self.positions.total_exposure_sol >= self.config.risk.max_portfolio_exposure_sol:
+            return {"action": "SKIP", "confidence": 0.9, "reasoning": "max_exposure"}
+
+        # Scoring prediction — this is where self-knowledge matters.
+        # We use our confidence states and recent history to estimate
+        # what we think we'll do, rather than running the full logic.
+        predicted_action = "SKIP"
+        predicted_confidence = 0.5
+
+        if score >= self.config.scoring.min_score_to_ape:
+            predicted_action = "APE"
+            predicted_confidence = score
+
+            # Predict our own adjustments using self-knowledge
+            if velocity < self.config.scoring.score_velocity_threshold:
+                predicted_action = "WATCH"
+                predicted_confidence -= 0.15
+
+            if smart_money and score > 0.55:
+                predicted_action = "APE"
+                predicted_confidence += 0.15
+
+            # Self-knowledge adjustment: if we've been wrong a lot recently,
+            # we know we tend to be more cautious (System 2 active)
+            if self._prediction_error_ema > 0.5:
+                # We're in System 2 / uncertain — predict more caution
+                predicted_confidence -= 0.1
+                if predicted_action == "APE" and predicted_confidence < 0.55:
+                    predicted_action = "WATCH"
+        elif score > 0.5:
+            predicted_action = "WATCH"
+            predicted_confidence = 0.6
+        else:
+            predicted_action = "SKIP"
+            predicted_confidence = 0.6
+
+        # Factor in regime knowledge
+        regime = market_summary.get("regime", "unknown")
+        strategy = self.strategies.get(self.active_strategy)
+        if strategy and regime in strategy.regime_affinity:
+            if strategy.regime_affinity[regime] < 0.3:
+                predicted_confidence -= 0.1
+
+        predicted_confidence = max(0.0, min(1.0, predicted_confidence))
+
+        # Final gate: we know we reject low-confidence APEs
+        if predicted_action == "APE" and predicted_confidence < 0.5:
+            predicted_action = "WATCH"
+
+        return {
+            "action": predicted_action,
+            "confidence": round(predicted_confidence, 4),
+            "reasoning": "self_prediction",
+        }
+
+    def compare_prediction(self, prediction: Dict, actual: Dict) -> Dict:
+        """
+        Compare self-prediction against actual decision.
+        Delegates to base SelfModel's prediction tracking,
+        then applies trading-specific feedback.
+        """
+        record = self.record_prediction_outcome(prediction, actual)
+
+        # Trading-specific feedback: prediction error modulates
+        # trading confidence states
+        error = record["combined_error"]
+
+        # High self-prediction error → reduce confidence in scoring
+        if error > 0.5:
+            self.confidence_states["scoring"] = max(
+                0.2, self.confidence_states["scoring"] - 0.03)
+            self.confidence_states["strategy"] = max(
+                0.2, self.confidence_states["strategy"] - 0.02)
+        elif error < 0.2:
+            # Good self-knowledge → boost confidence slightly
+            self.confidence_states["scoring"] = min(
+                0.9, self.confidence_states["scoring"] + 0.01)
+            self.confidence_states["strategy"] = min(
+                0.9, self.confidence_states["strategy"] + 0.01)
+
+        # Track self-prediction pattern effectiveness
+        if "self_referential" in self.reasoning_patterns:
+            self.reasoning_patterns["self_referential"].record_use(
+                succeeded=record["action_match"],
+                context=f"pred={prediction.get('action')} actual={actual.get('action')}"
+            )
+
+        return record
 
     def evaluate_token(self, token_data: Dict, market_summary: Dict) -> Dict:
         """
@@ -595,6 +722,7 @@ class TradingSelfModel(SelfModel):
                 },
                 "consecutive_losses": stats.get("consecutive_losses", 0),
             },
+            "self_prediction": self.get_prediction_stats(),
         })
         return base
 
