@@ -23,7 +23,7 @@ The simplest possible usage:
 ```python
 #!/usr/bin/env python3
 import sys
-sys.path.insert(0, '/home/computeruse/strange-loop')
+sys.path.insert(0, '.')
 
 from core.engine import StrangeLoopEngine
 

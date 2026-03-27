@@ -37,8 +37,8 @@ pip install pytest black flake8 mypy
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/Ouroborosbuythedip/Ouroboros Loop.git
-cd Ouroboros Loop
+git clone https://github.com/Bradbuythedip/brad.git
+cd brad
 ```
 
 ### 2. Verify Installation
@@ -121,7 +121,7 @@ Open `bot/config.json` and fill in your credentials:
 Test the bot without actually posting to Twitter:
 
 ```bash
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 This will:
@@ -134,7 +134,7 @@ This will:
 Once you've added API credentials and set `"simulation_mode": false`:
 
 ```bash
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 ---
@@ -153,8 +153,8 @@ After=network.target
 [Service]
 Type=simple
 User=YOUR_USERNAME
-WorkingDirectory=/path/to/Ouroboros Loop
-ExecStart=/usr/bin/python3 /path/to/Ouroboros Loop/bot/ouroboros_bot.py
+WorkingDirectory=/path/to/brad
+ExecStart=/usr/bin/python3 /path/to/brad/bot/brad_bot.py
 Restart=on-failure
 RestartSec=60
 StandardOutput=append:/var/log/ouroboros-bot.log
@@ -195,7 +195,7 @@ COPY . /app/
 RUN pip install --no-cache-dir tweepy
 
 # Run bot
-CMD ["python3", "bot/ouroboros_bot.py"]
+CMD ["python3", "bot/brad_bot.py"]
 ```
 
 Build and run:
@@ -221,8 +221,8 @@ docker logs -f ouroboros-bot
 ```bash
 # Using screen
 screen -S ouroboros-bot
-cd /path/to/Ouroboros Loop
-python3 bot/ouroboros_bot.py
+cd /path/to/brad
+python3 bot/brad_bot.py
 # Press Ctrl+A then D to detach
 
 # Re-attach later
@@ -230,8 +230,8 @@ screen -r ouroboros-bot
 
 # Or using tmux
 tmux new -s ouroboros-bot
-cd /path/to/Ouroboros Loop
-python3 bot/ouroboros_bot.py
+cd /path/to/brad
+python3 bot/brad_bot.py
 # Press Ctrl+B then D to detach
 
 # Re-attach later
@@ -250,7 +250,7 @@ Add:
 
 ```cron
 # Run Ouroboros Loop bot every 2 hours
-0 */2 * * * cd /path/to/Ouroboros Loop && /usr/bin/python3 bot/ouroboros_bot.py >> /var/log/ouroboros-bot.log 2>&1
+0 */2 * * * cd /path/to/brad && /usr/bin/python3 bot/brad_bot.py >> /var/log/ouroboros-bot.log 2>&1
 ```
 
 ---
@@ -308,10 +308,10 @@ export TWITTER_ACCESS_TOKEN="your_token"
 export TWITTER_ACCESS_TOKEN_SECRET="your_token_secret"
 export TWITTER_BEARER_TOKEN="your_bearer"
 
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
-Modify `bot/ouroboros_bot.py` to read from environment variables:
+Modify `bot/brad_bot.py` to read from environment variables:
 
 ```python
 import os
@@ -373,7 +373,7 @@ tail -50 /var/log/ouroboros-bot-error.log
 python3 -c "import sys; print(sys.path)"
 
 # Ensure you're in Ouroboros Loop directory
-cd /path/to/Ouroboros Loop
+cd /path/to/brad
 python3 -c "from core.engine import StrangeLoopEngine; print('OK')"
 ```
 
@@ -396,7 +396,7 @@ sudo systemctl restart ouroboros-bot
 ### Pull Latest Code
 
 ```bash
-cd /path/to/Ouroboros Loop
+cd /path/to/brad
 git pull origin main
 
 # Restart bot
@@ -435,10 +435,10 @@ For multiple Ouroboros Loop instances:
 
 ```bash
 # Instance 1 (main bot)
-python3 bot/ouroboros_bot.py --instance main --port 8001
+python3 bot/brad_bot.py --instance main --port 8001
 
 # Instance 2 (backup)
-python3 bot/ouroboros_bot.py --instance backup --port 8002
+python3 bot/brad_bot.py --instance backup --port 8002
 ```
 
 ---
@@ -497,7 +497,7 @@ jq 'select(.hofstadter_index > 0.8)' bot/tweet_history.jsonl
 
 ## Support
 
-- **GitHub Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
+- **GitHub Issues**: https://github.com/Bradbuythedip/brad/issues
 - **Documentation**: See README.md, ARCHITECTURE.md, EXAMPLES.md
 - **Twitter**: @ouroboros_loop (once live)
 

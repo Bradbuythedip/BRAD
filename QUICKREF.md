@@ -26,7 +26,7 @@ pip3 install tweepy
 cp bot/config.example.json bot/config.json
 chmod 600 bot/config.json
 nano bot/config.json  # Add your API keys
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 ### Method 2: Environment Variables
@@ -38,7 +38,7 @@ export TWITTER_API_SECRET="your_secret"
 export TWITTER_ACCESS_TOKEN="your_token"
 export TWITTER_ACCESS_TOKEN_SECRET="your_token_secret"
 export TWITTER_BEARER_TOKEN="your_bearer"
-python3 bot/ouroboros_bot.py
+python3 bot/brad_bot.py
 ```
 
 ## Getting Twitter API Keys
@@ -157,7 +157,7 @@ print(f"Entities: {len(state['world_model']['entities'])}")
 | Problem | Solution |
 |---------|----------|
 | `Python 3.7+ required` | Install Python 3.7+: `sudo apt install python3.9` |
-| `Module 'core' not found` | Run from Ouroboros Loop directory: `cd /path/to/Ouroboros Loop` |
+| `Module 'core' not found` | Run from Ouroboros Loop directory: `cd /path/to/brad` |
 | `Twitter 401 Unauthorized` | Check API keys, regenerate if needed |
 | `Twitter 403 Forbidden` | Set "Read and Write" permissions in dev portal |
 | `Rate limit exceeded` | Increase `tweet_interval_hours` in config |
@@ -174,7 +174,7 @@ Ouroboros Loop/
 │   ├── meta_cognitive.py
 │   └── ...
 ├── bot/                  # Twitter bot
-│   ├── ouroboros_bot.py
+│   ├── brad_bot.py
 │   ├── tweet_generator.py
 │   └── config.json (create this)
 ├── demo.py
@@ -195,12 +195,12 @@ Ouroboros Loop/
 
 ## Important URLs
 
-- **Repo**: https://github.com/Ouroborosbuythedip/Ouroboros Loop
+- **Repo**: https://github.com/Bradbuythedip/brad
 - **Twitter Dev**: https://developer.twitter.com/
 
 ## Support
 
-- **Issues**: https://github.com/Ouroborosbuythedip/Ouroboros Loop/issues
+- **Issues**: https://github.com/Bradbuythedip/brad/issues
 - **Docs**: README.md, INSTALL.md, DEPLOYMENT.md
 - **Twitter**: @ouroboros_loop (coming soon)
 
