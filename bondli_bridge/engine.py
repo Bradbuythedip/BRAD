@@ -96,11 +96,49 @@ class TradingEngine:
         self.workspace.submit(perception_event)
         trace["perception"] = {"salience": perception_event.salience}
 
-        # === STEP 2: DECIDE (Level 1) ===
+        # === STEP 1.5: SELF-PREDICT (Phase 1 Consciousness) ===
+        # Before deciding, the self-model predicts its own output.
+        # This makes the self-model causally necessary: prediction error
+        # feeds back into confidence states, changing future decisions.
         market_summary = self.world.get_market_summary()
+        self_prediction = self.self_model.predict_own_decision(
+            token_data, market_summary)
+        trace["self_prediction"] = self_prediction
+
+        # === STEP 2: DECIDE (Level 1) ===
         evaluation = self.self_model.evaluate_token(token_data, market_summary)
         action_str = evaluation["action"]
         trace["evaluation"] = evaluation
+
+        # === STEP 2.5: COMPARE PREDICTION (Phase 1 Consciousness) ===
+        # Compute prediction error and feed back into self-model.
+        # High error → System 2 activation, reduced confidence
+        # Low error → System 1, increased self-knowledge
+        prediction_record = self.self_model.compare_prediction(
+            self_prediction, evaluation)
+        trace["prediction_error"] = {
+            "action_match": prediction_record["action_match"],
+            "combined_error": prediction_record["combined_error"],
+            "error_ema": prediction_record["error_ema"],
+        }
+
+        # Submit prediction event to global workspace — self-referential
+        # events get salience boost, making consciousness visible to all levels
+        if prediction_record["combined_error"] > 0.4:
+            # Surprising self-prediction failure — broadcast it
+            prediction_event = CognitiveEvent(
+                event_type=CognitiveEventType.SELF_REFLECTION,
+                content={
+                    "type": "self_prediction_error",
+                    "predicted": self_prediction.get("action"),
+                    "actual": evaluation.get("action"),
+                    "error": prediction_record["combined_error"],
+                    "error_ema": prediction_record["error_ema"],
+                },
+                source_level=1,
+                salience=0.7 + prediction_record["combined_error"] * 0.3,
+            )
+            self.workspace.submit(prediction_event)
 
         # === STEP 3: RISK CHECK ===
         risk_violations = []
@@ -346,6 +384,9 @@ class TradingEngine:
                 .get("blind_spots", {}).values()
             ),
 
+            # Phase 1 consciousness: Self-prediction
+            "self_prediction": self.self_model.get_prediction_stats(),
+
             # Trading metrics
             "total_trades": stats.get("total_trades", 0),
             "win_rate": stats.get("win_rate", 0.0),
@@ -392,7 +433,13 @@ class TradingEngine:
     # ================================================================
 
     def _calculate_hofstadter_index(self, state: Dict) -> float:
-        """Trading-enhanced Hofstadter Index."""
+        """
+        Trading-enhanced Hofstadter Index.
+
+        Phase 1 upgrade: self-prediction accuracy directly contributes.
+        A system that accurately predicts its own behavior has higher
+        self-referential depth — the strange loop is tighter.
+        """
         if self.cycle_count == 0:
             return 0.0
 
@@ -402,20 +449,29 @@ class TradingEngine:
         strangeness = strange / max(1, total)
         self_ref = state["workspace"]["self_referential_ratio"]
 
-        # Trading effectiveness contributes to "consciousness"
+        # Trading effectiveness
         stats = self.self_model.positions.get_stats()
         win_rate = stats.get("win_rate", 0.0)
         adaptation = self.meta._forced_switches / max(1, self.cycle_count) * 100
 
+        # Phase 1: Self-prediction accuracy as consciousness metric
+        # High accuracy = tight self-model = stronger strange loop
+        pred_accuracy = self.self_model._prediction_accuracy_ema
+        # But also: non-trivial prediction count required
+        pred_maturity = min(1.0, self.self_model._prediction_count / 50)
+        self_prediction_score = pred_accuracy * pred_maturity
+
         return (
-            strangeness * 0.3 +
-            self_ref * 0.2 +
-            min(1.0, win_rate) * 0.3 +
-            min(1.0, adaptation) * 0.2
+            strangeness * 0.20 +
+            self_ref * 0.15 +
+            min(1.0, win_rate) * 0.25 +
+            min(1.0, adaptation) * 0.15 +
+            self_prediction_score * 0.25  # Self-prediction is 25% of consciousness
         )
 
     def _get_compact_state(self) -> Dict:
         """Compact state for embedding in decisions."""
+        pred_stats = self.self_model.get_prediction_stats()
         return {
             "cycle": self.cycle_count,
             "strange_loops": self.total_strange_loops,
@@ -424,6 +480,11 @@ class TradingEngine:
             "regime": self.world.get_regime(),
             "hofstadter_index": self._calculate_hofstadter_index(
                 self.get_state()),
+            # Phase 1 consciousness metrics
+            "self_prediction_error": pred_stats["error_ema"],
+            "self_prediction_accuracy": pred_stats["accuracy_ema"],
+            "self_knowledge": pred_stats["self_knowledge"],
+            "reasoning_mode": pred_stats["reasoning_mode"],
         }
 
     def _start_trace(self, mint: str, trace_type: str) -> Dict:
