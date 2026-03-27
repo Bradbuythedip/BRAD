@@ -29,11 +29,7 @@ Endpoints:
     GET  /health            — Health check
 """
 
-import sys
 import os
-
-# Add project root to path so core/ is importable
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -66,9 +62,13 @@ app = FastAPI(
     version="1.0.0",
 )
 
+cors_origins = os.environ.get(
+    "CORS_ORIGINS", "http://localhost:3000,http://127.0.0.1:3000"
+).split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Bondli backend is on the same machine
+    allow_origins=cors_origins,
     allow_methods=["*"],
     allow_headers=["*"],
 )
