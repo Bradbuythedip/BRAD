@@ -1,4 +1,4 @@
-FROM python:3.11-bookworm AS builder
+FROM python:3.11-slim
 
 WORKDIR /app
 
@@ -9,9 +9,9 @@ COPY core/ /app/core/
 COPY bondli_bridge/ /app/bondli_bridge/
 
 ENV BRAIN_HOST=0.0.0.0
-ENV BRAIN_PORT=8421
 ENV PYTHONUNBUFFERED=1
 
-EXPOSE 8421
+# Railway injects PORT at runtime — config.py reads it
+EXPOSE ${PORT:-8421}
 
 CMD ["python", "-m", "bondli_bridge"]
