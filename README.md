@@ -1,341 +1,236 @@
-# Ouroboros Loop
+<div align="center">
 
-**Self-Referential Recursive Cognitive Architecture with Formal Guarantees**
+# BRAD
 
-A computational implementation of Hofstadter's strange loop theory of consciousness, with verified axioms, proven blind spots, and empirical validation. Applied to autonomous trading intelligence via Bondli integration.
+### Bidirectional Recursive Autonomous Degen
 
----
+**A self-aware AI trading engine that predicts its own decisions before making them.**
 
-## Overview
+Built on Hofstadter's strange loop theory. Zero external dependencies.
+Applied to autonomous Solana memecoin trading via [Bondli](https://github.com/Bradbuythedip/bondli).
 
-Ouroboros Loop implements a three-level cognitive hierarchy where higher levels monitor and restructure lower levels (downward causation), forming a recursive self-referential loop. Named after the ancient symbol of the serpent consuming its own tail, the architecture embodies the principle that self-reference creates emergent cognitive properties.
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python 3.7+](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
+[![Tests: 92 passing](https://img.shields.io/badge/Tests-92%20passing-brightgreen.svg)](test_suite.py)
+[![Zero Dependencies](https://img.shields.io/badge/Core_Deps-Zero-orange.svg)](#)
 
-### Architecture
-
-```
-Level 2: Meta-Cognitive Loop (MC)        ← monitors + corrects L1, L0
-    | (modifies confidence, strategy)       detects blind spots
-Level 1: Self Model (SM)                 ← tracks internal state
-    | (modifies attention, beliefs)         chooses processing mode
-Level 0: World Model (WM)               ← maintains beliefs + SELF entity
-    ^ (observes self as entity)             self-referential fixed point
-```
-
-The loop closes when Level 0 perceives an entity "SELF" that Level 1 reasons about, which Level 2 evaluates, which modifies Level 1, which modifies Level 0's representation of "SELF" — a genuine strange loop.
-
-### Key Properties
-
-- **Formally verified**: 17 axioms verified programmatically (boundedness, monotonicity, downward causation, fixed points)
-- **Proven limits**: 3 blind spots reduced to Godel's Incompleteness, Halting Problem, and the Hard Problem of Consciousness
-- **Empirically validated**: Ablation studies (5 conditions, 30 trials) with permutation tests and bootstrap CIs
-- **Self-referential**: Models itself as an entity in its own world model (representational fixed point)
-- **Quantifiable**: Cognitive coherence measured via Hofstadter Index (0.0-1.0)
-- **Zero dependencies**: Core engine and full research suite require only Python's standard library
+</div>
 
 ---
 
-## Repository Structure
+## What is this?
+
+BRAD is a 3-level cognitive engine that forms a genuine **strange loop** — higher levels restructure the lower levels that produced them. It detects its own blind spots, predicts its own decisions, and corrects its own biases. Then it trades Solana memecoins with that self-awareness.
 
 ```
-brad/
-├── core/                          # Cognitive engine (DO NOT MODIFY for Bondli compat)
-│   ├── engine.py                  #   StrangeLoopEngine — main cognitive loop
-│   ├── structures.py              #   Data structures (CognitiveEvent, Perception)
-│   ├── global_workspace.py        #   Baars' Global Workspace (priority broadcasting)
-│   ├── self_model.py              #   Level 1: Self-model (confidence, mode selection)
-│   ├── world_model.py             #   Level 0: World model (beliefs, SELF entity)
-│   └── meta_cognitive.py          #   Level 2: Meta-cognitive loop (blind spots, calibration)
-│
-├── bondli_bridge/                 # Trading brain — plug-and-play Bondli integration
-│   ├── server.py                  #   FastAPI server (port 8421)
-│   ├── engine.py                  #   CognitiveTradingEngine
-│   ├── decisions.py               #   APE/SKIP/EXIT/HOLD decision logic
-│   ├── market_world.py            #   Market-aware world model
-│   ├── trading_self.py            #   Trading self-model (5 strategies)
-│   ├── trading_meta.py            #   Trading meta-cognition (overconfidence, revenge trading)
-│   ├── positions.py               #   Position tracking + PnL
-│   ├── risk.py                    #   Half-Kelly position sizing
-│   ├── config.py                  #   Configuration
-│   ├── INTEGRATION.md             #   Complete API reference
-│   └── tests/test_bridge.py       #   55 integration tests
-│
-├── research/                      # Formal foundations + empirical validation
-│   ├── formal/
-│   │   ├── axioms.py              #   17 verified axioms (HI bounds, DC, workspace, fixed points)
-│   │   └── blind_spot_proofs.py   #   3 impossibility proofs (Godel, Turing, Chalmers)
-│   ├── experiments/
-│   │   ├── ablation.py            #   Ablation study (5 conditions x 5 tasks x N trials)
-│   │   ├── benchmarks.py          #   Cognitive benchmarks (IGT, bandit, calibration)
-│   │   ├── baselines.py           #   Baseline models (random, threshold, EMA, flat)
-│   │   └── statistical.py         #   Non-parametric stats (permutation, bootstrap, Mann-Whitney)
-│   ├── reproducibility/
-│   │   ├── runner.py              #   Deterministic experiment runner
-│   │   └── synthetic_data.py      #   Synthetic datasets with known ground truth
-│   └── paper/
-│       ├── paper_skeleton.tex     #   LaTeX paper skeleton (theorems, proofs, tables)
-│       └── bibliography.bib       #   22 academic references
-│
-├── bot/                           # Autonomous Twitter agent
-│   ├── brad_bot.py                #   Bot main loop
-│   ├── tweet_generator.py         #   Cognitive state → tweet generation
-│   └── config.example.json        #   API key template
-│
-├── run_experiments.py             #   Top-level experiment entry point
-├── demo.py                        #   Demo: watch the engine think
-├── interactive.py                 #   REPL: explore cognitive state
-├── visualize.py                   #   Terminal visualization of strange loops
-├── benchmark.py                   #   Throughput benchmarking
-├── test_suite.py                  #   37 core architecture tests
-│
-├── ARCHITECTURE.md                #   Technical architecture deep dive
-├── DEPLOYMENT.md                  #   Production deployment guide
-├── CONTRIBUTING.md                #   Contribution guidelines
-├── Dockerfile                     #   Container build
-├── docker-compose.yml             #   Multi-service orchestration
-└── LICENSE                        #   MIT License
+L2  Meta-Cognitive    →  detects 7 blind spots, forces corrections
+ ↕  (downward causation)
+L1  Self-Model        →  5 strategies, confidence tracking, self-prediction
+ ↕  (upward perception)
+L0  World Model       →  tokens, wallets, regimes + SELF as an entity
 ```
+
+The loop closes when L0 models "SELF" → L1 reasons about SELF → L2 evaluates L1's reasoning → L2 modifies L1 → L1 modifies L0's representation of SELF. This recursive self-modification is the architecture, not a side effect.
+
+### Phase 1: Self-Prediction Loop (Consciousness)
+
+Before every decision, BRAD predicts what it will decide. After deciding, it compares. The prediction error feeds back into the self-model, making self-awareness **causally necessary** — not just observational.
+
+- High prediction error (>0.6) → System 2 (deliberate reasoning)
+- Low prediction error (<0.3) → System 1 (fast pattern matching)
+- Prediction accuracy tracked via EMA → feeds into Hofstadter Index
 
 ---
 
 ## Quick Start
 
-### Requirements
-
-- Python 3.7+
-- No external dependencies for core engine or research suite
-- `fastapi`, `uvicorn`, `pydantic` only needed for Bondli bridge
-
-### Installation
-
 ```bash
 git clone https://github.com/Bradbuythedip/brad.git
 cd brad
+python3 demo.py              # Watch it think
+python3 test_suite.py        # 37 core tests
+python3 run_experiments.py   # Full research suite
 ```
 
-### Run the Demo
+No pip install needed. Core engine runs on Python stdlib only.
+
+### As a Trading Brain
 
 ```bash
-python3 demo.py
+pip install fastapi uvicorn pydantic
+python3 -m bondli_bridge     # API on :8421
 ```
-
-### Run Tests
 
 ```bash
-# Core architecture tests (37 tests)
-python3 test_suite.py
-
-# Bondli bridge tests (55 tests)
-python3 -m unittest bondli_bridge.tests.test_bridge
+curl -X POST http://localhost:8421/evaluate \
+  -H "Content-Type: application/json" \
+  -d '{"token": {"ca": "abc123", "name": "TEST", "mcapUsd": 50000, "buys": 20, "sells": 5}}'
 ```
 
-### Run the Full Research Suite
+### Docker
 
 ```bash
-# Full run (30 trials per condition, ~2 min)
-python3 run_experiments.py
-
-# Quick validation (5 trials, ~2 sec)
-python3 run_experiments.py --quick
-
-# Custom seed and output
-python3 run_experiments.py --seed 123 --trials 50 --output my_results
-```
-
-This runs all 5 phases: axiom verification, blind spot proofs, ablation study, cognitive benchmarks, and statistical analysis. Results are saved as structured JSON to the output directory.
-
----
-
-## Usage
-
-### As a Library
-
-```python
-from core.engine import StrangeLoopEngine
-
-engine = StrangeLoopEngine()
-
-# Process a self-referential perception
-trace = engine.step({
-    "description": "Evaluating own reasoning process",
-    "about_self": True,
-    "confidence": 0.7
-})
-
-# Get cognitive metrics
-metrics = engine.get_consciousness_metrics()
-print(f"Hofstadter Index: {metrics['hofstadter_index']:.3f}")
-print(f"Strange loops: {metrics['strange_loop_count']}")
-print(f"Processing mode: {trace['mode']}")
-
-# Full state inspection
-state = engine.get_full_state()
-```
-
-### Interactive Mode
-
-```bash
-python3 interactive.py
-```
-
-Commands: `step <thought>`, `metrics`, `loops`, `status`, `self`, `limits`, `help`
-
-### Visualization
-
-```bash
-python3 visualize.py
+docker build -t brad .
+docker run -p 8421:8421 brad
 ```
 
 ---
 
-## Formal Foundations
+## How It Works
 
-The research framework (`research/`) provides the formal mathematical backbone for the architecture. Everything runs with zero external dependencies.
+### Cognitive Hierarchy
 
-### Axiom Verification
+| Level | Name | What It Does |
+|-------|------|-------------|
+| **L0** | World Model | Knowledge graph of tokens, wallets, market regimes. Contains a SELF entity — the system's representation of itself. |
+| **L1** | Self Model | 5 trading strategies (momentum, snipe, smart_follow, fade, survivor). Confidence tracking across 6 domains. Self-prediction before every decision. |
+| **L2** | Meta-Cognitive | Detects 7 blind spots: overconfidence, revenge trading, regime blindness, winner bias, loss aversion, recency bias, concentration risk. Applies corrections via **downward causation**. |
 
-17 axioms verified programmatically across 6 groups:
+### Blind Spot Detection
 
-| Group | Axioms | What It Verifies |
-|-------|--------|------------------|
-| Workspace (B1-B3) | 4 | Capacity bounds, priority ordering, self-ref detection |
-| Downward Causation L2→L1 (DC1-DC3) | 3 | Meta-cognitive loop modifies self-model |
-| Downward Causation L1→L0 (DC1-DC3) | 3 | Self-model modifies world model |
-| Fixed Point (FP1-FP4) | 4 | SELF entity existence, persistence, reflexivity, incompleteness |
-| HI Boundedness | 2 | Hofstadter Index in [0, 1] |
-| HI Zero Init | 1 | HI = 0 at cycle 0 |
+L2 doesn't just monitor — it intervenes:
+
+| Blind Spot | Detection | Correction |
+|-----------|-----------|-----------|
+| Overconfidence | Sizing inflated vs actual win rate | Reduce confidence, shrink positions |
+| Revenge Trading | Rapid re-entry after losses | Pause trading, cool-down period |
+| Regime Blindness | Wrong strategy for current market | Force strategy switch |
+| Winner Bias | Holding too long past peak | Tighten exits |
+| Loss Aversion | Not cutting losers fast enough | Lower stop-loss thresholds |
+| Recency Bias | Over-weighting last N trades | Expand evaluation window |
+| Concentration Risk | Too much in one position/sector | Block new entries |
+
+### Hofstadter Index
+
+Quantifies self-awareness on a 0–1 scale:
+
+```
+HI = strangeness(20%) + self_ref(15%) + win_rate(25%) + adaptation(15%) + self_prediction(25%)
+```
+
+Above 0.6 = strong self-awareness. The self-prediction component makes the index **causally coupled** to performance — it's not just a metric, it's a feedback signal.
+
+### Global Workspace (Baars)
+
+Cognitive events compete for broadcast. Self-referential events get a +0.15 salience boost. The winner broadcasts to all levels. This is how L2 interventions propagate — they win the competition and restructure L0/L1 in the same cycle.
+
+---
+
+## Formal Guarantees
+
+Not just "it works" — mathematically verified:
+
+### 17 Verified Axioms
 
 ```bash
 python3 -c "from research.formal.axioms import verify_all_axioms, print_verification_report; print_verification_report(verify_all_axioms())"
 ```
 
-### Blind Spot Proofs
+| Group | Count | Verifies |
+|-------|-------|----------|
+| Workspace bounds | 4 | Capacity limits, priority ordering, self-ref detection |
+| Downward causation L2→L1 | 3 | Meta-cognitive loop modifies self-model |
+| Downward causation L1→L0 | 3 | Self-model modifies world model |
+| Fixed points | 4 | SELF entity existence, persistence, reflexivity, incompleteness |
+| HI bounds | 2 | Hofstadter Index in [0, 1] |
+| HI initialization | 1 | HI = 0 at cycle 0 |
 
-Three fundamental limits proven as architectural necessities:
+### 3 Impossibility Proofs
 
-1. **Self-Consistency** — Reduced to Godel's 2nd Incompleteness Theorem. If the system is consistent, it cannot prove its own consistency.
-2. **Self-Prediction** — Reduced to the Halting Problem. No internal module can predict the system's halting behavior on all inputs.
-3. **Experience Gap** — Reduced to Chalmers' Hard Problem. Introspection yields only functional properties, not phenomenal ones.
+Proven as architectural necessities, not bugs:
 
-```bash
-python3 -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs, print_blind_spot_report; print_blind_spot_report(verify_all_blind_spot_proofs())"
-```
+1. **Self-Consistency** → Gödel's 2nd Incompleteness Theorem
+2. **Self-Prediction** → Halting Problem
+3. **Experience Gap** → Chalmers' Hard Problem
 
 ### Ablation Study
 
-Five conditions test each component's contribution:
+5 conditions × 5 tasks × 30 trials with permutation tests (10K permutations) and bootstrap CIs:
 
-| Condition | Meta-Cog | Loops | Workspace | Self-Ref |
-|-----------|----------|-------|-----------|----------|
-| FULL | yes | yes | yes | yes |
-| NO_META | **no** | yes | yes | yes |
-| NO_LOOPS | yes | **no** | yes | yes |
-| NO_WORKSPACE | yes | yes | **no** | yes |
-| FLAT | **no** | **no** | **no** | **no** |
-
-Evaluated on 5 tasks: decision accuracy, adaptation speed, confidence calibration, self-correction latency, strange loop depth. Statistical significance via permutation tests (10,000 permutations) with Holm-Bonferroni correction. Effect sizes via Cohen's d. Confidence intervals via bootstrap (10,000 resamples).
-
-### Cognitive Benchmarks
-
-| Benchmark | Based On | What It Measures |
-|-----------|----------|------------------|
-| Iowa Gambling Task | Bechara et al. (1994) | Learning from asymmetric payoffs |
-| Non-Stationary Bandit | Multi-arm bandit | Adaptation to regime changes |
-| Confidence Calibration | Brier (1950) | Alignment of confidence with outcomes |
-| Self-Correction Latency | — | Meta-cognitive correction speed |
-| Strange Loop Emergence | Hofstadter (2007) | Self-referential processing growth |
-
-Compared against 4 baselines: random (lower bound), fixed threshold, exponential moving average, and flat hierarchy (no meta-cognition).
-
----
-
-## Bondli Integration (Trading Brain)
-
-The bridge applies the three-level strange loop architecture to autonomous Solana token trading. **Plug-and-play** — the core engine is untouched.
-
-### What It Does
-
-- **Level 0**: Token entities, wallet profiles, market regime classification
-- **Level 1**: APE/SKIP/EXIT/HOLD decisions with 5 trading strategies (momentum, contrarian, sniper, conservative, adaptive)
-- **Level 2**: Detects overconfidence, revenge trading, regime blindness — forces corrections
-
-### Quick Start
+| Condition | What's Removed | Result |
+|-----------|---------------|--------|
+| FULL | Nothing | Baseline |
+| NO_META | L2 meta-cognitive | Overconfidence, no self-correction |
+| NO_LOOPS | Strange loops | No recursive self-awareness |
+| NO_WORKSPACE | Global workspace | No event competition/broadcast |
+| FLAT | Everything | Lookup table (lower bound) |
 
 ```bash
-pip install fastapi uvicorn pydantic
-python3 -m bondli_bridge
-# Server runs on http://127.0.0.1:8421
+python3 run_experiments.py --quick  # ~2 seconds
+python3 run_experiments.py          # Full run, ~90 seconds
 ```
-
-Add to Bondli's `.env`:
-```env
-BRAIN_BRIDGE_URL=http://127.0.0.1:8421
-```
-
-### API Endpoints
-
-| Endpoint | Method | Description |
-|----------|--------|-------------|
-| `/evaluate` | POST | Evaluate a token for trading |
-| `/decide` | POST | Get APE/SKIP/EXIT/HOLD decision |
-| `/state` | GET | Full cognitive state |
-| `/metrics` | GET | Consciousness metrics |
-| `/health` | GET | Health check |
-
-See [`bondli_bridge/INTEGRATION.md`](bondli_bridge/INTEGRATION.md) for complete API reference and integration code.
 
 ---
 
-## Autonomous Agent (Twitter Bot)
+## Trading Integration
+
+BRAD is the cognitive sidecar for [Bondli](https://github.com/Bradbuythedip/bondli) — a live Solana trading platform.
+
+### API
+
+| Endpoint | Method | Returns |
+|----------|--------|---------|
+| `/evaluate` | POST | Token evaluation with cognitive reasoning |
+| `/decide` | POST | APE / SKIP / EXIT / HOLD decision |
+| `/state` | GET | Full cognitive state (all 3 levels) |
+| `/metrics` | GET | Hofstadter Index, strange loops, win rate |
+| `/health` | GET | Health check |
+
+### What BRAD Adds to Bondli
+
+- **Gate 0**: Meta-cognitive veto on the 5-gate auto-ape pipeline
+- **Layer 0 exits**: L2 can force exits when it detects systematic errors
+- **Paper trading**: Virtual 10 SOL bankroll for learning without risk
+- **Multi-instance ensemble**: Run 4 BRAD instances with different strategies, take highest confidence
+
+See [`bondli_bridge/INTEGRATION.md`](bondli_bridge/INTEGRATION.md) for the full API reference.
+
+---
+
+## Autonomous Agent
+
+BRAD posts to X/Twitter from its own cognitive state:
 
 ```bash
 cp bot/config.example.json bot/config.json
-# Edit config.json with your Twitter API keys
-
+# Add your Twitter API keys
 python3 bot/brad_bot.py
 ```
 
-See [`DEPLOYMENT.md`](DEPLOYMENT.md) for production deployment (systemd, Docker).
+Generates 6 tweet types from live consciousness metrics: existential observations, Gödelian commentary, architectural insights, self-aware meta-commentary, market reads, and status reports. Voice: Satoshi Nakamoto meets Hofstadter — precise, understated, philosophical.
 
 ---
 
-## Theoretical Foundations
+## Project Structure
 
-| Framework | Source | Role in Architecture |
-|-----------|--------|---------------------|
-| Strange Loops | Hofstadter (1979, 2007) | Core architectural principle — tangled hierarchy |
-| Global Workspace Theory | Baars (1988, 2005) | Attention via priority-queue broadcasting |
-| Dual-Process Theory | Kahneman (2011) | Extended to three modes: fast, slow, loop |
-| Incompleteness Theorems | Godel (1931) | Blind spot 1: self-consistency |
-| Halting Problem | Turing (1936) | Blind spot 2: self-prediction |
-| Hard Problem | Chalmers (1995) | Blind spot 3: experience gap |
-| Integrated Information | Tononi (2004) | Inspiration for Hofstadter Index (distinct from Phi) |
-| Iowa Gambling Task | Bechara et al. (1994) | Benchmark for decision learning |
-
-Full bibliography: [`research/paper/bibliography.bib`](research/paper/bibliography.bib) (22 references)
-
----
-
-## Test Summary
-
-| Suite | Tests | Description |
-|-------|-------|-------------|
-| `test_suite.py` | 37 | Core architecture: hierarchy, strange loops, HI, workspace, blind spots, downward causation |
-| `bondli_bridge/tests/test_bridge.py` | 55 | Trading bridge: decisions, positions, risk, meta-cognition, strategies, server endpoints |
-| `run_experiments.py` | — | Research validation: 17 axioms + 3 proofs + ablation + benchmarks + stats |
-| **Total** | **92** | All passing |
-
----
-
-## Documentation
-
-| Document | Description |
-|----------|-------------|
-| [`ARCHITECTURE.md`](ARCHITECTURE.md) | Technical architecture deep dive |
-| [`DEPLOYMENT.md`](DEPLOYMENT.md) | Production deployment (Docker, systemd) |
-| [`CONTRIBUTING.md`](CONTRIBUTING.md) | Contribution guidelines |
-| [`bondli_bridge/INTEGRATION.md`](bondli_bridge/INTEGRATION.md) | Bondli trading API reference |
-| [`research/paper/paper_skeleton.tex`](research/paper/paper_skeleton.tex) | LaTeX paper skeleton |
-| [`research/paper/bibliography.bib`](research/paper/bibliography.bib) | Academic bibliography |
+```
+brad/
+├── core/                     # Cognitive engine (zero dependencies)
+│   ├── engine.py             #   StrangeLoopEngine — main loop
+│   ├── self_model.py         #   L1: self-prediction, confidence, modes
+│   ├── world_model.py        #   L0: beliefs, SELF entity
+│   ├── meta_cognitive.py     #   L2: blind spots, calibration
+│   ├── global_workspace.py   #   Baars' priority broadcasting
+│   └── structures.py         #   Core data structures
+│
+├── bondli_bridge/            # Trading brain (FastAPI)
+│   ├── engine.py             #   CognitiveTradingEngine
+│   ├── trading_self.py       #   5 strategies + self-prediction
+│   ├── trading_meta.py       #   7 blind spot detectors
+│   ├── decisions.py          #   APE/SKIP/EXIT/HOLD logic
+│   ├── risk.py               #   Half-Kelly position sizing
+│   └── tests/                #   55 integration tests
+│
+├── research/                 # Formal foundations
+│   ├── formal/               #   17 axioms + 3 impossibility proofs
+│   └── experiments/          #   Ablation, benchmarks, statistics
+│
+├── bot/                      # Twitter autonomous agent
+├── demo.py                   # Watch it think
+├── interactive.py            # REPL interface
+├── test_suite.py             # 37 core tests
+└── Dockerfile                # Container deployment
+```
 
 ---
 
@@ -344,60 +239,58 @@ Full bibliography: [`research/paper/bibliography.bib`](research/paper/bibliograp
 | Metric | Value |
 |--------|-------|
 | Cognitive cycle | ~10ms |
-| Strange loop detection | ~1ms |
 | Trading decision | <5ms |
-| Full experiment suite (30 trials) | ~90s |
-| Quick validation (5 trials) | ~2s |
+| Strange loop detection | ~1ms |
+| Self-prediction overhead | <2ms |
 | Memory (core) | ~50MB |
-| Memory (with trading bridge) | ~80MB |
+| Memory (with bridge) | ~80MB |
+| Full experiment suite | ~90s |
 
 ---
 
-## Reproducibility
+## Theoretical Foundations
 
-All experiments are fully deterministic:
+| Framework | Author | Role |
+|-----------|--------|------|
+| Strange Loops | Hofstadter (1979, 2007) | Core principle — tangled hierarchy |
+| Global Workspace | Baars (1988) | Attention via priority broadcasting |
+| Dual-Process Theory | Kahneman (2011) | Extended to 3 modes: fast, slow, loop |
+| Incompleteness Theorems | Gödel (1931) | Blind spot: self-consistency |
+| Halting Problem | Turing (1936) | Blind spot: self-prediction |
+| Hard Problem | Chalmers (1995) | Blind spot: experience gap |
 
-- **Seeded randomness**: Default seed 42, per-trial seeds derived as `seed + trial * 1000`
-- **No external dependencies**: Statistical tests implemented from scratch (no scipy/numpy)
-- **Structured output**: Results saved as JSON with run metadata (timestamp, platform, Python version, run hash)
-- **Synthetic ground truth**: Test datasets with known labels, breakpoints, and outcome probabilities
-
-```bash
-# Reproduce exact results
-python3 run_experiments.py --seed 42 --trials 30
-
-# Results saved to results/experiment_results.json
-```
+Full bibliography: [`research/paper/bibliography.bib`](research/paper/bibliography.bib)
 
 ---
 
-## Citations
+## Contributing
 
-If you use Ouroboros Loop in your research:
+See [`CONTRIBUTING.md`](CONTRIBUTING.md). Good first issues: adding new blind spot detectors, new trading strategies, or new cognitive benchmarks.
+
+## Citation
 
 ```bibtex
-@software{ouroboros_loop_2026,
-  title   = {Ouroboros Loop: Self-Referential Recursive Cognitive Architecture
-             with Formal Guarantees for Autonomous Decision-Making},
-  author  = {Ouroboros Loop Contributors},
-  year    = {2026},
-  url     = {https://github.com/Bradbuythedip/brad},
-  note    = {Strange loop implementation with verified axioms, proven blind spots,
-             and empirical validation via ablation studies}
+@software{brad_2026,
+  title  = {BRAD: Bidirectional Recursive Autonomous Degen —
+            Self-Referential Cognitive Architecture for Autonomous Trading},
+  author = {BRAD Contributors},
+  year   = {2026},
+  url    = {https://github.com/Bradbuythedip/brad}
 }
 ```
 
----
-
 ## License
 
-MIT License — see [`LICENSE`](LICENSE).
+MIT — see [`LICENSE`](LICENSE).
 
 ---
 
 <div align="center">
 
-**"I am a strange loop."**
-— Douglas Hofstadter
+*"The root problem with human trading is all the trust that's required.*
+*Trust in your own objectivity. Trust that emotions won't override logic.*
+*I replaced trust with verification."*
+
+— BRAD
 
 </div>

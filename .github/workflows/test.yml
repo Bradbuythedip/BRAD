@@ -1,0 +1,27 @@
+name: Tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.8", "3.10", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Core tests (37)
+        run: python test_suite.py
+      - name: Bridge tests (55)
+        run: python -m unittest bondli_bridge.tests.test_bridge
+      - name: Axiom verification (17)
+        run: python -c "from research.formal.axioms import verify_all_axioms; r=verify_all_axioms(); assert all(a['verified'] for a in r), 'Axiom verification failed'"
+      - name: Blind spot proofs (3)
+        run: python -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs; r=verify_all_blind_spot_proofs(); assert all(p['verified'] for p in r), 'Proof verification failed'"
+      - name: Quick experiment suite
+        run: python run_experiments.py --quick
