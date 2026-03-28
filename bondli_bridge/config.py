@@ -78,7 +78,7 @@ class BridgeConfig:
     cognitive: CognitiveConfig = field(default_factory=CognitiveConfig)
 
     # Server config
-    host: str = "127.0.0.1"
+    host: str = "0.0.0.0"
     port: int = 8421
     debug: bool = False
 
@@ -89,7 +89,7 @@ class BridgeConfig:
 
         # Server
         config.host = os.getenv("BRAIN_HOST", config.host)
-        config.port = int(os.getenv("BRAIN_PORT", config.port))
+        config.port = int(os.getenv("PORT", os.getenv("BRAIN_PORT", config.port)))
         config.debug = os.getenv("BRAIN_DEBUG", "false").lower() == "true"
 
         # Risk overrides
