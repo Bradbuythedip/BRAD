@@ -22,6 +22,6 @@ jobs:
       - name: Axiom verification (17)
         run: python -c "from research.formal.axioms import verify_all_axioms; r=verify_all_axioms(); assert all(all(v.values()) for v in r.values()), 'Axiom verification failed'"
       - name: Blind spot proofs (3)
-        run: python -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs; r=verify_all_blind_spot_proofs(); assert all(v.get('verified',False) for v in r.values()), 'Proof verification failed'"
+        run: python -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs; r=verify_all_blind_spot_proofs(); assert all(all(v for v in section.values() if isinstance(v,bool)) for proof in r.values() for section in proof.values() if isinstance(section,dict)), 'Proof verification failed'"
       - name: Quick experiment suite
         run: python run_experiments.py --quick
