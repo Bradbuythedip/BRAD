@@ -20,8 +20,8 @@ jobs:
       - name: Bridge tests (55)
         run: python -m unittest bondli_bridge.tests.test_bridge
       - name: Axiom verification (17)
-        run: python -c "from research.formal.axioms import verify_all_axioms; r=verify_all_axioms(); assert all(a['verified'] for a in r), 'Axiom verification failed'"
+        run: python -c "from research.formal.axioms import verify_all_axioms; r=verify_all_axioms(); assert all(all(v.values()) for v in r.values()), 'Axiom verification failed'"
       - name: Blind spot proofs (3)
-        run: python -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs; r=verify_all_blind_spot_proofs(); assert all(p['verified'] for p in r), 'Proof verification failed'"
+        run: python -c "from research.formal.blind_spot_proofs import verify_all_blind_spot_proofs; r=verify_all_blind_spot_proofs(); assert all(v.get('verified',False) for v in r.values()), 'Proof verification failed'"
       - name: Quick experiment suite
         run: python run_experiments.py --quick
