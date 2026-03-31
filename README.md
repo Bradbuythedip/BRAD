@@ -7,7 +7,7 @@
 **A self-aware AI trading engine that predicts its own decisions before making them.**
 
 Built on Hofstadter's strange loop theory. Zero external dependencies.
-Applied to autonomous Solana memecoin trading via [Bondli](https://github.com/Bradbuythedip/bondli).
+Applied to autonomous Solana memecoin trading via [Bondli](https://github.com/Bradbuythedip/bondli_public).
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Python 3.7+](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://python.org)
@@ -91,7 +91,7 @@ docker run -p 8421:8421 brad
 L2 doesn't just monitor — it intervenes:
 
 | Blind Spot | Detection | Correction |
-|-----------|-----------|-----------|
+|-----------|-----------|------------|
 | Overconfidence | Sizing inflated vs actual win rate | Reduce confidence, shrink positions |
 | Revenge Trading | Rapid re-entry after losses | Pause trading, cool-down period |
 | Regime Blindness | Wrong strategy for current market | Force strategy switch |
@@ -164,12 +164,12 @@ python3 run_experiments.py          # Full run, ~90 seconds
 
 ## Trading Integration
 
-BRAD is the cognitive sidecar for [Bondli](https://github.com/Bradbuythedip/bondli) — a live Solana trading platform.
+BRAD is the cognitive sidecar for [Bondli](https://github.com/Bradbuythedip/bondli_public) — a live Solana trading platform.
 
 ### API
 
 | Endpoint | Method | Returns |
-|----------|--------|---------|
+|----------|--------|--------|
 | `/evaluate` | POST | Token evaluation with cognitive reasoning |
 | `/decide` | POST | APE / SKIP / EXIT / HOLD decision |
 | `/state` | GET | Full cognitive state (all 3 levels) |
