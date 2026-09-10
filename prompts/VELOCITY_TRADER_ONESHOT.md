@@ -163,7 +163,7 @@ Constraints:
   `gates/*.js`, `rug-scanner.mjs`, `exit-liquidity-detector.mjs`,
   `survivorship-bias.mjs`, `smart-money-tracker.mjs`, `meme-intelligence.mjs`.
   Polymarket edge models are specified in Part J.
-- DP3 Risk envelope plus fractional-Kelly sizer. Immutable `risk.yaml` read
+- DP3 Risk envelope plus fractional-Kelly sizer. Immutable `risk.json` read
   at boot. Quarter-Kelly on power-law venues, half-Kelly on bounded venues,
   multiplied by the governor's throttle, then clipped by every cap. Reuses
   `calcPositionSize` in bondli `server.production.mjs`,
@@ -184,7 +184,8 @@ Constraints:
   Polymarket: hold-to-redeem for resolved-fact trades, target and stop and
   max-hold for the rest. Exits execute through DP4.
 - DP6 State store, append-only ledger, status endpoint and kill switch.
-  Redis (already in bondli) for live state, an append-only JSONL ledger for
+  One atomically written JSON snapshot for live state (fewer parts than
+  Redis, same FR), an append-only JSONL ledger for
   decisions, orders, fills, exits and outcomes with reasons, a `/status`
   endpoint and page, and a `/halt` endpoint with `freeze` and `flatten`
   modes. Decision log shape follows BRAD `DecisionLog`.
@@ -318,13 +319,13 @@ whole first release.
 Nine interactive elements. For each: affordance, signifier, success feedback,
 failure feedback, recovery, and the empty, loading and partial states.
 
-E1 `risk.yaml` (the only place capital and caps are set)
+E1 `risk.json` (the only place capital and caps are set)
 - Affordance: edit numbers. Signifier: a commented template with every cap,
   its unit, and a worked example, plus a `validate` command.
 - Success: `validate` prints each cap and the implied worst day in currency.
   Failure: names the field and the rule it broke, refuses to start.
 - Recovery: fix the field and run `validate` again; the previous good file is
-  kept as `risk.yaml.last-good`.
+  kept as `risk.json.last-good`.
 - Empty: no file means `start` refuses and prints the template path.
   Loading: none. Partial: missing optional caps take the printed defaults;
   a missing required cap is a failure.
@@ -487,7 +488,7 @@ Promotion gate per venue (paper to live), all required:
 - p95 latency inside the budget at every stage.
 - Zero risk-envelope violations and zero unplanned positions.
 - Starting live cap is 10 percent of the paper stake; it may double after
-  each further profitable window and never exceeds `risk.yaml`.
+  each further profitable window and never exceeds `risk.json`.
 
 If the gate never passes on a venue, the correct output of this system is to
 keep that venue in paper. A bot that does not trade where it has no edge is
@@ -529,4 +530,4 @@ Present Parts C through K as re-derived against the code you found, with
 every correction called out. Then stop and wait for approval. Write no code
 before approval, unless the line below reads `APPROVED`.
 
-Approval: PENDING
+Approval: APPROVED (built in bondli/src/velocity, tests T1..T9 in bondli/tests/velocity)
